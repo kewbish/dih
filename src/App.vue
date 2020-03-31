@@ -1,28 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="hero is-light is-medium" style="background:url('https://hdwallpaperim.com/wp-content/uploads/2017/08/22/351740-space-Earth-Moon-stars-minimalism-Sun.jpg');background-size:cover;background-repeat:no-repeat;">
+        <div class="hero-body" style="text-shadow:5px 5px #1e1e1e">
+            <Title class="has-text-centered" msg="Build. Create. Learn." sub="A social justice project - revamped!"/>
+        </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Title from './components/Title.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Title
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

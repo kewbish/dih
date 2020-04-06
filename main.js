@@ -9,14 +9,15 @@ const appVue = new Vue({
     el: '#app',
     data: {
         loading: true,
-        user: null
     },
     methods: {
         authUser: function () {
-            const provider = new firebase.auth.GoogleAuthProvider()
-            firebase.auth().signInWithRedirect(provider).then((result) => {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            provider.addScope('profile');
+            provider.addScope('https://www.googleapis.com/auth/drive');
+            firebase.auth().signInWithPopup(provider).then((result) => {
                 this.user = result.user;
-            }).catch(err => console.log(error));
+            }).catch(err => console.log(err));
         }
     }
 });

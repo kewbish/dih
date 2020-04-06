@@ -26,28 +26,36 @@
                 <div class="column">
                     <div class="box is-light">
                         <h1 class="title">Ever wanted to create an online resume?</h1>
-                        <p>We'll walk you through how.<br>Here, you'll learn the basics of laying out a website, styling
+                        <p>Here, you'll learn the basics of laying out a website, styling
                             it, making it mobile-friendly and responsive, and deploying it to the interwebs.<br>All for
                             free - and released under the GNU License. We 💖 open source!</p>
                     </div>
                 </div>
                 <div class="column" id="app">
                     <div class="box is-light">
-                        <p class="title">Let's get started.</p>
-                        <p v-if="user"><a @click="goToTut" class="button is-dark">Go to tutorial 👩‍🏫</a><br></p>
+                        <p class="title" style="margin-bottom: 15px;">Let's get started.</p>
                         <p v-if="!user"><a @click="authUser" class="button is-dark">Sign up w/ Gmail ✉️</a></p>
+                        <p style="margin-top: 10px;">You'll be redirected to Google to sign in - just for security purposes!<br>(You'll have to sign in each time to access the course - apologies for any inconveniences!)</p>
                     </div>
                 </div>
+            </div>
+            <div class="box box-info is-bold">
+                <h1 class="title has-text-white">Created to spread the power of markup.</h1>
+                <p class="has-text-white">I'm required to create a social justice action plan to benefit my community in some way, which I initially planned as a Canada Learning Code meetup.<br>
+                However, with the recent COVID-19 outbreak, that's likely going to become unfeasible. Therefore, I thought that I'd bring the resources I created to y'all, and share my knowledge via an interactive tutorial to create a resume.</p>
             </div>
         </div>
     </section>
     <section class="hero is-info is-bold is-small">
         <div class="hero-body">
-            <p>Created by <a href="https://kewbish.github.io" style="color: white; text-decoration: underline;">Kewbish</a>.</p>
+            <p>Created by <a href="https://kewbish.github.io"
+                    style="color: white; text-decoration: underline;">Kewbish</a>.</p>
         </div>
     </section>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
     <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
     <script src="main.js"></script>
 </body>

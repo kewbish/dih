@@ -1,6 +1,6 @@
 <template>
   <section id="app" class="section">
-      <router-view></router-view>
+      <learn></learn>
   </section>
 </template>
 

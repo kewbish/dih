@@ -1,7 +1,8 @@
 <template>
-  <section id="app" class="section">
-      <learn></learn>
-  </section>
+  <div id="app">
+      <index v-if="index"></index>
+      <learn v-if="!index"></learn>
+  </div>
 </template>
 
 <script>

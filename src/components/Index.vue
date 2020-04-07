@@ -26,7 +26,7 @@
                     <div class="column">
                         <div class="box is-light">
                             <p class="title">Let's get started.</p>
-                            <p><a href="learn.html" class="button is-dark">Go to tutorial 👩‍🏫</a><br></p>
+                            <p><a @click="switchIndex" class="button is-dark">Go to tutorial 👩‍🏫</a><br></p>
                         </div>
                     </div>
                 </div>
@@ -43,6 +43,11 @@
 
 <script>
 export default {
-    
+    methods:{
+        switchIndex: function () {
+            this.index = !this.index;
+            this.$emit('index');
+        }
+    }
 }
 </script>>

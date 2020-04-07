@@ -9,5 +9,8 @@ Vue.component('learn', Learn);
 Vue.component('index', Index);
 
 new Vue({
+    data:{
+        index: true
+    },
     render: h => h(App),
 }).$mount('#app')

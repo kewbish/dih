@@ -43,9 +43,9 @@
 
 <script>
 export default {
-    methods:{
-        switchIndex: function(){
-            this.$data.index = false;
+    methods: {
+        switchIndex: function () {
+            this.$indexTrue.index = false;
         }
     }
 }

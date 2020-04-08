@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-      <index v-if="app.index"></index>
-      <learn v-if="!app.index"></learn>
+    <index v-if="$indexTrue.index"></index>
+    <learn v-if="!$indexTrue.index"></learn>
   </div>
 </template>
 

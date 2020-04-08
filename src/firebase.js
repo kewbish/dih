@@ -22,11 +22,7 @@ export default {
         console.log(result);
       })
       .catch(function(error){
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.email;
-        const credential = error.credential;
-        console.log(errorCode, errorMessage, email, credential);
+        console.log("There was an error.", error.code, error.message, error.email, error.credential);
         })
     },
     logout() {

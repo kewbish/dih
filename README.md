@@ -1,24 +1,8 @@
-# sjap
+# SJAP - Dive Into HTML
+Made with Vue, April 2020 - current.  
+Created by [Kewbish](https://kewbish.github.io).  
+Released under the [GNU GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html).  
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## :pencil: A Little Note
+I'm required to create a social justice action plan to benefit my community in some way, which I initially planned as a Canada Learning Code meetup.
+However, with the recent COVID-19 outbreak, that's likely going to become unfeasible. Therefore, I thought that I'd bring the resources I created to y'all, and share my knowledge via an interactive tutorial to create a resume.

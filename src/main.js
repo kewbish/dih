@@ -9,8 +9,17 @@ Vue.component('learn', Learn);
 Vue.component('index', Index);
 
 new Vue({
-    data:{
-        index: true
-    },
     render: h => h(App),
 }).$mount('#app')
+
+let globalData = new Vue({
+    data: { $index: true }
+});
+Vue.mixin({
+    computed: {
+        $color: {
+            get: function () { return globalData.$data.$index },
+            set: function (bool) { globalData.$data.$index = bool; }
+        }
+    }
+})

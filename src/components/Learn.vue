@@ -1,12 +1,14 @@
 <template>
-    <div class="container">
-        <div class="box is-blue" v-if="!auth">
-            <a class="button" style="margin-bottom:10px" @click="login">Log In - Gmail</a>
+    <section class="section">
+        <div class="container">
+            <div class="box is-blue" v-if="!auth">
+                <a class="button" style="margin-bottom:10px" @click="login">Log In - Gmail</a>
+            </div>
+            <div v-if="auth">
+                <h1 class="title">Hello {{firstName}}!</h1>
+            </div>
         </div>
-        <div v-if="auth">
-            <h1 class="title">Hello {{firstName}}!</h1>
-        </div>
-    </div>
+    </section>
 </template>>
 
 <script>

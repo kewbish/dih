@@ -8,18 +8,13 @@ Vue.config.productionTip = false;
 Vue.component('learn', Learn);
 Vue.component('index', Index);
 
-new Vue({
+var index = true;
+console.log(`Index is currently ${index}`);
+
+var app = new Vue({
+    data: {
+        index: index
+    },
     render: h => h(App),
 }).$mount('#app')
-
-let globalData = new Vue({
-    data: { $index: true }
-});
-Vue.mixin({
-    computed: {
-        $color: {
-            get: function () { return globalData.$data.$index },
-            set: function (bool) { globalData.$data.$index = bool; }
-        }
-    }
-})
+console.log(app);

@@ -11,7 +11,7 @@
         </div>
       </div>
       <div v-if="auth">
-        <slide slide-subject="Hello {{firstName}}!" slide-content="Time to get started on your web development journey!"></slide>
+        <slide :slideSubject="'Hello ' + firstName + '!'" slideContent="{line: 'Time to get started on your web development journey!'}"></slide>
       </div>
     </div>
   </section>
@@ -43,9 +43,6 @@ export default {
   methods: {
     login() {
       Firebase.login();
-    },
-    logout() {
-      Firebase.logout();
     }
   },
   mounted: function() {

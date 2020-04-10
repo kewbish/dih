@@ -11,7 +11,7 @@
         </div>
       </div>
       <div v-if="auth">
-        <slide :slideSubject="'Hello ' + firstName + '!'" slideContent="{line: 'Time to get started on your web development journey!'}"></slide>
+        <slide :slideSubject="'Hello ' + firstName + '!'" :slideContent="[{line: 'Time to get started on your web development journey!'},{line:'First, let\'s download some software.'}]"></slide>
       </div>
     </div>
   </section>

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="message is-info is-bold is-medium" v-if="!auth">
         <div class="message-header">
-          <h1 class="title">Sign in</h1>
+          <h1 class="title has-text-white">Sign in, and let's get started!</h1>
         </div>
         <div class="message-body">
           <p class="subtitle">This is required to prevent abuse.</p>
@@ -11,7 +11,7 @@
         </div>
       </div>
       <div v-if="auth">
-        <h1 class="title">Hello {{firstName}}!</h1>
+        <slide slide-subject="Hello {{firstName}}!" slide-content="Time to get started on your web development journey!"></slide>
       </div>
     </div>
   </section>

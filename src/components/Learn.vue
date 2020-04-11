@@ -11,7 +11,7 @@
         </div>
       </div>
       <div v-if="auth">
-        <slide :slideSubject="'Hello ' + firstName + '!'" :slideContent="[{line: 'Time to get started on your web development journey!'},{line:'First, let\'s download some software.'},{img: `https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png`}]"></slide>
+        <slide v-if="count == 1" :slideSubject="'Hello ' + firstName + '!'" :slideContent="[{line: 'Time to get started on your web development journey!'},{line:'First, let\'s download some software.'},{img: `https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png`},{list:[{item: 'hello'}, {item: 'hi'}]}]"></slide>
       </div>
     </div>
   </section>
@@ -26,7 +26,8 @@ export default {
       user: {
         logged: false,
         data: {}
-      }
+      },
+      count: 1
     };
   },
   computed: {

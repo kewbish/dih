@@ -6,7 +6,8 @@
     <div class="columns">
       <div class="column">
         <div class="box" style="margin: 10px;">
-          <p>{{ subtitle }}</p>
+          <p style="margin-bottom:15px">{{ subtitle }}</p>
+          <a class="button is-dark">Flip counter</a>
         </div>
       </div>
       <div class="column">
@@ -24,7 +25,7 @@ export default {
   data(){
       return{
           timerInt: this.durationInSecs,
-          timerIsOn: true
+          c: 0
       }
   },
   computed: {
@@ -42,7 +43,7 @@ export default {
       timerInt: {
           handler(val){
             if (val > 0){
-                this.count();
+                this.c = setTimeout(() => {this.timerInt--;}, 1000);
             }
             else if (val <= 0){
                 this.endTimer();
@@ -55,9 +56,6 @@ export default {
       endTimer: function(){
           alert("Ended.");
       },
-      count: function(){
-          setTimeout(() => {this.timerInt--;}, 1000);
-      }
   }
 };
 </script>

@@ -1,13 +1,13 @@
 <template>
-  <div class="message is-info" style="margin-top: 20px;">
+  <div class="message is-info is-bold" style="margin-top: 20px;">
     <div class="message-header">
-      <p>{{ title }}</p>
+      <h1 class="title has-text-white">{{ title }}</h1>
     </div>
     <div class="columns">
       <div class="column">
         <div class="box" style="margin: 10px;">
           <p style="margin-bottom:15px">{{ subtitle }}</p>
-          <a class="button is-dark">Flip counter</a>
+          <a class="button is-dark" @click="endTimer">{{ switchText }}</a>
         </div>
       </div>
       <div class="column">
@@ -25,7 +25,9 @@ export default {
   data(){
       return{
           timerInt: this.durationInSecs,
-          c: 0
+          c: 0,
+          isOn: false,
+          switchText: "▶️ Timer"
       }
   },
   computed: {
@@ -48,13 +50,21 @@ export default {
             else if (val <= 0){
                 this.endTimer();
             }
-          },
-          immediate: true
+          }
       }
   },
   methods: {
       endTimer: function(){
-          alert("Ended.");
+          if (this.isOn == true){
+            clearInterval(this.c);
+            this.switchText = "▶️ Timer";
+            this.isOn = false;
+          }
+          else{
+              this.c = setTimeout(() => {this.timerInt--;}, 1000);
+              this.switchText = "⏸️ Timer";
+              this.isOn = true;
+          }
       },
   }
 };

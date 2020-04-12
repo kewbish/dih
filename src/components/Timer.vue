@@ -1,5 +1,5 @@
 <template>
-  <div class="message is-info is-bold" style="margin-top: 20px;">
+  <div class="message is-info is-bold" style="margin-top: 20px; margin-bottom: 20px;">
     <div class="message-header">
       <h1 class="title has-text-white">{{ title }}</h1>
     </div>

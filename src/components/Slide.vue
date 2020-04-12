@@ -7,10 +7,13 @@
                 <img :src="s.img[0]" style="margin: 5px 0;">
                 <p style="margin: 5px 0;"><em>{{ s.img[1] }}</em></p>
             </div>
-            <ul v-if="s.list" style="margin: 5px 0;">
+            <ul v-if="s.list" style="margin: 5px;">
                 <li v-for="(sl, i) in s.list" :key="i">● {{ sl.item }}</li>
             </ul>
             <timer v-if="s.timer" :title="s.timer[0]" :subtitle="s.timer[1]" :durationInSecs="s.timer[2]"></timer>
+            <div v-if="s.code" style="margin: 5px 0;">
+                <pre><code :class="s.code[0]">{{ s.code[1] }}</code></pre>
+            </div>
         </div>
     </section>
 </template>

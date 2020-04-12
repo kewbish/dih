@@ -11,7 +11,7 @@
         </div>
       </div>
       <div v-if="auth">
-        <slide v-if="count == 1" :slideSubject="'Hello ' + firstName + '!'" :slideContent="[{line: 'Time to get started on your web development journey!'},{line:'First, let\'s download some software.'},{img: [`https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png`, 'Figure 1: Hey, it\'s a figure!']},{list:[{item: 'hello'}, {item: 'hi'}]},{timer: ['Timing test', 'This is a one minute counter - wait it out!', 60]}]"></slide>
+        <slide v-if="count == 1" :slideSubject="'Hello ' + firstName + '!'" :slideContent="[{line: 'Time to get started on your web development journey!'},{line:'First, let\'s download some software.'},{img: [`https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png`, 'Figure 1: Hey, it\'s a figure!']},{list:[{item: 'hello'}, {item: 'hi'}]},{timer: ['Timing test', 'This is a one minute counter - wait it out!', 60]},{code: ['html', '<!DOCTYPE html>\n<h1>We have codeblocks too!</h1>\n<p>I don\'t like these newlines.</p>']}]"></slide>
       </div>
     </div>
   </section>

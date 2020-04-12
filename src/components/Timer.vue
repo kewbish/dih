@@ -1,17 +1,17 @@
 <template>
-  <div class="message is-info">
+  <div class="message is-info" style="margin-top: 20px;">
     <div class="message-header">
       <p>{{ title }}</p>
     </div>
     <div class="columns">
       <div class="column">
-          <div class="box">
-              <p class="has-text-white">{{ subtitle }}</p>
-          </div>
+        <div class="box" style="margin: 10px;">
+          <p>{{ subtitle }}</p>
+        </div>
       </div>
       <div class="column">
-        <div class="box">
-            <h1 class="title has-text-white"></h1>
+        <div class="box" style="margin: 10px;">
+          <h1 class="title">{{ formatTime }}</h1>
         </div>
       </div>
     </div>
@@ -21,26 +21,42 @@
 <script>
 export default {
   props: ["durationInSecs", "title", "subtitle"],
+  data(){
+      return{
+          timerInt: this.durationInSecs,
+          timerIsOn: true
+      }
+  },
   computed: {
     formatTime() {
-      var timeLeft = this.durationInSecs;
+      var timeLeft = this.timerInt;
       var minutes = Math.floor(timeLeft / 60);
       var seconds = timeLeft % 60;
       if (seconds < 10){
           seconds = `0${seconds}`;
       }
-      return `${minutes}:${seconds}`
+      return `${minutes}:${seconds}`;
     },
-    timeLeft(){
-        return this.timeLeft //
-    }
   },
-  data(){
-      return timerInt = null;
+  watch: {
+      timerInt: {
+          handler(val){
+            if (val > 0){
+                this.count();
+            }
+            else if (val <= 0){
+                this.endTimer();
+            }
+          },
+          immediate: true
+      }
   },
-  methods:{
-      startTimer(){
-          this.timerInt = setInterval(() => (this.))
+  methods: {
+      endTimer: function(){
+          alert("Ended.");
+      },
+      count: function(){
+          setTimeout(() => {this.timerInt--;}, 1000);
       }
   }
 };

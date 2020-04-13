@@ -8,6 +8,7 @@
         <div class="box" style="margin: 10px;">
           <p style="margin-bottom:15px">{{ subtitle }}</p>
           <a class="button is-dark" @click="endTimer">{{ switchText }}</a>
+          <a class="button is-dark" @click="resTimer" style="margin-left: 5px">↪️ Reset</a>
         </div>
       </div>
       <div class="column">
@@ -66,6 +67,10 @@ export default {
               this.isOn = true;
           }
       },
+      resTimer: function(){
+          clearInterval(this.c);
+          this.timerInt = this.durationInSecs;
+      }
   }
 };
 </script>

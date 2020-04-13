@@ -11,11 +11,18 @@
         </div>
       </div>
       <div v-if="auth">
-        <slide v-if="count == 1" :slideSubject="'Hello ' + firstName + '!'" :slideContent="[{line: 'Time to get started on your web development journey!'},{line:'First, let\'s download some software.'},{img: [`https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png`, 'Figure 1: Hey, it\'s a figure!']},{list:[{item: 'hello'}, {item: 'hi'}]},{timer: ['Timing test', 'This is a one minute counter - wait it out!', 60]},{code: ['html', '<!DOCTYPE html>\n<h1>We have codeblocks too!</h1>\n<p>I don\'t like these newlines.</p>']}]"></slide>
+        <slide v-if="count == 0" :slideSubject="'0: Hello ' + firstName + '!'" :slideContent="[{line: 'Time to get started on your web development journey! First, let\'s download some software.'},{line: 'You\'ll need some software to get started. We\'ll use:'},{list:[{item: 'VSCode', link: 'https://code.visualstudio.com/download'}, {item: 'VSCode HTML Preview', link: 'https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode'}, {item: 'Any web browser, like Chrome'}]},{line: 'Once you\'ve downloaded everything, press the [>] button - it\'s time to go!'}]"></slide>
+        <slide v-else-if="count == 1" slideSubject="1: Creating your files" :slideContent="[{line: 'Every website starts with an index.html file. This is what all web browsers look for to start rendering your creation within a site\'s files when it loads up.'},{line: 'Create a folder on your computer, and open this folder with VSCode by clicking this button:'}, {img: ['https://i.stack.imgur.com/AlsoM.png', 'Figure 1: Open the folder you just created.']}, {line: 'Now, it\'s time to create an index.html file.'},{img: ['https://code.visualstudio.com/assets/docs/nodejs/nodejs/toolbar-new-file.png', 'Figure 2: Create a new file, and call it index.html.']},{line:'You\'ll need to do the same with a main.css file. Create a main.css file, just like you created your index.html file.'}]"></slide>
+        <!--<slide v-else-if="count == 2" slideSubject="2: Some basic tags" :slideContent=`[{line:"The current HTML version is HTML5, and to denote that, we'll need to add a <!DOCTYPE HTML> tag."},{line:'Luckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type 'html:5', and select the Emmet Abbreviation that pops up with [Enter].'},{line:'VSCode should spit a nice template out for us. If not: copy-paste the code below.'},{code:'<!DOCTYPE html>\n<html lang="en">\n<head>\n\t<meta charset="UTF-8">\n\t<meta name="viewport" content="width=device-width, initial-scale=1.0">\n\t<title>Document</title>\n</head>\n<body>\n</body>\n</html>'},{line: "The <head> elements are meta elements, and we don't have to worry about anything right now except the <title></title>. That's what you'll see in the address bar, so choose something like your name."}, {img: ['https://i.imgur.com/cB42RYe.png', 'Figure 3: The HTML + CSS is where your title would go.']}]`></slide>-->
+        <slide v-else-if="count == 3" slideSubject="3: Learning about <p>, <h1>, and <a>" :slideContent="[{line: 'Within your <body></body> tags, try adding some other tags.'},{line:'Try pressing [Ctrl-Shift-V] to open the HTML preview, and refer to it as we go through each tag.'},{line: 'First, we\'ll look at the <p>. Add it within the body, and add something inside so it looks something like:'},{code: '<p>Hello there!</p>'},{line: 'The </p> slash is required - it denotes the ending of a tag.'},{line: 'Try doing the same with <h1> tags! Remember the </h1> tag!'},{line: 'In your preview, what do these do? [Spoiler: <p> creates paragraphs, and <h1> headers.]'},{line: 'Let\'s also go through the concept nesting: with the <a> tag.'},{code: '<a href=\'https://reddit.com\'><p>This link goes to Reddit</p></a>'},{line: 'See how the <a> tag goes *around* the <p> tag? This is called nesting, and the <a> is now the parent of the <a> tag, the child. We\'ll go through this in greater detail once we start structuring our site.'},{timer:['Experiment with these tags', 'Try playing around with the <a> link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them.', 180]}]"></slide>
+        <slide v-else slideSubject="Oops - that slide doesn't exist." :slideContent="[{line: 'Let\'s go back. Try entering the slide number you were at before. To go back to the beginning, type \'0\' in the text-input below.'}]"></slide>
       </div>
     </div>
+    <input type="text" class="input fixed-input" v-model="count">
+    <button @click="countDown" class="button fixed-back">&lt;</button>
+    <button @click="countUp" class="button fixed-right">&gt;</button>
   </section>
-</template>>
+</template>
 
 <script>
 import Firebase from "../firebase.js";
@@ -27,7 +34,7 @@ export default {
         logged: false,
         data: {}
       },
-      count: 1
+      count: 0
     };
   },
   computed: {
@@ -44,6 +51,14 @@ export default {
   methods: {
     login() {
       Firebase.login();
+    },
+    countUp(){
+        this.count++;
+    },
+    countDown(){
+        if (this.count > 0) {   
+            this.count--;
+        }
     }
   },
   mounted: function() {

@@ -16,19 +16,20 @@ firebase.initializeApp(firebaseConfig);
 export default {
     auth: firebase.auth(),
     login() {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider)
-      .then(function(result) {
-        console.log(result);
-      })
-      .catch(function(error){
-        console.log("There was an error.", error.code, error.message, error.email, error.credential);
-        })
+        const provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+            .then(function (result) {
+                console.log(result);
+            })
+            .catch(function (error) {
+                console.log("There was an error.", error.code, error.message, error.email, error.credential);
+            })
     },
     logout() {
-      firebase.auth().signOut()
-      .then(function() {})
-      .catch(function(error) {
-        console.log(error)});
+        firebase.auth().signOut()
+            .then(function () { })
+            .catch(function (error) {
+                console.log(error)
+            });
     }
 }

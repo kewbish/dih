@@ -26,3 +26,6 @@ svg{
     bottom: 50%;
     right: 5%;
 }
+code{
+    tab-size: 4;
+}

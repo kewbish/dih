@@ -51,6 +51,9 @@ export default {
             else if (val <= 0){
                 this.endTimer();
             }
+            if (this.timerInt == 0){
+                alert("Your timer's run out! 📚")
+            }
           }
       }
   },

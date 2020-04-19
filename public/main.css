@@ -26,6 +26,11 @@ svg{
     bottom: 50%;
     right: 2%;
 }
+.fixed-right-bottom{
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+}
 code{
     tab-size: 4;
 }

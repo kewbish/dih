@@ -24,6 +24,7 @@
     <input v-if="auth" type="text" class="input fixed-input" v-model="count" />
     <button v-if="auth" @click="countDown" class="button fixed-back is-small">&lt;</button>
     <button v-if="auth" @click="countUp" class="button fixed-right is-small">&gt;</button>
+    <a href="https://covid19responsefund.org/" class="button fixed-right-bottom is-info">Donate to COVID 🦠</a>
   </section>
 </template>
 

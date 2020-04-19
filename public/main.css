@@ -19,13 +19,16 @@ svg{
 .fixed-back{
     position: fixed;
     bottom: 50%;
-    left: 5%;
+    left: 2%;
 }
 .fixed-right{
     position: fixed;
     bottom: 50%;
-    right: 5%;
+    right: 2%;
 }
 code{
     tab-size: 4;
+}
+slide{
+    padding: 7px;
 }

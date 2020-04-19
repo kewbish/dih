@@ -21,9 +21,9 @@
         <slide v-else slideSubject="Oops - that slide doesn't exist." :slideContent="[{line: 'Let\'s go back. Try entering the slide number you were at before. To go back to the beginning, type \'0\' in the text-input below.'}]"></slide>
       </div>
     </div>
-    <input type="text" class="input fixed-input" v-model="count" />
-    <button @click="countDown" class="button fixed-back">&lt;</button>
-    <button @click="countUp" class="button fixed-right">&gt;</button>
+    <input v-if="auth" type="text" class="input fixed-input" v-model="count" />
+    <button v-if="auth" @click="countDown" class="button fixed-back is-small">&lt;</button>
+    <button v-if="auth" @click="countUp" class="button fixed-right is-small">&gt;</button>
   </section>
 </template>
 

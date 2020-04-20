@@ -22,7 +22,11 @@
 
 <script>
 export default {
-  props: ["durationInSecs", "title", "subtitle"],
+  props: {
+    durationInSecs: Number,
+    title: String,
+    subtitle: String,
+  },
   data(){
       return{
           timerInt: this.durationInSecs,

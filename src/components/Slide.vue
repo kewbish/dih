@@ -25,6 +25,9 @@
 
 <script>
 export default {
-  props: ["slideSubject", "slideContent"]
+  props: {
+      slideSubject: String,
+      slideContent: Array
+  }
 };
 </script>

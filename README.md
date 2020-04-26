@@ -1,7 +1,6 @@
 # SJAP - Dive Into HTML
 Made with Vue, April 2020 - current.  
 Created by [Kewbish](https://kewbish.github.io).  
-Released under the [GNU GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html).  
 
 ## :pencil: A Little Note
 I'm required to create a social justice action plan to benefit my community in some way, which I initially planned as a Canada Learning Code meetup.

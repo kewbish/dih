@@ -3,7 +3,7 @@
     <section>
       <div class="hero is-info is-bold is-medium">
         <div class="hero-body">
-          <h1 class="title is-1 has-text-centered">SJAP - Dive Into HTML - Created by Kewbish.</h1>
+          <h1 class="title is-1 has-text-centered">Dive Into HTML</h1>
           <div class="has-text-centered">
             <a href="#get-started" class="button">Get Started 📚</a>
           </div>
@@ -22,8 +22,6 @@
                 styling
                 it, making it mobile-friendly and responsive, and deploying it to the
                 interwebs.
-                <br />All for
-                free - and released under the GNU License. We 💖 open source!
               </p>
               <br />
               <h1 class="title">Let's get started.</h1>

@@ -37,3 +37,10 @@ code{
 slide{
     padding: 7px;
 }
+.fade-enter-active, .fade-leave-active {
+    transition: all .3s ease;
+}
+.fade-enter, .fade-leave-to{
+    transform: translateX(-100vw);
+    opacity: 50%;
+}

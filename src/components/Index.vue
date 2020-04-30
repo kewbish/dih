@@ -5,7 +5,7 @@
         <div class="hero-body">
           <h1 class="title is-1 has-text-centered">Dive Into HTML</h1>
           <div class="has-text-centered">
-            <a href="#get-started" class="button">Get Started 📚</a>
+            <a @click="switchIndex" class="button">Get Started 📚</a>
           </div>
         </div>
       </div>

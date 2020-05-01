@@ -11,7 +11,7 @@
       </div>
       <ul v-if="s.list" style="margin: 5px;">
         <li v-for="(sl, i) in s.list" :key="i" class="is-size-5">
-          <a v-if="sl.link" :src="sl.link">● {{ sl.item }}</a>
+          <a v-if="sl.link" :href="sl.link">● {{ sl.item }}</a>
           <p v-else>● {{ sl.item }}</p>
         </li>
       </ul>

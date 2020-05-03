@@ -6,7 +6,7 @@
           <h1 class="title has-text-white">Sign in, and let's get started!</h1>
         </div>
         <div class="message-body">
-          <p class="subtitle">This is required to prevent abuse. We do not collect any information other than your display name, and your email will not be used for any marketing purposes.</p>
+          <p class="subtitle">We do not collect any information other than your display name, and your email will not be used for any marketing purposes.</p>
           <a class="button" style="margin-bottom:10px" @click="login">Log In - Gmail</a>
         </div>
       </div>

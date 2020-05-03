@@ -598,7 +598,7 @@
         <p>
           Created by
           <a
-            href="https://kewbish.github.io"
+            href="https://github.com/kewbish"
             style="color: white; text-decoration: underline;"
           >Kewbish</a>.
         </p>

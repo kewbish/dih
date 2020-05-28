@@ -1,5 +1,6 @@
 # SJAP - Dive Into HTML
 Made with Vue, April 2020 - current.  
+Not released under any particular license.
 Created by [Kewbish](https://kewbish.github.io).  
 
 ## :pencil: A Little Note

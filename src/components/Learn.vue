@@ -13,6 +13,12 @@
       <div v-if="auth">
         <transition name="fade">
           <slide
+            key="99"
+            v-if="count == 99"
+            :slideSubject="'99: Hello ' + firstName + '!'"
+            slideContent="# Quirky!"
+          />
+          <slide
             key="0"
             v-if="count == 0"
             :slideSubject="'0: Hello ' + firstName + '!'"

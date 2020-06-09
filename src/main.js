@@ -1,5 +1,6 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import VueShowdown from 'vue-showdown';
+import App from './App.vue';
 import Learn from './components/Learn.vue';
 import Index from './components/Index.vue';
 import Slide from './components/Slide.vue';
@@ -12,16 +13,22 @@ Vue.component('index', Index);
 Vue.component('slide', Slide);
 Vue.component('timer', Timer);
 
-var index = new Vue({data:{ index: true }})
-index.install = function(){
+var index = new Vue({ data: { index: true } })
+index.install = function () {
     Object.defineProperty(Vue.prototype, '$indexTrue', {
-      get () { return index }
+        get() { return index }
     })
-  }
+}
 Vue.use(index);
 
+Vue.use(VueShowdown, {
+    options: {
+        emojis: true
+    }
+});
+
 new Vue({
-    methods:{
+    methods: {
         switchIndex: function () {
             this.$indexTrue.index = false;
             return;

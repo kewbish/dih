@@ -1,6 +1,11 @@
 <template>
   <section class="section">
     <h1 class="title is-1">{{ slideSubject }}</h1>
+    <div class="content is-medium">
+      <VueShowdown :markdown="slideContent" />
+    </div>
+    <!--
+    <h1 class="title is-1">{{ slideSubject }}</h1>
     <div v-for="(s, index) in slideContent" :key="index" style="margin: 5px 0;">
       <p class="is-size-5" v-if="s.line">{{ s.line }}</p>
       <div v-if="s.img">
@@ -20,14 +25,15 @@
         <pre><code>{{ s.code }}</code></pre>
       </div>
     </div>
+    -->
   </section>
 </template>
 
 <script>
 export default {
   props: {
-      slideSubject: String,
-      slideContent: Array
+    slideSubject: String,
+    slideContent: Array
   }
 };
 </script>

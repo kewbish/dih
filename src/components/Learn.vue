@@ -16,13 +16,13 @@
             key="0"
             v-if="count == 0"
             :slideSubject="'0: Hello ' + firstName + '!'"
-            :slideContent="slide1"
+            :slideContent="slide0"
           />
           <slide
             key="1"
             v-else-if="count == 1"
             slideSubject="1: Creating your files"
-            :slideContent="[{line: 'Every website starts with an index.html file. This is what all web browsers look for to start rendering your creation within a site\'s files when it loads up.'},{line: 'Create a folder on your computer, and open this folder with VSCode by clicking this button:'}, {img: ['https://i.imgur.com/QseX16F.png', 'Figure 1: Open the folder you just created.']}, {line: 'Now, it\'s time to create an index.html file.'},{img: ['https://code.visualstudio.com/assets/docs/nodejs/nodejs/toolbar-new-file.png', 'Figure 2: Create a new file, and call it index.html.']},{line:'You\'ll need to do the same with a main.css file. Create a main.css file, just like you created your index.html file.'}]"
+            :slideContent="slide1"
           />
           <slide
             key="2"
@@ -179,14 +179,22 @@ export default {
         data: {}
       },
       count: 0,
-      slide1: `'This course is meant to guide you through the beginnings of HTML by building a simple resume!  
+      slide0: `'This course is meant to guide you through the beginnings of HTML by building a simple resume!  
       Initially, it was meant to be a meetup run in Vancouver by some Canada Learning Code teen ambassadors (of which I [Kewbish] am one!), but due to COVID-19, it was cancelled.  
       \nIf you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please visit the following link:  
       \n[Canada Learning Code](https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate)  
       \nThis course was created by Emilie Ma - also known as Kewbish. If you'd like to learn more about me, visit [my site](https://kewbish.github.io).  
       \nTime to get started on your web development journey! First, let's download some software.  
       \nYou'll need some software to get started. We'll use [VSCode](https://code.visualstudio.com/download), [VSCode HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode), and any web browser, like Chrome.  
-      \nOnce you've downloaded everything, press the [>] button - it's time to go!'`
+      \nOnce you've downloaded everything, press the [>] button - it's time to go!'`,
+      slide1: `Every website starts with an index.html file. This is what all web browsers look for to start rendering your creation within a site's files when it loads up.
+      \nCreate a folder on your computer, and open this folder with VSCode by clicking this button:
+      \n![Figure 1: Open the folder you just created.](https://i.imgur.com/QseX16F.png)
+      *Figure 1: Open the folder you just created.*
+      \nNow, it's time to create an index.html file.
+      \n![Figure 2: Create a new file, and call it index.html.](https://code.visualstudio.com/assets/docs/nodejs/nodejs/toolbar-new-file.png)
+      *Figure 2: Create a new file, and call it index.html.*
+      \nYou'll need to do the same with a main.css file. Create a main.css file, just like you created your index.html file.`
     };
   },
   computed: {

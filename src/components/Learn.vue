@@ -40,7 +40,7 @@
             key="4"
             v-else-if="count == 4"
             slideSubject="4: Structural elements: <div> and <section>"
-            :slideContent="[{line:'<div> and <section> won\'t have any visible effect on the structure, and don\'t print anything like <h1> and <p>. However, they\'re still required as basic knowledge.'},{line: 'Section tags allow us to differentiate different, well, sections in your website. It can contain any other tags, like <div>, <h1>, and <p>.'},{line: 'Speaking of which: what does the div tag do? It\'s a container, and like section, can contain any other HTML tags, including another div.'},{line: 'Visibly, these don\'t seem to do anything, but we\'ll be using them very frequently to structure our web resume.'},{line: 'Unfortunately, we\'ll have to undo all your hard work - but that\'s alright, you\'ve learned so much!'},{line: 'Inside your <body>, add a couple of <sections>.'}, {code: '<section class=&quot;header&quot;></section>\n<section class=&quot;about-me&quot;></section>\n<section class=&quot;education&quot;></section>\n<section class=&quot;project-skills&quot;></section>\n<section class=&quot;footer&quot;></section>\n'},{line:'This will add several empty sections to your site. Remember, you can preview your site with [Ctrl-Shift-V]!'}]"
+            :slideContent="[{md: slide4}]"
           />
           <slide
             key="5"
@@ -222,7 +222,18 @@ export default {
       \n
       <a href="https://reddit.com"><p>This link goes to Reddit</p></a>
       \nSee how the \`<a>\` tag goes *around* the \`<p>\` tag? This is called nesting, and the \`<a>\` is now the parent of the \`<p>\` tag, the child. We'll go through this in greater detail once we start structuring our site.
-      </p><timer title="Experiment with these tags" subtitle="Try playing around with the 'a' link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them." durationInSecs="180"/>`
+      </p><timer title="Experiment with these tags" subtitle="Try playing around with the 'a' link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them." durationInSecs="180"/>`,
+      slide4: `\`<div>\` and \`<section>\` won't have any visible effect on the structure, and don't print anything like \`<h1>\` and \`<p>\`. However, they're still required as basic knowledge for website structuring.
+      \nSection tags allow us to differentiate different, well, sections in your website. It can contain any other tags, like \`<div>\`, \`<h1>\`, and \`<p>\`.
+      \nSpeaking of which: what does the div tag do? It's a container, and like section, can contain any other HTML tags, including another div. Visibly, these don't seem to do anything, but we'll be using them very frequently to structure our web resume.
+      \nUnfortunately, we'll have to undo all your hard work - but that's alright, you've learned so much! Delete everything in your \`index.html\`, and add \`html:5\`'s output again. For reference, check slide 2!
+      \nInside your \`<body>\`, add a couple of \`<section>\`s.
+      \n
+      <section class="header"></section>
+      <section class="about-me"></section>
+      <section class="education"></section>
+      <section class="project-skills"></section>
+      \nThis will add several empty sections to your site. Remember, you can preview your site with [Ctrl-Shift-V]!`
     };
   },
   computed: {

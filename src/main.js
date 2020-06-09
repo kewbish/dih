@@ -23,7 +23,8 @@ Vue.use(index);
 
 Vue.use(VueShowdown, {
     options: {
-        emojis: true
+        emojis: true,
+        simpleLineBreaks: true
     }
 });
 

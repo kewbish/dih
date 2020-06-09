@@ -33,7 +33,7 @@
 export default {
   props: {
     slideSubject: String,
-    slideContent: Array
+    slideContent: String
   }
 };
 </script>

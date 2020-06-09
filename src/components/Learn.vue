@@ -13,16 +13,10 @@
       <div v-if="auth">
         <transition name="fade">
           <slide
-            key="99"
-            v-if="count == 99"
-            :slideSubject="'99: Hello ' + firstName + '!'"
-            slideContent="# Quirky!"
-          />
-          <slide
             key="0"
             v-if="count == 0"
             :slideSubject="'0: Hello ' + firstName + '!'"
-            :slideContent="[{line: 'This course is meant to guide you through the beginnings of HTML by building a simple resume!'},{line: 'Initially, it was meant to be a meetup run in Vancouver by some Canada Learning Code teen ambassadors (of which I [Kewbish] am one!), but due to COVID-19, it was cancelled.'},{line: 'If you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please visit the following link:'},{list: [{item: 'Canada Learning Code', link:'https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate'}]},{line: 'This course was created by Emilie Ma - also known as Kewbish. If you\'d like to learn more about me, visit:'},{list: [{item: 'My site', link:'https://kewbish.github.io'}]},{line: 'Time to get started on your web development journey! First, let\'s download some software.'},{line: 'You\'ll need some software to get started. We\'ll use:'},{list:[{item: 'VSCode', link: 'https://code.visualstudio.com/download'}, {item: 'VSCode HTML Preview', link: 'https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode'}, {item: 'Any web browser, like Chrome'}]},{line: 'Once you\'ve downloaded everything, press the [>] button - it\'s time to go!'}]"
+            :slideContent="slide1"
           />
           <slide
             key="1"
@@ -184,7 +178,15 @@ export default {
         logged: false,
         data: {}
       },
-      count: 0
+      count: 0,
+      slide1: `'This course is meant to guide you through the beginnings of HTML by building a simple resume!  
+      Initially, it was meant to be a meetup run in Vancouver by some Canada Learning Code teen ambassadors (of which I [Kewbish] am one!), but due to COVID-19, it was cancelled.  
+      \nIf you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please visit the following link:  
+      \n[Canada Learning Code](https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate)  
+      \nThis course was created by Emilie Ma - also known as Kewbish. If you'd like to learn more about me, visit [my site](https://kewbish.github.io).  
+      \nTime to get started on your web development journey! First, let's download some software.  
+      \nYou'll need some software to get started. We'll use [VSCode](https://code.visualstudio.com/download), [VSCode HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode), and any web browser, like Chrome.  
+      \nOnce you've downloaded everything, press the [>] button - it's time to go!'`
     };
   },
   computed: {

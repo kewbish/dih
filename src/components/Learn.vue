@@ -16,25 +16,25 @@
             key="0"
             v-if="count == 0"
             :slideSubject="'0: Hello ' + firstName + '!'"
-            :slideContent="slide0"
+            :slideContent="[{md: slide0}]"
           />
           <slide
             key="1"
             v-else-if="count == 1"
             slideSubject="1: Creating your files"
-            :slideContent="slide1"
+            :slideContent="[{md: slide1}]"
           />
           <slide
             key="2"
             v-else-if="count == 2"
             slideSubject="2: Some basic tags"
-            :slideContent="slide2"
+            :slideContent="[{md: slide2}]"
           />
           <slide
             key="3"
             v-else-if="count == 3"
             slideSubject="3: Learning about <p>, <h1>, and <a>"
-            :slideContent="[{line: 'Within your <body></body> tags, try adding some other tags.'},{line:'Try pressing [Ctrl-Shift-V] to open the HTML preview, and refer to it as we go through each tag.'},{line: 'First, we\'ll look at the <p>. Add it within the body, and add something inside so it looks something like:'},{code: '<p>Hello there!</p>'},{line: 'The </p> slash is required - it denotes the ending of a tag.'},{line: 'Try doing the same with <h1> tags! Remember the </h1> tag!'},{line: 'In your preview, what do these do? [Spoiler: <p> creates paragraphs, and <h1> headers.]'},{line: 'Let\'s also go through the concept nesting: with the <a> tag.'},{code: '<a href=&quot;https://reddit.com&quot;><p>This link goes to Reddit</p></a>'},{line: 'See how the <a> tag goes *around* the <p> tag? This is called nesting, and the <a> is now the parent of the <p> tag, the child. We\'ll go through this in greater detail once we start structuring our site.'},{timer:['Experiment with these tags', 'Try playing around with the <a> link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them.', 180]}]"
+            :slideContent="[{md: slide3}, {timer:['Experiment with these tags', 'Try playing around with the <a> link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them.', 180]}]"
           />
           <slide
             key="4"
@@ -199,18 +199,30 @@ export default {
       \nLuckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type \`html:5\`, and select the Emmet Abbreviation that pops up with [Enter]
       \nVSCode should spit a nice template out for us. If not: copy-paste the code below.
       \n
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body></body>
-    </html>
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+            </head>
+            <body></body>
+        </html>
       \nThe <head> elements are meta elements, and we don't have to worry about anything right now except the <title></title>. That's what you'll see in the address bar, so choose something like your name.
       \n![Figure 3: The HTML + CSS is where your title would go.](https://i.imgur.com/cB42RYe.png)
-      *Figure 3: The HTML + CSS is where your title would go.*'`
+      *Figure 3: The HTML + CSS is where your title would go.*`,
+      slide3: `Within your <body></body> tags, try adding some other tags. Try pressing [Ctrl-Shift-V] to open the HTML preview, and refer to it as we go through each tag.
+      \nFirst, we'll look at the <p>. Add it within the body, and add something inside so it looks something like:
+      \n
+      <p>Hello there!</p>
+      \nThe \`</p>\` slash is required - it denotes the ending of a tag.
+      \nTry doing the same with \`<h1>\` tags! Remember this tag - it's important. You can just copy-paste the \`<p>\` tags, but replace the 'p' with 'h1'.
+      \nIn your preview, what do these do? [Spoiler: \`<p>\` creates paragraphs, and \`<h1>\` creates headers.]
+      \nLet's also go through the concept nesting: with the \`<a>\` tag.
+      \n
+      <a href="https://reddit.com"><p>This link goes to Reddit</p></a>
+      \nSee how the \`<a>\` tag goes *around* the \`<p>\` tag? This is called nesting, and the \`<a>\` is now the parent of the \`<p>\` tag, the child. We'll go through this in greater detail once we start structuring our site.
+      </p><timer title="Experiment with these tags" subtitle="Try playing around with the 'a' link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them." durationInSecs="180"/>`
     };
   },
   computed: {

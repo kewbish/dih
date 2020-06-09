@@ -25,59 +25,61 @@ export default {
   props: {
     durationInSecs: Number,
     title: String,
-    subtitle: String,
+    subtitle: String
   },
-  data(){
-      return{
-          timerInt: this.durationInSecs,
-          c: 0,
-          isOn: false,
-          switchText: "▶️ Timer"
-      }
+  data() {
+    return {
+      timerInt: this.durationInSecs,
+      c: 0,
+      isOn: false,
+      switchText: "▶️ Timer"
+    };
   },
   computed: {
     formatTime() {
       var timeLeft = this.timerInt;
       var minutes = Math.floor(timeLeft / 60);
       var seconds = timeLeft % 60;
-      if (seconds < 10){
-          seconds = `0${seconds}`;
+      if (seconds < 10) {
+        seconds = `0${seconds}`;
       }
       return `${minutes}:${seconds}`;
-    },
+    }
   },
   watch: {
-      timerInt: {
-          handler(val){
-            if (val > 0){
-                this.c = setTimeout(() => {this.timerInt--;}, 1000);
-            }
-            else if (val <= 0){
-                this.endTimer();
-            }
-            if (this.timerInt == 0){
-                alert("Your timer's run out! 📚")
-            }
-          }
+    timerInt: {
+      handler(val) {
+        if (val > 0) {
+          this.c = setTimeout(() => {
+            this.timerInt--;
+          }, 1000);
+        } else if (val <= 0) {
+          this.endTimer();
+        }
+        if (this.timerInt == 0) {
+          alert("Your timer's run out! 📚");
+        }
       }
+    }
   },
   methods: {
-      endTimer: function(){
-          if (this.isOn == true){
-            clearInterval(this.c);
-            this.switchText = "▶️ Timer";
-            this.isOn = false;
-          }
-          else{
-              this.c = setTimeout(() => {this.timerInt--;}, 1000);
-              this.switchText = "⏸️ Timer";
-              this.isOn = true;
-          }
-      },
-      resTimer: function(){
-          clearInterval(this.c);
-          this.timerInt = this.durationInSecs;
+    endTimer: function() {
+      if (this.isOn == true) {
+        clearInterval(this.c);
+        this.switchText = "▶️ Timer";
+        this.isOn = false;
+      } else {
+        this.c = setTimeout(() => {
+          this.timerInt--;
+        }, 1000);
+        this.switchText = "⏸️ Timer";
+        this.isOn = true;
       }
+    },
+    resTimer: function() {
+      clearInterval(this.c);
+      this.timerInt = this.durationInSecs;
+    }
   }
 };
 </script>

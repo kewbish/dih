@@ -28,7 +28,7 @@
             key="2"
             v-else-if="count == 2"
             slideSubject="2: Some basic tags"
-            :slideContent="[{line:'The current HTML version is HTML5, and to denote that, we\'ll need to add a <!DOCTYPE HTML> tag.'},{line:'Luckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type \'html:5\', and select the Emmet Abbreviation that pops up with [Enter].'},{line:'VSCode should spit a nice template out for us. If not: copy-paste the code below.'},{code:'<!DOCTYPE html>\n<html lang=&quot;en&quot;>\n<head>\n\t<meta charset=&quot;UTF-8&quot;>\n\t<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>\n\t<title>Document</title>\n</head>\n<body>\n</body>\n</html>'}, {line: 'The <head> elements are meta elements, and we don\'t have to worry about anything right now except the <title></title>. That\'s what you\'ll see in the address bar, so choose something like your name.'}, {img: ['https://i.imgur.com/cB42RYe.png', 'Figure 3: The HTML + CSS is where your title would go.']}]"
+            :slideContent="slide2"
           />
           <slide
             key="3"
@@ -194,7 +194,23 @@ export default {
       \nNow, it's time to create an index.html file.
       \n![Figure 2: Create a new file, and call it index.html.](https://code.visualstudio.com/assets/docs/nodejs/nodejs/toolbar-new-file.png)
       *Figure 2: Create a new file, and call it index.html.*
-      \nYou'll need to do the same with a main.css file. Create a main.css file, just like you created your index.html file.`
+      \nYou'll need to do the same with a main.css file. Create a main.css file, just like you created your index.html file.`,
+      slide2: `'The current HTML version is HTML5, and to denote that, we'll need to add a <!DOCTYPE HTML> tag.
+      \nLuckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type \`html:5\`, and select the Emmet Abbreviation that pops up with [Enter]
+      \nVSCode should spit a nice template out for us. If not: copy-paste the code below.
+      \n
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body></body>
+    </html>
+      \nThe <head> elements are meta elements, and we don't have to worry about anything right now except the <title></title>. That's what you'll see in the address bar, so choose something like your name.
+      \n![Figure 3: The HTML + CSS is where your title would go.](https://i.imgur.com/cB42RYe.png)
+      *Figure 3: The HTML + CSS is where your title would go.*'`
     };
   },
   computed: {

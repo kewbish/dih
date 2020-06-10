@@ -46,7 +46,7 @@
             key="5"
             v-else-if="count == 5"
             slideSubject="5: Filling up .about-me"
-            :slideContent="[{line: 'Let\'s fill up our .about-me with content. Inside the <section> tags, type:'}, {line: '[Tip]: Type this code out by hand - it helps you learn much better. Copy-paste doesn\'t teach your brain to HTMLify :)'}, {code: '<div class=&quot;about-me-image&quot;>\n\t<img src=&quot;https://imgur.com/helloWorld&quot;>\n</div>\n<h1>Hey - I\'m [yourname]</h1>\n<div class=&quot;custom-div&quot;></div>\n<p>This is where you can briefly touch on your life, thoughts, and manifestos.</p>'}, {line: 'Here, a new tag is introduced: the <img> tag. This is one of the few tags in HTML that doesn\'t require an ending / tag. We need a src property - replace this with an imgur link, after you upload your profile headshot, of course.'}, {line: 'Let\'s see how your site is looking so far! [Ctrl-S] to save, and [Ctrl-Shift-V] to view.'}, {img: ['https://i.imgur.com/bPBFH7F.png', 'Figure 1. Your site so far. Not much, eh?']}]"
+            :slideContent="[{md: slide5}]"
           />
           <slide
             key="6"
@@ -233,7 +233,20 @@ export default {
       <section class="about-me"></section>
       <section class="education"></section>
       <section class="project-skills"></section>
-      \nThis will add several empty sections to your site. Remember, you can preview your site with [Ctrl-Shift-V]!`
+      \nThis will add several empty sections to your site. Remember, you can preview your site with [Ctrl-Shift-V]!`,
+      slide5: `Let's fill up our .about-me (The . denotes a class, so this would be the section with the class of about-me) with content. Inside the \`<section>\` tags, type:
+      \n[Tip]: Type this code out by hand - it helps you learn much better. Copy-paste doesn't teach your brain to HTMLify :)
+      \n
+      <div class="about-me-image">
+        <img src="https://imgur.com/helloWorld">
+      </div>
+      <h1>Hey - I'm [yourname]</h1>
+      <div class="custom-div"></div>
+      <p>This is where you can briefly touch on your life, thoughts, and manifestos.</p>
+      \nHere, a new tag is introduced: the \`<img>\` tag. This is one of the few tags in HTML that doesn't require an ending \`</img>\` tag. We need a src property (which is the bit with the equal sign) - replace this with an imgur link, after you upload your profile headshot, of course. Alternatively, you can use file-paths, like: \`src="img.jpg"\`, for a ,jpg in the same folder with a name of img.
+      \nLet's see how your site is looking so far! [Ctrl-S] to save, and [Ctrl-Shift-V] to view, remember.
+      \n![Figure 1. Your site so far. Not much, eh?](https://i.imgur.com/bPBFH7F.png)
+      *Figure 1. Your site so far. Not much, eh?*`
     };
   },
   computed: {

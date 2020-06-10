@@ -52,13 +52,13 @@
             key="6"
             v-else-if="count == 6"
             slideSubject="6: Filling up the rest of our sections"
-            :slideContent="[{line: 'For the next 15-20 minutes, work on filling in content around your website. Try editing your education details, writing about your work, or changing anything else you wish. (Don\'t worry about the projects bit quite yet - we\'ll learn how to build a grid with that soon!)'},{line: 'Don\'t feel limited by the section classes we have implemented here, you can add sections with classes with whatever you wish!'}, {timer:['Editing time!', 'Change anything and everything about the site, right now. Add headings, paragraphs, text, images, whatever you like.', 1200]}]"
+            :slideContent="[{md: slide6}, {timer:['Editing time!', 'Change anything and everything about the site, right now. Add headings, paragraphs, text, images, whatever you like.', 1200]}]"
           />
           <slide
             key="7"
             v-else-if="count == 7"
             slideSubject="7: Checkin + break!"
-            :slideContent="[{line: 'Time for our first checkin!'}, {line: 'In the past section, we\'ve learned to:'}, {list: [{item: 'Using a code editor - easy shortcuts like [Ctrl-S] and [Ctrl-Shift-V]'},{item: 'Basic HTML tags - <p>, <div>, <a>, <img>, <h1>, <section> (and maybe you\'ve come across others too!)'}, {items:'Structuring a site, and applying classes'}]}, {line: 'In the next section, we\'ll be learning how to style our site, as well as what those class quotes really do.'}, {line: 'By now, your site might look something like:'},{img:['https://i.imgur.com/hQ6i5jj.png', 'Figure 1: Just an example - we\'ll style it up soon!']},{line: 'Oh - it\'s been a while already, remember to stand up, stretch, and take your eyes off the screen before we get started on CSS!'}]"
+            :slideContent="[{md: slide7}]"
           ></slide>
           <slide
             key="8"
@@ -181,11 +181,9 @@ export default {
       count: 0,
       slide0: `'This course is meant to guide you through the beginnings of HTML by building a simple resume!  
       Initially, it was meant to be a meetup run in Vancouver by some Canada Learning Code teen ambassadors (of which I [Kewbish] am one!), but due to COVID-19, it was cancelled.  
-      \nIf you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please visit the following link:  
-      \n[Canada Learning Code](https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate)  
+      \nIf you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please visit the following link: [Canada Learning Code](https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate)  
       \nThis course was created by Emilie Ma - also known as Kewbish. If you'd like to learn more about me, visit [my site](https://kewbish.github.io).  
-      \nTime to get started on your web development journey! First, let's download some software.  
-      \nYou'll need some software to get started. We'll use [VSCode](https://code.visualstudio.com/download), [VSCode HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode), and any web browser, like Chrome.  
+      \nTime to get started on your web development journey! First, let's download some software. We'll use [VSCode](https://code.visualstudio.com/download), [VSCode HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode), and any web browser, like Chrome.  
       \nOnce you've downloaded everything, press the [>] button - it's time to go!'`,
       slide1: `Every website starts with an index.html file. This is what all web browsers look for to start rendering your creation within a site's files when it loads up.
       \nCreate a folder on your computer, and open this folder with VSCode by clicking this button:
@@ -246,7 +244,20 @@ export default {
       \nHere, a new tag is introduced: the \`<img>\` tag. This is one of the few tags in HTML that doesn't require an ending \`</img>\` tag. We need a src property (which is the bit with the equal sign) - replace this with an imgur link, after you upload your profile headshot, of course. Alternatively, you can use file-paths, like: \`src="img.jpg"\`, for a ,jpg in the same folder with a name of img.
       \nLet's see how your site is looking so far! [Ctrl-S] to save, and [Ctrl-Shift-V] to view, remember.
       \n![Figure 1. Your site so far. Not much, eh?](https://i.imgur.com/bPBFH7F.png)
-      *Figure 1. Your site so far. Not much, eh?*`
+      *Figure 1. Your site so far. Not much, eh?*`,
+      slide6: `For the next 15-20 minutes, work on filling in content around your website. Try editing your education details, writing about your work, or changing anything else you wish. (Don't worry about the projects bit quite yet - we'll learn how to build a grid with that soon!)
+      \nRemember the \`<p>\` tags, and keep those in mind - they're the best way to add more information. Also, remember to add \`<div>\` tags to separate chunks of content, and if you feel the need, add another section for fun! The link \`<a>\` tag can also be used to link to things like your resume, LinkedIn, or social media profiles.
+      \nDon't feel limited by the section classes we have implemented here, you can add sections with classes with whatever you wish!`,
+      slide7: `Time for our first checkin!
+      \nIn the past section, we've learned to:
+      - Using a code editor - easy shortcuts like [Ctrl-S] and [Ctrl-Shift-V]
+      - Basic HTML tags - \`<p>\`, \`<div>\`, \`<a>\`, \`<img>\`, \`<h1>\`, \`<section>\` (and maybe you've come across others too!)
+      - Structuring a site, and applying classes
+      \nIn the next section, we'll be learning how to style our site, as well as what those class quotes really do.
+      \nBy now, your site might look something like:
+      \n![Figure 1: Just an example - we'll style it up soon!](https://i.imgur.com/hQ6i5jj.png)
+      *Figure 1: Just an example - we'll style it up soon!*
+      \nOh - it's been a while already, remember to stand up, stretch, and take your eyes off the screen before we get started on CSS [Cascading Style Sheets]!`
     };
   },
   computed: {

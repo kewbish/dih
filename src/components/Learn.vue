@@ -64,7 +64,7 @@
             key="8"
             v-else-if="count == 8"
             slideSubject="8: A whole new style"
-            :slideContent="[{line: 'We\'re about to get started with a whole new language - CSS. CSS stands for Cascading Style Sheets, and is the language that web browsers use to figure out how to color, shape, and format your content.'},{line: 'To get started, add a main.css file. As with the index.html, click the File add icon on the sidebar of VSCode, and add the file.'},{line: 'To link our index.html with our main.css file, add the following link inside your <head> element:'},{code: '<link rel=&quot;stylesheet&quot; href=&quot;main.css&quot;>'},{line: 'This will ensure that any styling changes you add to your site is reflected when you view your site with [Ctrl-Shift-V].'},{line: 'Let\'s start off simple: by styling our <h1> tags. In CSS, styling all elements of a tag type (here, all <h1>s), is done by adding:'},{code:'h1{\n\t//something_here\n}'},{line: 'Times New Roman is a boring font - find a new one from:'},{list:[{item: 'Google Fonts', link:'https://fonts.google.com/'}]},{line: 'Choose one, select style, and copy the embed tag into your <head>, just like you added the link to the main.css file. Now, we\'ll add it to the HTML.'},{code:'h1{\n\tfont-family:fontname;\n\tfont-size:18px;\n\tcolor:mediumblue;\n}'},{line: 'Make sure you change the fontname to the actual name of the font you\'ve just imported. Now, you\'ll have something like:'},{img:['https://i.imgur.com/qB2idJq.png', 'Figure 1: An example of our shiny new blue headers!']},{line: 'font-family, font-size, and color are all examples of CSS properties that describe what an element looks like. A great reference can be found here:'},{list:[{item: 'W3schools', link:'https://www.w3schools.com/css/default.asp'}]},{line: 'These colours and parameters can all be changed to whatever you wish. Experiment and have fun!'}]"
+            :slideContent="[{md: slide8}]"
           />
           <slide
             key="9"
@@ -257,7 +257,31 @@ export default {
       \nBy now, your site might look something like:
       \n![Figure 1: Just an example - we'll style it up soon!](https://i.imgur.com/hQ6i5jj.png)
       *Figure 1: Just an example - we'll style it up soon!*
-      \nOh - it's been a while already, remember to stand up, stretch, and take your eyes off the screen before we get started on CSS [Cascading Style Sheets]!`
+      \nOh - it's been a while already, remember to stand up, stretch, and take your eyes off the screen before we get started on CSS [Cascading Style Sheets]!`,
+      slide8: `We're about to get started with a whole new language - CSS. CSS stands for Cascading Style Sheets, and is the language that web browsers use to figure out how to color, shape, and format your content.
+      \nTo get started, add a \`main.css\` file. As with the \`index.html\`, click the 'File add' icon on the sidebar of VSCode, and add the file.
+      \nTo link our \`index.html\` with our \`main.css\` file, add the following link inside your \`<head>\` element:
+      \n
+      <link rel="stylesheet' href="main.css">
+      \nThis will ensure that any styling changes you add to your site is reflected when you view your site with [Ctrl-Shift-V]. Let's start off simple: by styling our \`<h1>\` tags. In CSS, styling all elements of a tag type (here, all \`<h1>\`s), is done by adding:
+      \n
+      h1{
+          //something_here
+        }
+      \nTimes New Roman is a boring font - find a new one from [Google Fonts](https://fonts.google.com) that you like.
+      \nChoose one, select style, and copy the embed tag into your \`<head>\`, just like you added the link to the \`main.css\` file. Now, we'll add it to the CSS.
+      \n
+      h1{
+        font-family:fontname;
+        font-size:18px;
+        color:mediumblue;
+        }
+      \nMake sure you change the fontname to the actual name of the font you've just imported. For example, if you've added a 'Montserrat' font, change the \`font-family\` to \`'Montserrat'\`. Make sure to add quotes, especially if your font name is multiple words.
+      \nNow, you'll have something like: 
+      \n![Figure 1: An example of our shiny new blue headers!](https://i.imgur.com/qB2idJq.png)
+      \n*Figure 1: An example of our shiny new blue headers!*
+      \n\`font-family\`, \`font-size\`, and \`color\` are all examples of CSS properties that describe what an element looks like. A great reference can be found here - [W3schools](https://www.w3schools.com/css/default.asp)
+      \nThese colours and parameters can all be changed to whatever you wish. Experiment and have fun!`
     };
   },
   computed: {

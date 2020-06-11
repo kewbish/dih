@@ -300,43 +300,43 @@ export default {
       .class{
           margin: auto;
           text-align: center;
-          }
+        }
       \nThe auto margin sets the margin automatically on each side of the element with the class \`class\`, top, right, left, and bottom. This doesn't end up affecting your top or bottom (we'll get there soon).
       \nThe text-align property aligns the text within the div. If you don't want your text centered in your centered div, you don't need to add this. Try applying this to one of your classes or elements!
       \nNow, let's go over vertical centering. Usually, this ends up being a little more tricky than horizontal centering.
       \n
       .class{
           margin: 0 auto;
-          }
+        }
       \nThis sets the margin of the top and bottom to zero, and therefore sets the element right in the middle of its parent. That's usually the de-facto solution, but alternatively, you can choose to use:
       \n
       .class{
           position: relative;
           top: 50%;
           transform: translateY(-50%);
-          }
+        }
       \nThis is another solution - it sets the position (usually static where elements render in order) to relative to its parent element. It positions 50% away from the top, and then 50% of the element's height back up, to properly center. Note: if you try to center an image, you usually need to put it inside a div, and apply these centering styles to the div instead. This is due to the fact that images don't render as blocks properly, and have some weird margin styles.
       \nIf you'd like to center some elements on your site, take the next couple minutes to apply some styles!`,
       slide11: `Alright, speed round. These are some easy-to-understand CSS properties that are commonly used, but don't need a lot of explanation.
       \n
       .class{
           background-color: #123456;
-          }
+        }
       \nThis sets the background color of your element to a hex code. You can find a hex code for any color from Google - just look up a hex color picker. You can apply this to any element, specifically - use it on divs to add background squares of colour!
       \nTo add a background image instead:
       \n
       .class{
           background: url('url/to/jpeg');
-          }
+        }
       \n
       .class{
           text-shadow: 2px 2px #123456;
-          }
+        }
       \nThis sets a text shadow to a text element, 2px left-right, and 2px top-down away. These values can be negative, too. Again, there's the hex code - set it to your desired text shadow color. Remember, Google is your friend.
       \n
       .class:hover{
           color: #123456;
-          }
+        }
       \nThis is a little different. The :hover selector goes after an element or class selector. Here, the style would be applied when the element with class \`class\` was hovered over. Here, we're just setting an arbitrary color, but other properties can be applied, like text-shadow, for example.`
     };
   },

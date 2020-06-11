@@ -76,7 +76,7 @@
             key="10"
             v-else-if="count == 10"
             slideSubject="10: Centering both ways"
-            :slideContent="[{line: 'Commonly, we also see elements centered on webpages. Let\'s learn how to do that, applying our new knowledge with element and class selectors. (Remember, the h1{} and the .about-me{}?)'},{line:'To center content horizontally, like:'},{code:'|   [el]   |'},{line:'We can use the following CSS - again, taking advantage of the margin properties of each element.'},{code:'.class{\n\tmargin: auto;\n\ttext-align: center;\n}'},{line: 'The auto margin sets the margin automatically on each side of the element with the class \'class\', top, right, left, and bottom. This doesn\'t end up affecting your top or bottom (we\'ll get there soon)'},{line:'The text-align property aligns the text within the div. If you don\'t want your text centered in your centered div, you don\'t need to add this.'},{line: 'Try applying this to one of your classes or elements!'},{line:'Now, let\'s go over vertical centering. Usually, this ends up being a little more tricky than horizontal centering.'}, {code:'.class{\n\tmargin: 0 auto;\n}'}, {line: 'This sets the margin of the top and bottom to zero, and therefore sets the element right in the middle of its parent. That\'s usually the de-facto solution, but alternatively, you can choose to use:'},{code: '.class{\n\tposition: relative;\n\ttop: 50%;\n\ttransform: translateY(-50%);'},{line: 'This is another solution - it sets the position (usually static where elements render in order) to relative to its parent element. It positions 50% away from the top, and then 50% of the element\'s height back up, to properly center.'},{line: 'Note: if you try to center an image, you usually need to put it inside a div, and apply the class to that div instead. This is due to the fact that images don\'t render as blocks properly, and have some weird margin styles.'},{line: 'If you\'d like to center elements, take the next couple minutes to apply some styles!'},{timer: ['Centering', 'Take the next while to center some of your elements with what you\'ve just learned.', '150']}]"
+            :slideContent="[{md: slide10}, {timer: ['Centering', 'Take the next while to center some of your elements with what you\'ve just learned.', '150']}]"
           />
           <slide
             key="11"
@@ -291,7 +291,32 @@ export default {
           border-bottom:1px solid darkgray;
         }
       \nThe \`.\` before the \`custom-div\` style tells CSS that we're referencing a class. [There are also id's, but we won't be going over those in this intro site.] The border-bottom is another property that adds a 1 pixel tall, solid, dark gray border to the .custom-div element. Now, your site might look something like:
-      \n![Figure 2: Maybe your site looks like this! Note the long border going across.](https://i.imgur.com/pSvBuao.png)\n*Figure 2: Maybe your site looks like this! Note the long border going across.*`
+      \n![Figure 2: Maybe your site looks like this! Note the long border going across.](https://i.imgur.com/pSvBuao.png)\n*Figure 2: Maybe your site looks like this! Note the long border going across.*`,
+      slide10: `Commonly, we also see elements centered on webpages. Let's learn how to do that, applying our new knowledge with element and class selectors. (Remember, the \`h1{}\` and the \`.custom-div{}\`?)
+      \nTo center content horizontally, like:
+      \`|   [el]   |\`
+      \nWe can use the following CSS - again, taking advantage of the margin properties of each element.
+      \n
+      .class{
+          margin: auto;
+          text-align: center;
+          }
+      \nThe auto margin sets the margin automatically on each side of the element with the class \`class\`, top, right, left, and bottom. This doesn't end up affecting your top or bottom (we'll get there soon).
+      \nThe text-align property aligns the text within the div. If you don't want your text centered in your centered div, you don't need to add this. Try applying this to one of your classes or elements!
+      \nNow, let's go over vertical centering. Usually, this ends up being a little more tricky than horizontal centering.
+      \n
+      .class{
+          margin: 0 auto;
+          }
+      \nThis sets the margin of the top and bottom to zero, and therefore sets the element right in the middle of its parent. That's usually the de-facto solution, but alternatively, you can choose to use:
+      \n
+      .class{
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          }
+      \nThis is another solution - it sets the position (usually static where elements render in order) to relative to its parent element. It positions 50% away from the top, and then 50% of the element's height back up, to properly center. Note: if you try to center an image, you usually need to put it inside a div, and apply these centering styles to the div instead. This is due to the fact that images don't render as blocks properly, and have some weird margin styles.
+      \nIf you'd like to center some elements on your site, take the next couple minutes to apply some styles!`
     };
   },
   computed: {

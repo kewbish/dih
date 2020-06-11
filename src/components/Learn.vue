@@ -94,7 +94,7 @@
             key="13"
             v-else-if="count == 13"
             slideSubject="13: Formatting the grid"
-            :slideContent="[{line:'Alright, let\'s go back to CSS for a bit. Add the following code to your main.css file.'},{code:'.grid-container{\n\tdisplay:grid;\n\tgrid-template-columns: 1fr 1fr 1fr;\n}'},{line:'This style changes the display property of the parent (container) <div>, which is usually block, to grid. This is a relatively new CSS property, with its history only going back to around 2011. Then, we add the template columns, setting each one equal to one third each - (what the 1fr does: it\'s literally just 1 fraction of the total width.) Now, if you view your site with [Ctrl-Shift-V], you\'ll see that your <div>\'s children are displayed like so:'},{img:['https://i.imgur.com/ICfGPf1.png','Figure 1: An example grid.']},{line:'Try styling the background colors of some of the containers by adding classes, or change the font color! If you need a refresher, visit the past slides.'}]"
+            :slideContent="[{md: slide13}]"
           />
           <slide
             key="14"
@@ -359,7 +359,17 @@ export default {
             <p>An item subtitle and content. Fill this in!</p>
         </div>
       </div>
-      \nRemember, the larger \`<div>\` has the class \`grid-container\`, and we just filled it with three smaller \`<div>\`s which will have all our content!`
+      \nRemember, the larger \`<div>\` has the class \`grid-container\`, and we just filled it with three smaller \`<div>\`s which will have all our content!`,
+      slide13: `Alright, let's go back to CSS for a bit. Add the following code to your main.css file.
+      \n
+      .grid-container{
+          display:grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      \nThis style changes the display property of the parent (container) \`<div>\`, which is usually \`block\`, to \`grid\`. This is a relatively new CSS property, with its history only going back to around 2011. Then, we add the template columns, setting each one equal to one third each - (what the 1fr does: it's literally just 1 fraction of the total width.) Now, if you view your site with [Ctrl-Shift-V], you'll see that your \`<div>\`'s children are displayed like so:
+      \n![Figure 1: An example grid.](https://i.imgur.com/ICfGPf1.png)
+      \n*Figure 1: An example grid.*
+      \nTry styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`
     };
   },
   computed: {

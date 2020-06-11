@@ -70,7 +70,7 @@
             key="9"
             v-else-if="count == 9"
             slideSubject="9: Dividers and box model"
-            :slideContent="[{line: 'CSS structures most elements in HTML with a box model.'},{img:['https://i.imgur.com/3A5ZcE1.png', 'Figure 1: The CSS box model. Every element has its content, padding, margin, and border.']},{line:'Here, we\'ll be taking advantage of the border to add a nice divider element.'},{line:'Already implemented in the code is a .custom-div class, which we\'ll use in CSS to add a solid divider.'},{code: '.custom-div{\n\tborder-bottom:1px solid darkgray;\n}'},{line: 'The . before the custom-div style tells CSS that we\'re referencing a class. [There are also id\'s, but we won\'t be going over those in this intro site.] The border-bottom is another property that adds a 1 pixel tall, solid, dark gray border to the .custom-div element. Now, your site might look something like:'},{img:['https://i.imgur.com/pSvBuao.png', 'Figure 2: Maybe your site looks like this! Note the long border going across.']}]"
+            :slideContent="[{md: slide9}]"
           />
           <slide
             key="10"
@@ -281,7 +281,17 @@ export default {
       \n![Figure 1: An example of our shiny new blue headers!](https://i.imgur.com/qB2idJq.png)
       \n*Figure 1: An example of our shiny new blue headers!*
       \n\`font-family\`, \`font-size\`, and \`color\` are all examples of CSS properties that describe what an element looks like. A great reference can be found here - [W3schools](https://www.w3schools.com/css/default.asp)
-      \nThese colours and parameters can all be changed to whatever you wish. Experiment and have fun!`
+      \nThese colours and parameters can all be changed to whatever you wish. Experiment and have fun!`,
+      slide9: `CSS structures most elements in HTML with a box model.
+      \n![Figure 1: The CSS box model. Every element has its content, padding, margin, and border.](https://i.imgur.com/3A5ZcE1.png)
+      \n*Figure 1: The CSS box model. Every element has its content, padding, margin, and border.*
+      \nHere, we'll be taking advantage of the border to add a nice divider element. Let's add a  \`.custom-div\` class, which we'll use in CSS to add a solid divider.
+      \n
+      .custom-div{
+          border-bottom:1px solid darkgray;
+        }
+      \nThe \`.\` before the \`custom-div\` style tells CSS that we're referencing a class. [There are also id's, but we won't be going over those in this intro site.] The border-bottom is another property that adds a 1 pixel tall, solid, dark gray border to the .custom-div element. Now, your site might look something like:
+      \n![Figure 2: Maybe your site looks like this! Note the long border going across.](https://i.imgur.com/pSvBuao.png)\n*Figure 2: Maybe your site looks like this! Note the long border going across.*`
     };
   },
   computed: {

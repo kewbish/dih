@@ -112,7 +112,7 @@
             key="16"
             v-else-if="count == 16"
             slideSubject="16: GitHub setup"
-            :slideContent="[{line: 'To host our site and get a free domain, we\'ll be using a free-to-use service called GitHub and its website hosting service, GitHub Pages. Go to:'},{list:[{item: 'GitHub.com', link:'https://github.com'}]},{line: 'and sign up for an account. A free user account will work fine!'}, {line:'Next, we\'ll make our first repo, which is where we\'ll upload our code. Click the + button next to your profile picture in the top right, and fill in the next page.'},{line:'Make sure your repository name is \'[your-username].github.io\'. For example, my username is kewbish, so I\'d fill kewbish.github.io in for the repo name. The rest of the information doesn\'t matter - just make sure it\'s a public repository.'}]"
+            :slideContent="[{md: slide16}]"
           />
           <slide
             key="17"
@@ -389,7 +389,10 @@ export default {
       \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!`,
       slide15: `We're almost done, so it's time to finalize your design for now. Implement any and all of the properties and selectors we've learned about.
       \nSome interesting resources you might also want to check out include [CSS.cool](http://css.cool/#/), [W3schools](https://www.w3schools.com/css/default.asp), and [CSS Cookbook](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook)
-      \nOnce you're done, remember to take a stretch break before we get finished with deployment.`
+      \nOnce you're done, remember to take a stretch break before we get finished with deployment.`,
+      slide16: `To host our site and get a free domain, we'll be using a free-to-use service called GitHub and its website hosting service, GitHub Pages. Go to [GitHub.com](https://github.com), and sign up for an account. A free user account will work fine!
+      \nNext, we'll make our first repo, which is where we'll upload our code. Click the + button next to your profile picture in the top right, and fill in the next page.
+      \nMake sure your repository name is \`[your-username].github.io\`. For example, my username is kewbish, so I'd fill \`kewbish.github.io\` in for the repo name. The rest of the information doesn't matter - just make sure it's a public repository.`
     };
   },
   computed: {

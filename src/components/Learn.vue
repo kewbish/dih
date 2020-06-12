@@ -106,7 +106,7 @@
             key="15"
             v-else-if="count == 15"
             slideSubject="15: Finishing our design"
-            :slideContent="[{line: 'We\'re almost done, so it\'s time to finalize your design for now. Implement any and all of the properties and selectors we\'ve learned about.'},{line:'Some interesting resources you might also want to check out include:'},{list:[{item:'CSS.cool', link:'http://css.cool/#/'}, {item: 'W3schools', link:'https://www.w3schools.com/css/default.asp'}, {item: 'CSS Cookbook', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook'}]},{timer:['Take the next 5 minutes to finalize everything!', 'Make sure your site includes all the information you want on it, and if this isn\'t enough time - keep working!', 300]}, {line: 'Once you\'re done, remember to take a stretch break before we get finished with deployment.'}]"
+            :slideContent="[{md: slide15}, {timer:['Take the next 5 minutes to finalize everything!', 'Make sure your site includes all the information you want on it, and if this isn\'t enough time - keep working!', 300]}]"
           />
           <slide
             key="16"
@@ -386,7 +386,10 @@ export default {
           }
       }
       \nThis checks for phone screens in portrait. Here, we only want one column, or else the text might be a little cluttered and hard to read.
-      \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!`
+      \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!`,
+      slide15: `We're almost done, so it's time to finalize your design for now. Implement any and all of the properties and selectors we've learned about.
+      \nSome interesting resources you might also want to check out include [CSS.cool](http://css.cool/#/), [W3schools](https://www.w3schools.com/css/default.asp), and [CSS Cookbook](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook)
+      \nOnce you're done, remember to take a stretch break before we get finished with deployment.`
     };
   },
   computed: {

@@ -43,3 +43,6 @@ slide{
 .fade-enter, .fade-leave-to{
     opacity: 0%;
 }
+br{
+    line-height: 150%;
+}

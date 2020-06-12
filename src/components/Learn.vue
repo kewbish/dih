@@ -100,7 +100,7 @@
             key="14"
             v-else-if="count == 14"
             slideSubject="14: Media Queries and Responsiveness"
-            :slideContent="[{line: 'You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.'},{line: 'For our resume, the thing that\'s most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let\'s set some things called media queries, which check for the width of the screen and adapt our CSS accordingly.'},{line: 'As a separate part of your CSS, add:'},{code:'@media (min-width: 768px) and (max-width: 1024px){\n\t.grid-container{\n\t\tgrid-template-columns: 1fr 1fr;\n\t}\n}'}, {line:'This checks for tablets, which usually have a screen width of between 768 to 1024px. Then, we set our grid template to only have 2 columns to make reading easier on tablet.'},{code:'@media (min-width: 481px) and (max-width: 767px){\n\t.grid-container{\n\t\tgrid-template-columns: 1fr;\n\t}\n}'}, {line:'This checks for phone screens in portrait. Here, we only want one column, or else the text might be a little cluttered and hard to read.'},{line: 'Try previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!'}]"
+            :slideContent="[{md: slide14}]"
           />
           <slide
             key="15"
@@ -369,7 +369,24 @@ export default {
       \nThis style changes the display property of the parent (container) \`<div>\`, which is usually \`block\`, to \`grid\`. This is a relatively new CSS property, with its history only going back to around 2011. Then, we add the template columns, setting each one equal to one third each - (what the 1fr does: it's literally just 1 fraction of the total width.) Now, if you view your site with [Ctrl-Shift-V], you'll see that your \`<div>\`'s children are displayed like so:
       \n![Figure 1: An example grid.](https://i.imgur.com/ICfGPf1.png)
       \n*Figure 1: An example grid.*
-      \nTry styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`
+      \nTry styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`,
+      slide14: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
+      \nFor our resume, the thing that's most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let's set some things called media queries, which check for the width of the screen and adapt our CSS accordingly. As a separate part of your CSS, add:
+      \n
+      @media (min-width: 768px) and (max-width: 1024px){
+          .grid-container{
+            grid-template-columns: 1fr 1fr;
+          }
+      }
+      \nThis checks for tablets, which usually have a screen width of between 768 to 1024px. Then, we set our grid template to only have 2 columns to make reading easier on tablet.
+      \n
+      @media (min-width: 481px) and (max-width: 767px){
+        .grid-container{
+            grid-template-columns: 1fr;
+          }
+      }
+      \nThis checks for phone screens in portrait. Here, we only want one column, or else the text might be a little cluttered and hard to read.
+      \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!`
     };
   },
   computed: {

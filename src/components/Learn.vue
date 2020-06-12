@@ -124,13 +124,13 @@
             key="18"
             v-else-if="count == 18"
             slideSubject="18: </lesson>"
-            :slideContent="[{line: 'That\'s about it for this course, but it doesn\'t have to be your end of your coding journey. We haven\'t gone over everything in HTML and CSS. Some future exploring points:'},{list:[{item: 'CSS #ids'}, {item: 'CSS animations'},{item:'HTML buttons'}, {item:'HTML forms'},{item: 'CSS Flexbox'}]},{line: 'If you\'d like to investigate these technologies further:'},{list: [{item: 'Khan Academy', link:'https://www.khanacademy.org/computing/computer-programming/html-css'},{item:'GitHub Labs', link:'https://lab.github.com/githubtraining/introduction-to-html'},{item:'YouTube - Traversy Media', link:'https://www.youtube.com/watch?v=UB1O30fR-EE&list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU'}]},{line: 'That just about does it for this lesson.'},{line: 'Again, if you\'d like to support Canada Learning Code by making a donation, click the red button in the bottom right.'},{line: 'I\'ve created a GitHub repo at the link below. That\'s the place to ask any questions and post links to your finished sites in the issues.'},{list:[{item: 'The repo', link: 'https://github.com/kewbish/diveintohtml'}]},{line:'If you have any questions, feel free to get in touch via the form on my website. Alternatively, find me on the Interwebs:'},{list:[{item: 'My site', link: 'https://kewbish.github.io'}, {item: 'My GitHub', link: 'https://github.com/kewbish'}, {item: 'My Dev', link: 'https://dev.to/kewbish'}]}, {line: 'Thanks for learning! If you found this useful, please share this site with your friends, and help guide them in building a web presence as well.'}, {list: [{item:'Share on Reddit', link: 'http://www.reddit.com/submit?url=https://diveintoht.ml&title=Dive%20Into%20HTML%20-%20A%20great%20site%20to%20learn%20HTML!'},{item:'Share on Twitter', link:'https://twitter.com/intent/tweet?text=diveintoht.ml%20-%20a%20great%20site%20to%20learn%20HTML!'}, {item: 'Share on Facebook', link:'https://www.facebook.com/sharer/sharer.php?u=https://diveintoht.ml'},{item: 'Share on LinkedIn', link:'https://www.linkedin.com/sharing/share-offsite/?url=https://diveintoht.ml'}]}, {line: 'Hope you continue to develop, build, and create with the web!'}]"
+            :slideContent="[{md: slide18}]"
           />
           <slide
             key="19"
             v-else
             slideSubject="Oops - that slide doesn't exist."
-            :slideContent="[{line: 'Let\'s go back. Try entering the slide number you were at before. To go back to the beginning, type \'0\' in the text-input below.'}]"
+            :slideContent="[{md: slideAny}]"
           ></slide>
         </transition>
       </div>
@@ -398,7 +398,24 @@ export default {
       \nWe're almost there. Finally, we need to enable GitHub Pages. Navigate to the Settings tab, and find the GitHub Pages section. Under source, select the master branch.
       \nWait a couple minutes for your site to go live, and your site will be officially online and accessible at \`[your-name].github.io\`.
       \nOnce it uploads, you can send this link to your friends and family. In the meantime, showcase your files to whoever's around!
-      \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; and GitHub version control and site deployment. That's a ton of learning!`
+      \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; and GitHub version control and site deployment. That's a ton of learning!`,
+      slide18: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
+      \n- CSS #ids
+      \n- CSS animations
+      \n- HTML buttons
+      \n- HTML forms and POSTing requests
+      \n- CSS Flexbox
+      \nIf you'd like to investigate these technologies further, check out the following resources: [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css), [GitHub Labs](https://lab.github.com/githubtraining/introduction-to-html), and [Traversy Media](https://www.youtube.com/watch?v=UB1O30fR-EE&list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU).
+      \nThat just about does it for this lesson. Again, if you'd like to support Canada Learning Code by making a donation, click the red button in the bottom right.
+      \nAs well, I've created a GitHub repo at the link below. That's the place to ask any questions and post links to your finished sites in the issues. [The repo.](https://github.com/kewbish/diveintohtml)
+      \nIf you have any questions, feel free to get in touch via the form on my website. Alternatively, find me on the Interwebs: [my site](https://kewbish.github.io), [my GitHub](https://github.com/kewbish), and [my Dev.to](https://dev.to/kewbish).
+      \nThanks for learning! If you found this useful, please share this site with your friends, and help guide them in building a web presence as well.
+      - [Share on Reddit](http://www.reddit.com/submit?url=https://diveintoht.ml&title=Dive%20Into%20HTML%20-%20A%20great%20site%20to%20learn%20HTML!)
+      - [Share on Twitter](https://twitter.com/intent/tweet?text=diveintoht.ml%20-%20a%20great%20site%20to%20learn%20HTML!)
+      - [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https://diveintoht.ml)
+      - [Share on LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://diveintoht.ml)
+      \nHope you continue to develop, build, and create with the web!`,
+      slideAny: `Let's go back. Try entering the slide number you were at before. To go back to the beginning, type \`0\` in the text-input below.`
     };
   },
   computed: {

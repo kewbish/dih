@@ -436,11 +436,13 @@ export default {
     countUp() {
       if (this.count < 18) {
         this.count++;
+        window.scrollTo(0, 0);
       }
     },
     countDown() {
       if (this.count > 0) {
         this.count--;
+        window.scrollTo(0, 0);
       }
     }
   },

@@ -1,18 +1,18 @@
 <template>
   <div class="message is-info is-bold" style="margin-top: 20px; margin-bottom: 20px;">
-    <div class="message-header">
+    <div class="message-header" style="margin-bottom:10px">
       <h1 class="title has-text-white">{{ title }}</h1>
     </div>
-    <div class="columns is-1">
-      <div class="column">
-        <div class="box" style="margin: 10px;">
+    <div class="columns is-0 is-variable">
+      <div class="column c-column">
+        <div class="box" style="margin: 5px;">
           <p style="margin-bottom:15px">{{ subtitle }}</p>
           <a class="button is-dark" @click="endTimer">{{ switchText }}</a>
           <a class="button is-dark" @click="resTimer" style="margin-left: 5px">↪️ Reset</a>
         </div>
       </div>
-      <div class="column">
-        <div class="box" style="margin: 10px;">
+      <div class="column c-column" id="c-column">
+        <div class="box" style="margin: 5px;">
           <h1 class="title">{{ formatTime }}</h1>
         </div>
       </div>

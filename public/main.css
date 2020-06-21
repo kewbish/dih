@@ -14,7 +14,7 @@ svg{
     position: fixed;
     bottom: 15px;
     left: 15px;
-    width: 3.5%;
+    width: max(3.5%, 40px);
 }
 .fixed-back{
     position: fixed;
@@ -28,8 +28,8 @@ svg{
 }
 .fixed-right-bottom{
     position: fixed;
-    bottom: 3%;
-    right: 2%;
+    bottom: 15px;
+    right: 15px;
 }
 code{
     tab-size: 4;
@@ -46,3 +46,12 @@ slide{
 br{
     line-height: 150%;
 }
+.c-column{
+    margin:6px auto 3px;
+    padding:0px;
+}
+@media (max-device-width: 1024px){
+    #c-column{
+        margin-top: 0 !important;
+    }
+} 

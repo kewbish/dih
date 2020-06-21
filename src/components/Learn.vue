@@ -6,7 +6,11 @@
           <h1 class="title has-text-white">Sign in, and let's get started!</h1>
         </div>
         <div class="message-body">
-          <p class="subtitle">We do not collect any information other than your display name.</p>
+          <p class="subtitle">
+            We do not collect any information other than your display name.
+            <br />This site works best on desktop. It
+            <em>may</em> work on mobile, but it's difficult to view the code snippets.
+          </p>
           <a class="button" style="margin-bottom:10px" @click="login">Log In - Gmail</a>
         </div>
       </div>
@@ -166,7 +170,7 @@ export default {
         data: {}
       },
       count: 0,
-      slide0: `'This course is meant to guide you through the beginnings of HTML by building a simple resume!  
+      slide0: `This course is meant to guide you through the beginnings of HTML by building a simple resume!  
       Initially, it was meant to be a meetup run in Vancouver by some Canada Learning Code teen ambassadors (of which I [Kewbish] am one!), but due to COVID-19, it was cancelled.  
       \nIf you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please visit the following link: [Canada Learning Code](https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate)  
       \nThis course was created by Emilie Ma - also known as Kewbish. If you'd like to learn more about me, visit [my site](https://kewbish.github.io).  

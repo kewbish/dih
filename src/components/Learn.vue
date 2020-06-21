@@ -147,23 +147,10 @@
       class="button is-info fixed-right is-small"
     >&gt;</button>
     <div class="fixed-right-bottom">
-      <table>
-        <tr>
-          <td>
-            <a
-              href="https://covid19responsefund.org/"
-              class="button is-info"
-              style="margin-right: 5px;"
-            >Donate to COVID 🦠</a>
-          </td>
-          <td>
-            <a
-              href="https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate"
-              class="button is-danger"
-            >Support CLC 🍁</a>
-          </td>
-        </tr>
-      </table>
+      <a
+        href="https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate"
+        class="button is-danger"
+      >Support CLC 🍁</a>
     </div>
   </section>
 </template>

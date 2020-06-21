@@ -3,7 +3,7 @@
     <div class="message-header">
       <h1 class="title has-text-white">{{ title }}</h1>
     </div>
-    <div class="columns">
+    <div class="columns is-1">
       <div class="column">
         <div class="box" style="margin: 10px;">
           <p style="margin-bottom:15px">{{ subtitle }}</p>

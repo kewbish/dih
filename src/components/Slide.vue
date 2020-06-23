@@ -16,6 +16,7 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars */
 import VueMarkdown from "vue-markdown";
 export default {
   props: {
@@ -26,4 +27,5 @@ export default {
     VueMarkdown
   }
 };
+/* eslint-enable no-unused-vars */
 </script>

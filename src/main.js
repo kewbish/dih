@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import VueShowdown from 'vue-showdown';
+import VueMarkdown from 'vue-markdown';
 import App from './App.vue';
 import Learn from './components/Learn.vue';
 import Index from './components/Index.vue';
@@ -20,13 +20,6 @@ index.install = function () {
     })
 }
 Vue.use(index);
-
-Vue.use(VueShowdown, {
-    options: {
-        emojis: true,
-        simpleLineBreaks: true
-    }
-});
 
 new Vue({
     methods: {

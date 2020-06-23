@@ -3,7 +3,7 @@
     <h1 class="title is-1">{{ slideSubject }}</h1>
     <div class="content is-medium">
       <div v-for="(s, index) in slideContent" :key="index">
-        <vue-markdown :source="s.md" v-if="s.md" />
+        <VueShowdown :markdown="s.md" v-if="s.md" />
         <timer
           v-if="s.timer"
           :title="s.timer[0]"
@@ -16,16 +16,10 @@
 </template>
 
 <script>
-/* eslint-disable no-unused-vars */
-import VueMarkdown from "vue-markdown";
 export default {
   props: {
     slideSubject: String,
     slideContent: Array
-  },
-  components: {
-    VueMarkdown
   }
 };
-/* eslint-enable no-unused-vars */
 </script>

@@ -179,12 +179,12 @@ export default {
       slide1: `Every website starts with an index.html file. This is what all web browsers look for to start rendering your creation within a site's files when it loads up.
       \nCreate a folder on your computer, and open this folder with VSCode by clicking this button:
       \n![Figure 1: Open the folder you just created.](https://i.imgur.com/QseX16F.png)
-      *Figure 1: Open the folder you just created.*
+      \n*Figure 1: Open the folder you just created.*
       \nNow, it's time to create an index.html file.
       \n![Figure 2: Create a new file, and call it index.html.](https://code.visualstudio.com/assets/docs/nodejs/nodejs/toolbar-new-file.png)
-      *Figure 2: Create a new file, and call it index.html.*
+      \n*Figure 2: Create a new file, and call it index.html.*
       \nYou'll need to do the same with a main.css file. Create a main.css file, just like you created your index.html file.`,
-      slide2: `'The current HTML version is HTML5, and to denote that, we'll need to add a <!DOCTYPE HTML> tag.
+      slide2: `The current HTML version is HTML5, and to denote that, we'll need to add a <!DOCTYPE HTML> tag.
       \nLuckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type \`html:5\`, and select the Emmet Abbreviation that pops up with [Enter]
       \nVSCode should spit a nice template out for us. If not: copy-paste the code below.
       \n
@@ -199,7 +199,7 @@ export default {
         </html>
       \nThe <head> elements are meta elements, and we don't have to worry about anything right now except the <title></title>. That's what you'll see in the address bar, so choose something like your name.
       \n![Figure 3: The HTML + CSS is where your title would go.](https://i.imgur.com/cB42RYe.png)
-      *Figure 3: The HTML + CSS is where your title would go.*`,
+      \n*Figure 3: The HTML + CSS is where your title would go.*`,
       slide3: `Within your <body></body> tags, try adding some other tags. Try pressing [Ctrl-Shift-V] to open the HTML preview, and refer to it as we go through each tag.
       \nFirst, we'll look at the <p>. Add it within the body, and add something inside so it looks something like:
       \n
@@ -235,7 +235,7 @@ export default {
       \nHere, a new tag is introduced: the \`<img>\` tag. This is one of the few tags in HTML that doesn't require an ending \`</img>\` tag. We need a src property (which is the bit with the equal sign) - replace this with an imgur link, after you upload your profile headshot, of course. Alternatively, you can use file-paths, like: \`src="img.jpg"\`, for a ,jpg in the same folder with a name of img.
       \nLet's see how your site is looking so far! [Ctrl-S] to save, and [Ctrl-Shift-V] to view, remember.
       \n![Figure 1. Your site so far. Not much, eh?](https://i.imgur.com/bPBFH7F.png)
-      *Figure 1. Your site so far. Not much, eh?*`,
+      \n*Figure 1. Your site so far. Not much, eh?*`,
       slide6: `For the next 15-20 minutes, work on filling in content around your website. Try editing your education details, writing about your work, or changing anything else you wish. (Don't worry about the projects bit quite yet - we'll learn how to build a grid with that soon!)
       \nRemember the \`<p>\` tags, and keep those in mind - they're the best way to add more information. Also, remember to add \`<div>\` tags to separate chunks of content, and if you feel the need, add another section for fun! The link \`<a>\` tag can also be used to link to things like your resume, LinkedIn, or social media profiles.
       \nDon't feel limited by the section classes we have implemented here, you can add sections with classes with whatever you wish!`,
@@ -247,7 +247,7 @@ export default {
       \nIn the next section, we'll be learning how to style our site, as well as what those class quotes really do.
       \nBy now, your site might look something like:
       \n![Figure 1: Just an example - we'll style it up soon!](https://i.imgur.com/hQ6i5jj.png)
-      *Figure 1: Just an example - we'll style it up soon!*
+      \n*Figure 1: Just an example - we'll style it up soon!*
       \nOh - it's been a while already, remember to stand up, stretch, and take your eyes off the screen before we get started on CSS [Cascading Style Sheets]!`,
       slide8: `We're about to get started with a whole new language - CSS. CSS stands for Cascading Style Sheets, and is the language that web browsers use to figure out how to color, shape, and format your content.
       \nTo get started, add a \`main.css\` file. As with the \`index.html\`, click the 'File add' icon on the sidebar of VSCode, and add the file.
@@ -282,7 +282,8 @@ export default {
           border-bottom:1px solid darkgray;
         }
       \nThe \`.\` before the \`custom-div\` style tells CSS that we're referencing a class. [There are also id's, but we won't be going over those in this intro site.] The border-bottom is another property that adds a 1 pixel tall, solid, dark gray border to the .custom-div element. Now, your site might look something like:
-      \n![Figure 2: Maybe your site looks like this! Note the long border going across.](https://i.imgur.com/pSvBuao.png)\n*Figure 2: Maybe your site looks like this! Note the long border going across.*`,
+      \n![Figure 2: Maybe your site looks like this! Note the long border going across.](https://i.imgur.com/pSvBuao.png)
+      \n*Figure 2: Maybe your site looks like this! Note the long border going across.*`,
       slide10: `Commonly, we also see elements centered on webpages. Let's learn how to do that, applying our new knowledge with element and class selectors. (Remember, the \`h1{}\` and the \`.custom-div{}\`?)
       \nTo center content horizontally, like:
       \`|   [el]   |\`

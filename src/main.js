@@ -17,7 +17,7 @@ Vue.use(VueShowdown, {
     options: {
         emoji: false,
     },
-})
+});
 
 var index = new Vue({ data: { index: true } })
 index.install = function () {

@@ -80,7 +80,7 @@
             key="10"
             v-else-if="count == 10"
             slideSubject="10: Centering both ways"
-            :slideContent="[{md: slide10}, {timer: ['Centering', 'Take the next while to center some of your elements with what you\'ve just learned.', '150']}]"
+            :slideContent="[{md: slide10}, {timer: ['Centering', 'Take the next while to center some of your elements with what you\'ve just learned.', 150]}]"
           />
           <slide
             key="11"
@@ -187,7 +187,7 @@ export default {
       slide2: `The current HTML version is HTML5, and to denote that, we'll need to add a <!DOCTYPE HTML> tag.
       \nLuckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type \`html:5\`, and select the Emmet Abbreviation that pops up with [Enter]
       \nVSCode should spit a nice template out for us. If not: copy-paste the code below.
-      <pre><code class="language-html">
+      <pre><code>
     <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -218,7 +218,7 @@ export default {
       \nSpeaking of which: what does the div tag do? It's a container, and like section, can contain any other HTML tags, including another div. Visibly, these don't seem to do anything, but we'll be using them very frequently to structure our web resume.
       \nUnfortunately, we'll have to undo all your hard work - but that's alright, you've learned so much! Delete everything in your \`index.html\`, and add \`html:5\`'s output again. For reference, check slide 2!
       \nInside your \`<body>\`, add a couple of \`<section>\`s.
-      <pre><code class="language-html">
+      <pre><code>
     <section class="header"></section>
     <section class="about-me"></section>
     <section class="education"></section>
@@ -227,7 +227,7 @@ export default {
       \nThis will add several empty sections to your site. Remember, you can preview your site with [Ctrl-Shift-V]!`,
       slide5: `Let's fill up our .about-me (The . denotes a class, so this would be the section with the class of about-me) with content. Inside the \`<section>\` tags, type:
       \n[Tip]: Type this code out by hand - it helps you learn much better. Copy-paste doesn't teach your brain to HTMLify :)
-      <pre><code class="language-html">
+      <pre><code>
     <div class="about-me-image">
         <img src="https://imgur.com/helloWorld">
     </div>
@@ -283,7 +283,7 @@ export default {
       \n![Figure 1: The CSS box model. Every element has its content, padding, margin, and border.](https://i.imgur.com/3A5ZcE1.png)
       \n*Figure 1: The CSS box model. Every element has its content, padding, margin, and border.*
       \nHere, we'll be taking advantage of the border to add a nice divider element. Let's add a  \`.custom-div\` class, which we'll use in CSS to add a solid divider.
-      <pre><code class="language-css">
+      <pre><code>
     .custom-div{
         border-bottom:1px solid darkgray;
     }
@@ -295,7 +295,7 @@ export default {
       \nTo center content horizontally, like:
       \`|   [el]   |\`
       \nWe can use the following CSS - again, taking advantage of the margin properties of each element.
-      <pre><code class="language-css">
+      <pre><code>
     .class{
         margin: auto;
         text-align: center;
@@ -310,7 +310,7 @@ export default {
     }
       </code></pre>
       \nThis sets the margin of the top and bottom to zero, and therefore sets the element right in the middle of its parent. That's usually the de-facto solution, but alternatively, you can choose to use:
-      <pre><code class="language-css">
+      <pre><code>
     .class{
         position: relative;
         top: 50%;
@@ -320,19 +320,19 @@ export default {
       \nThis is another solution - it sets the position (usually static where elements render in order) to relative to its parent element. It positions 50% away from the top, and then 50% of the element's height back up, to properly center. Note: if you try to center an image, you usually need to put it inside a div, and apply these centering styles to the div instead. This is due to the fact that images don't render as blocks properly, and have some weird margin styles.
       \nIf you'd like to center some elements on your site, take the next couple minutes to apply some styles!`,
       slide11: `Alright, speed round. These are some easy-to-understand CSS properties that are commonly used, but don't need a lot of explanation.
-      <pre><code class="language-css">
+      <pre><code>
     .class{
         background-color: #123456;
     }
       </code></pre>
       \nThis sets the background color of your element to a hex code. You can find a hex code for any color from Google - just look up a hex color picker. You can apply this to any element, specifically - use it on divs to add background squares of colour!
       \nTo add a background image instead:
-      <pre><code class="language-css">
+      <pre><code>
     .class{
         background: url('url/to/jpeg');
     }
       </code></pre>
-      <pre><code class="language-css">
+      <pre><code>
     .class{
         text-shadow: 2px 2px #123456;
     }
@@ -350,7 +350,7 @@ export default {
       \n![Figure 2: Another example, something closer to what we'll be building for our projects section.](https://designinginterfaces.com/wp-content/images/grid-of-equals-cnn.png)
       \n*Figure 2: Another example, something closer to what we'll be building for our projects section.*
       \nBefore we do any cool CSS styling, we need to structure our grid. Add this in one of your sections in your \`main.html\`:
-      <pre><code class="language-html">
+      <pre><code>
     <div class="grid-container">
     <div>
         <h1>An item title!</h1>
@@ -368,7 +368,7 @@ export default {
       </code></pre>
       \nRemember, the larger \`<div>\` has the class \`grid-container\`, and we just filled it with three smaller \`<div>\`s which will have all our content!`,
       slide13: `Alright, let's go back to CSS for a bit. Add the following code to your main.css file.
-      <pre><code class="language-css">
+      <pre><code>
     .grid-container{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -380,7 +380,7 @@ export default {
       \nTry styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`,
       slide14: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
       \nFor our resume, the thing that's most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let's set some things called media queries, which check for the width of the screen and adapt our CSS accordingly. As a separate part of your CSS, add:
-      <pre><code class="language-css">
+      <pre><code>
     @media (min-width: 768px) and (max-width: 1024px){
         .grid-container{
         grid-template-columns: 1fr 1fr;
@@ -388,7 +388,7 @@ export default {
     }
       </code></pre>
       \nThis checks for tablets, which usually have a screen width of between 768 to 1024px. Then, we set our grid template to only have 2 columns to make reading easier on tablet.
-      <pre><code class="language-css">
+      <pre><code>
     @media (min-width: 481px) and (max-width: 767px){
     .grid-container{
         grid-template-columns: 1fr;

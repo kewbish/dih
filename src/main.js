@@ -13,6 +13,12 @@ Vue.component('index', Index);
 Vue.component('slide', Slide);
 Vue.component('timer', Timer);
 
+Vue.use(VueShowdown, {
+    options: {
+        emoji: false,
+    },
+})
+
 var index = new Vue({ data: { index: true } })
 index.install = function () {
     Object.defineProperty(Vue.prototype, '$indexTrue', {
@@ -20,13 +26,6 @@ index.install = function () {
     })
 }
 Vue.use(index);
-
-Vue.use(VueShowdown, {
-    options: {
-        emojis: true,
-        simpleLineBreaks: true
-    }
-});
 
 new Vue({
     methods: {

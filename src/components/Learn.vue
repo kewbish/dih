@@ -109,35 +109,35 @@
           <slide
             key="15"
             v-else-if="count == 15"
-            slideSubject="14: Media Queries and Responsiveness"
-            :slideContent="[{md: slide14n}]"
-          />
-          <slide
-            key="15"
-            v-else-if="count == 15"
-            slideSubject="15: Finishing our design"
-            :slideContent="[{md: slide15}, {timer:['Take the next 5 minutes to finalize everything!', 'Make sure your site includes all the information you want on it, and if this isn\'t enough time - keep working!', 300]}]"
+            slideSubject="15: Media Queries and Responsiveness"
+            :slideContent="[{md: slide15}]"
           />
           <slide
             key="16"
             v-else-if="count == 16"
-            slideSubject="16: GitHub setup"
-            :slideContent="[{md: slide16}]"
+            slideSubject="16: Finishing our design"
+            :slideContent="[{md: slide16}, {timer:['Take the next 5 minutes to finalize everything!', 'Make sure your site includes all the information you want on it, and if this isn\'t enough time - keep working!', 300]}]"
           />
           <slide
             key="17"
             v-else-if="count == 17"
-            slideSubject="17: Going live"
+            slideSubject="17: GitHub setup"
             :slideContent="[{md: slide17}]"
           />
           <slide
             key="18"
             v-else-if="count == 18"
-            slideSubject="18: </lesson>"
+            slideSubject="18: Going live"
             :slideContent="[{md: slide18}]"
           />
           <slide
             key="19"
+            v-else-if="count == 19"
+            slideSubject="19: </lesson>"
+            :slideContent="[{md: slide19}]"
+          />
+          <slide
+            key="20"
             v-else
             slideSubject="Oops - that slide doesn't exist."
             :slideContent="[{md: slideAny}]"
@@ -152,7 +152,7 @@
       class="button is-info fixed-back is-small"
     >&lt;</button>
     <button
-      v-if="auth && count < 18"
+      v-if="auth && count < 19"
       @click="countUp"
       class="button is-info fixed-right is-small"
     >&gt;</button>

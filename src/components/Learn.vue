@@ -103,6 +103,12 @@
           <slide
             key="14"
             v-else-if="count == 14"
+            slideSubject="14: Introductions to IDs"
+            :slideContent="[{md: slide14}]"
+          />
+          <slide
+            key="15"
+            v-else-if="count == 15"
             slideSubject="14: Media Queries and Responsiveness"
             :slideContent="[{md: slide14n}]"
           />
@@ -378,7 +384,7 @@ export default {
       \n![Figure 1: An example grid.](https://i.imgur.com/ICfGPf1.png)
       \n*Figure 1: An example grid.*
       \nTry styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`,
-      slide14n: `Speaking of changing background colors of containers, what if we wanted to change the color of just *one* element? And what if we wanted to keep everything else the same?
+      slide14: `Speaking of changing background colors of containers, what if we wanted to change the color of just *one* element? And what if we wanted to keep everything else the same?
       \nThis is where we can use something called an \`id\`. Usually, these are used for CSS where we only want to change the look of an element or group of elements that only appears once. The reason that they're only used for things that appear only once? IDs can be used only once.
       \nImagine two people named Alice Chapman and Bob Chapman. A class selector is like 'selecting' both Alice and Bob by their last name, Chapman. IDs would be like selecting just Alice, or just Bob. The way we use IDs is like:
       <pre><code>
@@ -404,7 +410,7 @@ export default {
     }
       </code></pre>
       \nNow, your center element should be purple! You can use the rest of your CSS properties to change how specific IDs look!`,
-      slide14: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
+      slide15: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
       \nFor our resume, the thing that's most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let's set some things called media queries, which check for the width of the screen and adapt our CSS accordingly. As a separate part of your CSS, add:
       <pre><code>
     @media (min-width: 768px) and (max-width: 1024px){
@@ -423,19 +429,19 @@ export default {
       </code></pre>
       \nThis checks for phone screens in portrait. Here, we only want one column, or else the text might be a little cluttered and hard to read.
       \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!`,
-      slide15: `We're almost done, so it's time to finalize your design for now. Implement any and all of the properties and selectors we've learned about.
+      slide16: `We're almost done, so it's time to finalize your design for now. Implement any and all of the properties and selectors we've learned about.
       \nSome interesting resources you might also want to check out include [CSS.cool](http://css.cool/#/), [W3schools](https://www.w3schools.com/css/default.asp), and [CSS Cookbook](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook)
       \nOnce you're done, remember to take a stretch break before we get finished with deployment.`,
-      slide16: `To host our site and get a free domain, we'll be using a free-to-use service called GitHub and its website hosting service, GitHub Pages. Go to [GitHub.com](https://github.com), and sign up for an account. A free user account will work fine!
+      slide17: `To host our site and get a free domain, we'll be using a free-to-use service called GitHub and its website hosting service, GitHub Pages. Go to [GitHub.com](https://github.com), and sign up for an account. A free user account will work fine!
       \nNext, we'll make our first repo, which is where we'll upload our code. Click the + button next to your profile picture in the top right, and fill in the next page.
       \nMake sure your repository name is \`[your-username].github.io\`. For example, my username is kewbish, so I'd fill \`kewbish.github.io\` in for the repo name. The rest of the information doesn't matter - just make sure it's a public repository.`,
-      slide17: `First, let's upload our files. Find the Upload files button in your repository, and upload all the files in your development folder. Make sure you get your \`index.html\` and \`main.css\`, along with whatever else you've added, such as images.
+      slide18: `First, let's upload our files. Find the Upload files button in your repository, and upload all the files in your development folder. Make sure you get your \`index.html\` and \`main.css\`, along with whatever else you've added, such as images.
       \nFill in whatever you'd like for the commit message: Usually, it should be something like \`Initial commit\`. Then, click the commit button.
       \nWe're almost there. Finally, we need to enable GitHub Pages. Navigate to the Settings tab, and find the GitHub Pages section. Under source, select the master branch.
       \nWait a couple minutes for your site to go live, and your site will be officially online and accessible at \`[your-name].github.io\`.
       \nOnce it uploads, you can send this link to your friends and family. In the meantime, showcase your files to whoever's around!
       \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; and GitHub version control and site deployment. That's a ton of learning!`,
-      slide18: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
+      slide19: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
       \n- CSS #ids
       \n- CSS animations
       \n- HTML buttons

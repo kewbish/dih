@@ -104,7 +104,7 @@
             key="14"
             v-else-if="count == 14"
             slideSubject="14: Media Queries and Responsiveness"
-            :slideContent="[{md: slide14}]"
+            :slideContent="[{md: slide14n}]"
           />
           <slide
             key="15"
@@ -378,6 +378,32 @@ export default {
       \n![Figure 1: An example grid.](https://i.imgur.com/ICfGPf1.png)
       \n*Figure 1: An example grid.*
       \nTry styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`,
+      slide14n: `Speaking of changing background colors of containers, what if we wanted to change the color of just *one* element? And what if we wanted to keep everything else the same?
+      \nThis is where we can use something called an \`id\`. Usually, these are used for CSS where we only want to change the look of an element or group of elements that only appears once. The reason that they're only used for things that appear only once? IDs can be used only once.
+      \nImagine two people named Alice Chapman and Bob Chapman. A class selector is like 'selecting' both Alice and Bob by their last name, Chapman. IDs would be like selecting just Alice, or just Bob. The way we use IDs is like:
+      <pre><code>
+    #id{
+      // some code   
+    }
+      </code></pre>
+      \nNote the \`#\` instead of the \`.\`. This is how we differentiate between classes, which use the \`.\`, and our new IDs.
+      \nAnother reason we might want to use IDs: they overrule other selectors. That way, you can use IDs to overrule a class, for example.
+      \nHowever, if there are two elements that have similar styles, IDs might not be the best choice - you'll have to repeat the same CSS code twice. It's not the most efficient, but it works. Generally, use IDs only when something's used once.
+      \nFor example, to change the color of one of the grid items, change your HTML to:
+      <pre><code>
+    <div id="purple-grid-item">
+        <h1>An item title!</h1>
+        <p>An item subtitle and content. Fill this in!</p>
+    </div>
+      </code></pre>
+      \nAnd add this to your CSS:
+      \n
+      <pre><code>
+    #purple-grid-item{
+        background-color: purple;
+    }
+      </code></pre>
+      \nNow, your center element should be purple! You can use the rest of your CSS properties to change how specific IDs look!`,
       slide14: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
       \nFor our resume, the thing that's most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let's set some things called media queries, which check for the width of the screen and adapt our CSS accordingly. As a separate part of your CSS, add:
       <pre><code>
@@ -420,10 +446,10 @@ export default {
       \nAs well, I've created a GitHub repo at the link below. That's the place to ask any questions and post links to your finished sites in the issues. [The repo.](https://github.com/kewbish/diveintohtml)
       \nIf you have any questions, feel free to get in touch via the form on my website. Alternatively, find me on the Interwebs: [my site](https://kewbish.github.io), [my GitHub](https://github.com/kewbish), and [my Dev.to](https://dev.to/kewbish).
       \nThanks for learning! If you found this useful, please share this site with your friends, and help guide them in building a web presence as well.
-      - [Share on Reddit](http://www.reddit.com/submit?url=https://diveintoht.ml&title=Dive%20Into%20HTML%20-%20A%20great%20site%20to%20learn%20HTML!)
-      - [Share on Twitter](https://twitter.com/intent/tweet?text=diveintoht.ml%20-%20a%20great%20site%20to%20learn%20HTML!)
-      - [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https://diveintoht.ml)
-      - [Share on LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://diveintoht.ml)
+      \n- [Share on Reddit](http://www.reddit.com/submit?url=https://diveintoht.ml&title=Dive%20Into%20HTML%20-%20A%20great%20site%20to%20learn%20HTML!)
+      \n- [Share on Twitter](https://twitter.com/intent/tweet?text=diveintoht.ml%20-%20a%20great%20site%20to%20learn%20HTML!)
+      \n- [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https://diveintoht.ml)
+      \n- [Share on LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://diveintoht.ml)
       \nHope you continue to develop, build, and create with the web!`,
       slideAny: `Let's go back. Try entering the slide number you were at before. To go back to the beginning, type \`0\` in the text-input below.`
     };

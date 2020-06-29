@@ -476,7 +476,7 @@ export default {
       Firebase.login();
     },
     countUp() {
-      if (this.count < 18) {
+      if (this.count < 19) {
         this.count++;
         window.scrollTo(0, 0);
       }

@@ -409,7 +409,10 @@ export default {
         background-color: purple;
     }
       </code></pre>
-      \nNow, your center element should be purple! You can use the rest of your CSS properties to change how specific IDs look!`,
+      \nNow, your center element should be purple!
+      \n![Figure 1: Look, the center div is purple!](https://i.imgur.com/dTQKdjk.png)
+      \n*Figure 1: Look, the center div is purple!*
+      \nOf course, now the text inside is a little illegible. However, you can use the rest of your CSS properties to change how specific IDs look! (For example, you can put another ID on the \`<h1>\`s and \`<p>\`s and color those differently.)`,
       slide15: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
       \nFor our resume, the thing that's most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let's set some things called media queries, which check for the width of the screen and adapt our CSS accordingly. As a separate part of your CSS, add:
       <pre><code>

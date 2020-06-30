@@ -387,7 +387,7 @@ export default {
       \nAs well, the \`column-gap\` adds a little gap between each of the columns, so each column has some room to breathe. If you're planning on having more than one row, you can add a \`row-gap\` property, and set that to around 10px (measurement in pixels, remember) as well.
       \nTry styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`,
       slide14: `Speaking of changing background colors of containers, what if we wanted to change the color of just *one* element? And what if we wanted to keep everything else the same?
-      \nThis is where we can use something called an \`id\`. Usually, these are used for CSS where we only want to change the look of an element or group of elements that only appears once. The reason that they're only used for things that appear only once? IDs can be used only once.
+      \nThis is where we can use something called an \`id\`. Usually, these are used for CSS where we only want to change the look of an element or group of elements that only appears once. The reason that they're only used for things that appear only once? IDs can be used only once. (Technically, most web browsers are so tolerant that they'll add the styles as well, but this is definitely *bad practise*.)
       \nImagine two people named Alice Chapman and Bob Chapman. A class selector is like 'selecting' both Alice and Bob by their last name, Chapman. IDs would be like selecting just Alice, or just Bob. The way we use IDs is like:
       <pre><code>
     #id{
@@ -397,6 +397,7 @@ export default {
       \nNote the \`#\` instead of the \`.\`. This is how we differentiate between classes, which use the \`.\`, and our new IDs.
       \nAnother reason we might want to use IDs: they overrule other selectors. That way, you can use IDs to overrule a class, for example.
       \nHowever, if there are two elements that have similar styles, IDs might not be the best choice - you'll have to repeat the same CSS code twice. It's not the most efficient, but it works. Generally, use IDs only when something's used once.
+      \nAs well, you can't have multiple IDs on an element. Usually, only the first ID listed is applied. If you want to have multiple pseudo-IDs, try using classes instead!
       \nFor example, to change the color of one of the grid items, change your HTML to:
       <pre><code>
     <div id="purple-grid-item">

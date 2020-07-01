@@ -475,6 +475,25 @@ export default {
       \n![Figure 1: How POST works](https://i.imgur.com/3vMJxkX.png)
       \n*Figure 1: How POST works*
       \nSo, in lieu of setting up our own services, we're going to use [Formspree](https://formspree.io). It's a free way to build contact forms quickly and easily. Take this time to create your own account, and create a form to point back at your email. Click the \`[+ New Form]\` button, then fill in your details.`,
+      slideForm1: `The basics of getting a form started are pretty easy.
+      <pre><code>
+    <form action="https://formspree.io/FORM_ID" method="POST">
+        <label>
+            Your Name:
+            <input type="text" name="name">
+        </label>
+        <label>
+            Your Email:
+            <input type="email" name="email">
+        </label>
+        <label>
+            Message:
+            <textarea name="message"></textarea>
+        </label>
+        <input type="submit" value="Send">
+    </form>
+      </code></pre>
+      \nIf you reload, this will give you a couple inputs, like so:`,
       slideAny: `Let's go back. Try entering the slide number you were at before. To go back to the beginning, type \`0\` in the text-input below.`
     };
   },

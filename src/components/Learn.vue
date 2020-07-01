@@ -448,7 +448,6 @@ export default {
       \nOnce it uploads, you can send this link to your friends and family. In the meantime, showcase your files to whoever's around!
       \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; and GitHub version control and site deployment. That's a ton of learning!`,
       slide19: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
-      \n- CSS #ids
       \n- CSS animations
       \n- HTML buttons
       \n- HTML forms and POSTing requests

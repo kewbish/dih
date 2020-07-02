@@ -149,6 +149,12 @@
             :slideContent="[{md: slideForm1}]"
           />
           <slide
+            key="23"
+            v-else-if="count == 23"
+            slideSubject="x: A couple style examples"
+            :slideContent="[{md: slideForm2}]"
+          />
+          <slide
             key="20"
             v-else
             slideSubject="Oops - that slide doesn't exist."
@@ -506,6 +512,25 @@ export default {
       \n- And finally, our last input. This one has a type of 'submit', which lets the web browser know that it should render it as a button and submit the form to the server. In our case, it'll submit to the URL that we defined in the 'action' attribute of our starting form element. (Again, remember to change this to your actual Formspree link!) The 'value' attribute we set here is the text that gets displayed inside the button, as you can see in the image.
       \n- Lastly, we close our form up!
       \nTry to implement this HTML into your website as well! We'll get into styling next.`,
+      slideForm2: `Alright, almost done now. Let's go through a couple recipes that you might want to use in styling your inputs and textareas!
+      <pre><code>
+    input{
+        font-family: 'Cool Font', sans-serif;
+        color: red;
+    }
+      </code></pre>
+      \nThis recipe goes through two of the most commonly used properties when dealing with form inputs. Normally, we've already changed all our \`<p>\`s to be a different font, but that won't change inputs. So here, we re-add the rule. Remember, the \`'Cool Font'\` needs to be something you've imported. See previous slides for more information!
+      \nAs well, if you'd like to change the input text color, you can do so here. Now, your form might look something like:
+      \n![*Figure 1: A form with added styling!*](https://i.imgur.com/T0uFYnj.png)
+      \n*Figure 1: A form with added styling!*
+      \nIf you'd like to apply these styles to both your input and textarea, you can change the first line of the rule like so:
+      <pre><code>
+    // from 'input{' to
+    input, textarea{
+        // styles
+    }
+      </code></pre>
+      \nThis tells the browser to select both inputs and textareas to apply these styles to.`,
       slideAny: `Let's go back. Try entering the slide number you were at before. To go back to the beginning, type \`0\` in the text-input below.`
     };
   },

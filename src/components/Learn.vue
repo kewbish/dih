@@ -115,47 +115,47 @@
           <slide
             key="16"
             v-else-if="count == 16"
-            slideSubject="16: Finishing our design"
-            :slideContent="[{md: slide16}, {timer:['Take the next 5 minutes to finalize everything!', 'Make sure your site includes all the information you want on it, and if this isn\'t enough time - keep working!', 300]}]"
+            slideSubject="16: HTTP Requests"
+            :slideContent="[{md: slide16}]"
           />
           <slide
             key="17"
             v-else-if="count == 17"
-            slideSubject="17: GitHub setup"
+            slideSubject="17: Adding our form markup"
             :slideContent="[{md: slide17}]"
           />
           <slide
             key="18"
             v-else-if="count == 18"
-            slideSubject="18: Going live"
+            slideSubject="18: A couple style examples"
             :slideContent="[{md: slide18}]"
           />
           <slide
             key="19"
             v-else-if="count == 19"
-            slideSubject="19: </lesson>"
-            :slideContent="[{md: slide19}]"
+            slideSubject="19: Finishing our design"
+            :slideContent="[{md: slide19}, {timer:['Take the next 5 minutes to finalize everything!', 'Make sure your site includes all the information you want on it, and if this isn\'t enough time - keep working!', 300]}]"
+          />
+          <slide
+            key="20"
+            v-else-if="count == 20"
+            slideSubject="20: GitHub setup"
+            :slideContent="[{md: slide20}]"
           />
           <slide
             key="21"
             v-else-if="count == 21"
-            slideSubject="x: HTTP Requests"
-            :slideContent="[{md: slideForm0}]"
+            slideSubject="21: Going live"
+            :slideContent="[{md: slide21}]"
           />
           <slide
             key="22"
             v-else-if="count == 22"
-            slideSubject="x: Adding our form markup"
-            :slideContent="[{md: slideForm1}]"
+            slideSubject="22: </lesson>"
+            :slideContent="[{md: slide22}]"
           />
           <slide
             key="23"
-            v-else-if="count == 23"
-            slideSubject="x: A couple style examples"
-            :slideContent="[{md: slideForm2}]"
-          />
-          <slide
-            key="20"
             v-else
             slideSubject="Oops - that slide doesn't exist."
             :slideContent="[{md: slideAny}]"
@@ -170,7 +170,7 @@
       class="button is-info fixed-back is-small"
     >&lt;</button>
     <button
-      v-if="auth && count < 19"
+      v-if="auth && count < 22"
       @click="countUp"
       class="button is-info fixed-right is-small"
     >&gt;</button>
@@ -453,41 +453,14 @@ export default {
       </code></pre>
       \nThis checks for phone screens in portrait. Here, we only want one column, or else the text might be a little cluttered and hard to read.
       \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!`,
-      slide16: `We're almost done, so it's time to finalize your design for now. Implement any and all of the properties and selectors we've learned about.
-      \nSome interesting resources you might also want to check out include [CSS.cool](http://css.cool/#/), [W3schools](https://www.w3schools.com/css/default.asp), and [CSS Cookbook](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook)
-      \nOnce you're done, remember to take a stretch break before we get finished with deployment.`,
-      slide17: `To host our site and get a free domain, we'll be using a free-to-use service called GitHub and its website hosting service, GitHub Pages. Go to [GitHub.com](https://github.com), and sign up for an account. A free user account will work fine!
-      \nNext, we'll make our first repo, which is where we'll upload our code. Click the + button next to your profile picture in the top right, and fill in the next page.
-      \nMake sure your repository name is \`[your-username].github.io\`. For example, my username is kewbish, so I'd fill \`kewbish.github.io\` in for the repo name. The rest of the information doesn't matter - just make sure it's a public repository.`,
-      slide18: `First, let's upload our files. Find the Upload files button in your repository, and upload all the files in your development folder. Make sure you get your \`index.html\` and \`main.css\`, along with whatever else you've added, such as images.
-      \nFill in whatever you'd like for the commit message: Usually, it should be something like \`Initial commit\`. Then, click the commit button.
-      \nWe're almost there. Finally, we need to enable GitHub Pages. Navigate to the Settings tab, and find the GitHub Pages section. Under source, select the master branch.
-      \nWait a couple minutes for your site to go live, and your site will be officially online and accessible at \`[your-name].github.io\`.
-      \nOnce it uploads, you can send this link to your friends and family. In the meantime, showcase your files to whoever's around!
-      \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; and GitHub version control and site deployment. That's a ton of learning!`,
-      slide19: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
-      \n- CSS animations
-      \n- HTML buttons
-      \n- HTML forms and POSTing requests
-      \n- CSS Flexbox
-      \nIf you'd like to investigate these technologies further, check out the following resources: [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css), [GitHub Labs](https://lab.github.com/githubtraining/introduction-to-html), and [Traversy Media](https://www.youtube.com/watch?v=UB1O30fR-EE&list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU).
-      \nThat just about does it for this lesson. Again, if you'd like to support Canada Learning Code by making a donation, click the red button in the bottom right.
-      \nAs well, I've created a GitHub repo at the link below. That's the place to ask any questions and post links to your finished sites in the issues. [The repo.](https://github.com/kewbish/diveintohtml)
-      \nIf you have any questions, feel free to get in touch via the form on my website. Alternatively, find me on the Interwebs: [my site](https://kewbish.github.io), [my GitHub](https://github.com/kewbish), and [my Dev.to](https://dev.to/kewbish).
-      \nThanks for learning! If you found this useful, please share this site with your friends, and help guide them in building a web presence as well.
-      \n- [Share on Reddit](http://www.reddit.com/submit?url=https://diveintoht.ml&title=Dive%20Into%20HTML%20-%20A%20great%20site%20to%20learn%20HTML!)
-      \n- [Share on Twitter](https://twitter.com/intent/tweet?text=diveintoht.ml%20-%20a%20great%20site%20to%20learn%20HTML!)
-      \n- [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https://diveintoht.ml)
-      \n- [Share on LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://diveintoht.ml)
-      \nHope you continue to develop, build, and create with the web!`,
-      slideForm0: `We've gone over HTML, CSS, and even grids! One last thing we'll learn - HTTP requests. While these may seem super scary, this is the technology behind most web apps, like YouTube and Reddit. Here, we'll be using it to build a contact form with an external service called [Formspree](https://formspree.io/). (Not sponsored in any way, just find it a great service and convenient for getting something up and running quickly!)
+      slide16: `We've gone over HTML, CSS, and even grids! One last thing we'll learn - HTTP requests. While these may seem super scary, this is the technology behind most web apps, like YouTube and Reddit. Here, we'll be using it to build a contact form with an external service called [Formspree](https://formspree.io/). (Not sponsored in any way, just find it a great service and convenient for getting something up and running quickly!)
       \nNow, what *are* HTTP requests? And what even is HTTP? HTTP stands for *Hypertext Transfer Protocol*, and is a method of transferring information between the client and the server. What we've been creating over the past bit is considered purely *client*-side, and doesn't have to interact with a server, really.
       \nAs you might expect, HTTP requests are a way for the client to request information, but from where, you ask? Well, usually, it requests information from the server. However, setting up a server and a way to get some information back to the client is out of the scope of this tutorial. If you're interested, check out [this tutorial on REST APIs](https://www.restapitutorial.com/).
       \nHow clients and server communicate is through the use of HTTP methods. We'll be focusing on one: the POST request. As the name explains, it POSTs some information to the server. Think of it like sending an email - your email client, like GMail, sends a POST request to the big servers and tells those to transfer your message to the recipient. (grossly simplified explanation)
       \n![Figure 1: How POST works.](https://i.imgur.com/3vMJxkX.png)
       \n*Figure 1: How POST works.*
       \nSo, in lieu of setting up our own services, we're going to use [Formspree](https://formspree.io). It's a free way to build contact forms quickly and easily. Take this time to create your own account, and create a form to point back at your email. Click the \`[+ New Form]\` button, then fill in your details.`,
-      slideForm1: `The basics of getting a form started are pretty easy.
+      slide17: `The basics of getting a form started are pretty easy.
       <pre><code>
     <form action="https://formspree.io/FORM_ID" method="POST">
         <p>Name:</p>
@@ -512,7 +485,7 @@ export default {
       \n- And finally, our last input. This one has a type of 'submit', which lets the web browser know that it should render it as a button and submit the form to the server. In our case, it'll submit to the URL that we defined in the 'action' attribute of our starting form element. (Again, remember to change this to your actual Formspree link!) The 'value' attribute we set here is the text that gets displayed inside the button, as you can see in the image.
       \n- Lastly, we close our form up!
       \nTry to implement this HTML into your website as well! We'll get into styling next.`,
-      slideForm2: `Alright, almost done now. Let's go through a couple recipes that you might want to use in styling your inputs and textareas!
+      slide18: `Alright, almost done now. Let's go through a couple recipes that you might want to use in styling your inputs and textareas!
       <pre><code>
     input{
         font-family: 'Cool Font', sans-serif;
@@ -531,6 +504,33 @@ export default {
     }
       </code></pre>
       \nThis tells the browser to select both inputs and textareas to apply these styles to.`,
+      slide19: `We're almost done, so it's time to finalize your design for now. Implement any and all of the properties and selectors we've learned about.
+      \nSome interesting resources you might also want to check out include [CSS.cool](http://css.cool/#/), [W3schools](https://www.w3schools.com/css/default.asp), and [CSS Cookbook](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook)
+      \nOnce you're done, remember to take a stretch break before we get finished with deployment.`,
+      slide20: `To host our site and get a free domain, we'll be using a free-to-use service called GitHub and its website hosting service, GitHub Pages. Go to [GitHub.com](https://github.com), and sign up for an account. A free user account will work fine!
+      \nNext, we'll make our first repo, which is where we'll upload our code. Click the + button next to your profile picture in the top right, and fill in the next page.
+      \nMake sure your repository name is \`[your-username].github.io\`. For example, my username is kewbish, so I'd fill \`kewbish.github.io\` in for the repo name. The rest of the information doesn't matter - just make sure it's a public repository.`,
+      slide21: `First, let's upload our files. Find the Upload files button in your repository, and upload all the files in your development folder. Make sure you get your \`index.html\` and \`main.css\`, along with whatever else you've added, such as images.
+      \nFill in whatever you'd like for the commit message: Usually, it should be something like \`Initial commit\`. Then, click the commit button.
+      \nWe're almost there. Finally, we need to enable GitHub Pages. Navigate to the Settings tab, and find the GitHub Pages section. Under source, select the master branch.
+      \nWait a couple minutes for your site to go live, and your site will be officially online and accessible at \`[your-name].github.io\`.
+      \nOnce it uploads, you can send this link to your friends and family. In the meantime, showcase your files to whoever's around!
+      \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; and GitHub version control and site deployment. That's a ton of learning!`,
+      slide22: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
+      \n- CSS animations
+      \n- HTML buttons
+      \n- HTML forms and POSTing requests
+      \n- CSS Flexbox
+      \nIf you'd like to investigate these technologies further, check out the following resources: [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css), [GitHub Labs](https://lab.github.com/githubtraining/introduction-to-html), and [Traversy Media](https://www.youtube.com/watch?v=UB1O30fR-EE&list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU).
+      \nThat just about does it for this lesson. Again, if you'd like to support Canada Learning Code by making a donation, click the red button in the bottom right.
+      \nAs well, I've created a GitHub repo at the link below. That's the place to ask any questions and post links to your finished sites in the issues. [The repo.](https://github.com/kewbish/diveintohtml)
+      \nIf you have any questions, feel free to get in touch via the form on my website. Alternatively, find me on the Interwebs: [my site](https://kewbish.github.io), [my GitHub](https://github.com/kewbish), and [my Dev.to](https://dev.to/kewbish).
+      \nThanks for learning! If you found this useful, please share this site with your friends, and help guide them in building a web presence as well.
+      \n- [Share on Reddit](http://www.reddit.com/submit?url=https://diveintoht.ml&title=Dive%20Into%20HTML%20-%20A%20great%20site%20to%20learn%20HTML!)
+      \n- [Share on Twitter](https://twitter.com/intent/tweet?text=diveintoht.ml%20-%20a%20great%20site%20to%20learn%20HTML!)
+      \n- [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https://diveintoht.ml)
+      \n- [Share on LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://diveintoht.ml)
+      \nHope you continue to develop, build, and create with the web!`,
       slideAny: `Let's go back. Try entering the slide number you were at before. To go back to the beginning, type \`0\` in the text-input below.`
     };
   },
@@ -550,7 +550,7 @@ export default {
       Firebase.login();
     },
     countUp() {
-      if (this.count < 19) {
+      if (this.count < 22) {
         this.count++;
         window.scrollTo(0, 0);
       }

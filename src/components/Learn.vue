@@ -138,9 +138,15 @@
           />
           <slide
             key="21"
-            v-else-if="count ==21"
+            v-else-if="count == 21"
             slideSubject="x: HTTP Requests"
             :slideContent="[{md: slideForm0}]"
+          />
+          <slide
+            key="22"
+            v-else-if="count == 22"
+            slideSubject="x: Adding our form markup"
+            :slideContent="[{md: slideForm1}]"
           />
           <slide
             key="20"
@@ -472,28 +478,33 @@ export default {
       \nNow, what *are* HTTP requests? And what even is HTTP? HTTP stands for *Hypertext Transfer Protocol*, and is a method of transferring information between the client and the server. What we've been creating over the past bit is considered purely *client*-side, and doesn't have to interact with a server, really.
       \nAs you might expect, HTTP requests are a way for the client to request information, but from where, you ask? Well, usually, it requests information from the server. However, setting up a server and a way to get some information back to the client is out of the scope of this tutorial. If you're interested, check out [this tutorial on REST APIs](https://www.restapitutorial.com/).
       \nHow clients and server communicate is through the use of HTTP methods. We'll be focusing on one: the POST request. As the name explains, it POSTs some information to the server. Think of it like sending an email - your email client, like GMail, sends a POST request to the big servers and tells those to transfer your message to the recipient. (grossly simplified explanation)
-      \n![Figure 1: How POST works](https://i.imgur.com/3vMJxkX.png)
-      \n*Figure 1: How POST works*
+      \n![Figure 1: How POST works.](https://i.imgur.com/3vMJxkX.png)
+      \n*Figure 1: How POST works.*
       \nSo, in lieu of setting up our own services, we're going to use [Formspree](https://formspree.io). It's a free way to build contact forms quickly and easily. Take this time to create your own account, and create a form to point back at your email. Click the \`[+ New Form]\` button, then fill in your details.`,
       slideForm1: `The basics of getting a form started are pretty easy.
       <pre><code>
     <form action="https://formspree.io/FORM_ID" method="POST">
-        <label>
-            Your Name:
-            <input type="text" name="name">
-        </label>
-        <label>
-            Your Email:
-            <input type="email" name="email">
-        </label>
-        <label>
-            Message:
-            <textarea name="message"></textarea>
-        </label>
+        <p>Name:</p>
+        <input type="text" name="name">
+        <p>Email:</p>
+        <input type="email" name="email">
+        <p>Message:</p>
+        <textarea name="message"></textarea><br><br>
         <input type="submit" value="Send">
     </form>
       </code></pre>
-      \nIf you reload, this will give you a couple inputs, like so:`,
+      \nIf you reload, this will give you a couple inputs, like so:
+      \n![Figure 1: The markup for our form.](https://i.imgur.com/CC3Kn8M.png)
+      \n*Figure 1: The markup for our form.*
+      \nWe're introducing a lot of new elements here, so let's go through the HTML one line at a time.
+      \n- First, we start with \`<form action="https://formspree.io/FORM_ID" method="POST">\`. This creates a new \`<form>\` element, which will serve as a container for our inputs.
+      \n- Here, we have a paragraph tag - something we've seen before. We can use this to label our input, which is the next thing we'll look at.
+      \n- This \`<input>\` element is the input box that you see and put your information into. We give it an attribute called 'text', showing that our input is a text input. There are lots of other types of inputs, [see a larger list here](https://www.w3schools.com/html/html_form_input_types.asp). This will give us a single-line text input. We give it a 'name' too - this gives us a reference point for our data later. When submitting a form, only the inputs with a name gets submitted, so make sure your inputs have the 'name' attribute.
+      \n- Another text input - just like above!
+      \n- We'll skip over the paragraph - you know what that does. Here, we have a new element: \`<textarea>\`. Unlike the \`<input>\` text element, this is a multiline input. Right after it, there are two \`<br>\` tags. These are linebreaks, not unlike pressing [Enter] on your keyboard. This lets us have a bit of spacing before our submit button.
+      \n- And finally, our last input. This one has a type of 'submit', which lets the web browser know that it should render it as a button and submit the form to the server. In our case, it'll submit to the FORM_ID. (By the way, remember to change this to your actual Formspree link!) The 'value' attribute we set is the text that gets displayed inside the button.
+      \n- Lastly, we close our form up!
+      \nTry to implement this HTML into your website as well! We'll get into styling next.`,
       slideAny: `Let's go back. Try entering the slide number you were at before. To go back to the beginning, type \`0\` in the text-input below.`
     };
   },

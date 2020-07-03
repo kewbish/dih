@@ -196,9 +196,9 @@ export default {
       count: 0,
       slide0: `This course is meant to guide you through the beginnings of HTML by building a simple resume!  
       Initially, it was meant to be a meetup run in Vancouver by some Canada Learning Code teen ambassadors (of which I [Kewbish] am one!), but due to COVID-19, it was cancelled.  
-      \nIf you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please visit the following link: [Canada Learning Code](https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate)  
+      \nIf you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please [visit their site](https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate).
       \nThis course was created by Emilie Ma - also known as Kewbish. If you'd like to learn more about me, visit [my site](https://kewbish.github.io).  
-      \nTime to get started on your web development journey! First, let's download some software. We'll use [VSCode](https://code.visualstudio.com/download), [VSCode HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode), and any web browser, like Chrome.  
+      \nTime to get started on your web development journey! First, let's download some software. We'll use [VSCode](https://code.visualstudio.com/download), [VSCode HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode), and any web browser, like Chrome. You can find installation instructions [for VSCode here](https://code.visualstudio.com/docs/setup/setup-overview), and [for the extension here](https://code.visualstudio.com/docs/editor/extension-gallery).
       \nOnce you've downloaded everything, press the [>] button - it's time to go!'`,
       slide1: `Every website starts with an index.html file. This is what all web browsers look for to start rendering your creation within a site's files when it loads up.
       \nCreate a folder on your computer, and open this folder with VSCode by clicking this button:
@@ -209,7 +209,7 @@ export default {
       \n*Figure 2: Create a new file, and call it index.html.*
       \nYou'll need to do the same with a main.css file. Create a main.css file, just like you created your index.html file.`,
       slide2: `The current HTML version is HTML5, and to denote that, we'll need to add a <!DOCTYPE HTML> tag.
-      \nLuckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type \`html:5\`, and select the Emmet Abbreviation that pops up with [Enter]
+      \nLuckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type \`html:5\`, and select the Emmet Abbreviation that pops up with [Enter].
       \nVSCode should spit a nice template out for us. If not: copy-paste the code below.
       <pre><code>
     <!DOCTYPE html>
@@ -222,7 +222,7 @@ export default {
         <body></body>
     </html>
       </code></pre>
-      \nThe <head> elements are meta elements, and we don't have to worry about anything right now except the <title></title>. That's what you'll see in the address bar, so choose something like your name.
+      \nThe \`<head>\` elements are 'meta' elements, and we don't have to worry about anything right now except the \`<title></title>\`. That's what you'll see in the address bar, so choose something like your name.
       \n![Figure 3: The HTML + CSS is where your title would go.](https://i.imgur.com/cB42RYe.png)
       \n*Figure 3: The HTML + CSS is where your title would go.*`,
       slide3: `Within your <body></body> tags, try adding some other tags. Try pressing [Ctrl-Shift-V] to open the HTML preview, and refer to it as we go through each tag.
@@ -259,7 +259,7 @@ export default {
     <div class="custom-div"></div>
     <p>This is where you can briefly touch on your life, thoughts, and manifestos.</p>
       </code></pre>
-      \nHere, a new tag is introduced: the \`<img>\` tag. This is one of the few tags in HTML that doesn't require an ending \`</img>\` tag. We need a src property (which is the bit with the equal sign) - replace this with an imgur link, after you upload your profile headshot, of course. Alternatively, you can use file-paths, like: \`src="img.jpg"\`, for a ,jpg in the same folder with a name of img.
+      \nHere, a new tag is introduced: the \`<img>\` tag. This is one of the few tags in HTML that doesn't require an ending \`</img>\` tag. We need a src property (which is the bit with the equal sign) - replace this with an imgur link, after you upload your profile headshot, of course. Alternatively, you can use file-paths, like: \`src="img.jpg"\`, for a .jpg in the same folder with a name of img.
       \nLet's see how your site is looking so far! [Ctrl-S] to save, and [Ctrl-Shift-V] to view, remember.
       \n![Figure 1. Your site so far. Not much, eh?](https://i.imgur.com/bPBFH7F.png)
       \n*Figure 1. Your site so far. Not much, eh?*`,

@@ -115,29 +115,47 @@
           <slide
             key="16"
             v-else-if="count == 16"
-            slideSubject="16: Finishing our design"
-            :slideContent="[{md: slide16}, {timer:['Take the next 5 minutes to finalize everything!', 'Make sure your site includes all the information you want on it, and if this isn\'t enough time - keep working!', 300]}]"
+            slideSubject="16: HTTP Requests"
+            :slideContent="[{md: slide16}]"
           />
           <slide
             key="17"
             v-else-if="count == 17"
-            slideSubject="17: GitHub setup"
+            slideSubject="17: Adding our form markup"
             :slideContent="[{md: slide17}]"
           />
           <slide
             key="18"
             v-else-if="count == 18"
-            slideSubject="18: Going live"
+            slideSubject="18: A couple style examples"
             :slideContent="[{md: slide18}]"
           />
           <slide
             key="19"
             v-else-if="count == 19"
-            slideSubject="19: </lesson>"
-            :slideContent="[{md: slide19}]"
+            slideSubject="19: Finishing our design"
+            :slideContent="[{md: slide19}, {timer:['Take the next 5 minutes to finalize everything!', 'Make sure your site includes all the information you want on it, and if this isn\'t enough time - keep working!', 300]}]"
           />
           <slide
             key="20"
+            v-else-if="count == 20"
+            slideSubject="20: GitHub setup"
+            :slideContent="[{md: slide20}]"
+          />
+          <slide
+            key="21"
+            v-else-if="count == 21"
+            slideSubject="21: Going live"
+            :slideContent="[{md: slide21}]"
+          />
+          <slide
+            key="22"
+            v-else-if="count == 22"
+            slideSubject="22: </lesson>"
+            :slideContent="[{md: slide22}]"
+          />
+          <slide
+            key="23"
             v-else
             slideSubject="Oops - that slide doesn't exist."
             :slideContent="[{md: slideAny}]"
@@ -152,7 +170,7 @@
       class="button is-info fixed-back is-small"
     >&lt;</button>
     <button
-      v-if="auth && count < 19"
+      v-if="auth && count < 22"
       @click="countUp"
       class="button is-info fixed-right is-small"
     >&gt;</button>
@@ -178,9 +196,9 @@ export default {
       count: 0,
       slide0: `This course is meant to guide you through the beginnings of HTML by building a simple resume!  
       Initially, it was meant to be a meetup run in Vancouver by some Canada Learning Code teen ambassadors (of which I [Kewbish] am one!), but due to COVID-19, it was cancelled.  
-      \nIf you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please visit the following link: [Canada Learning Code](https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate)  
+      \nIf you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please [visit their site](https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate).
       \nThis course was created by Emilie Ma - also known as Kewbish. If you'd like to learn more about me, visit [my site](https://kewbish.github.io).  
-      \nTime to get started on your web development journey! First, let's download some software. We'll use [VSCode](https://code.visualstudio.com/download), [VSCode HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode), and any web browser, like Chrome.  
+      \nTime to get started on your web development journey! First, let's download some software. We'll use [VSCode](https://code.visualstudio.com/download), [VSCode HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode), and any web browser, like Chrome. You can find installation instructions [for VSCode here](https://code.visualstudio.com/docs/setup/setup-overview), and [for the extension here](https://code.visualstudio.com/docs/editor/extension-gallery).
       \nOnce you've downloaded everything, press the [>] button - it's time to go!'`,
       slide1: `Every website starts with an index.html file. This is what all web browsers look for to start rendering your creation within a site's files when it loads up.
       \nCreate a folder on your computer, and open this folder with VSCode by clicking this button:
@@ -191,7 +209,7 @@ export default {
       \n*Figure 2: Create a new file, and call it index.html.*
       \nYou'll need to do the same with a main.css file. Create a main.css file, just like you created your index.html file.`,
       slide2: `The current HTML version is HTML5, and to denote that, we'll need to add a <!DOCTYPE HTML> tag.
-      \nLuckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type \`html:5\`, and select the Emmet Abbreviation that pops up with [Enter]
+      \nLuckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type \`html:5\`, and select the Emmet Abbreviation that pops up with [Enter].
       \nVSCode should spit a nice template out for us. If not: copy-paste the code below.
       <pre><code>
     <!DOCTYPE html>
@@ -204,7 +222,7 @@ export default {
         <body></body>
     </html>
       </code></pre>
-      \nThe <head> elements are meta elements, and we don't have to worry about anything right now except the <title></title>. That's what you'll see in the address bar, so choose something like your name.
+      \nThe \`<head>\` elements are 'meta' elements, and we don't have to worry about anything right now except the \`<title></title>\`. That's what you'll see in the address bar, so choose something like your name.
       \n![Figure 3: The HTML + CSS is where your title would go.](https://i.imgur.com/cB42RYe.png)
       \n*Figure 3: The HTML + CSS is where your title would go.*`,
       slide3: `Within your <body></body> tags, try adding some other tags. Try pressing [Ctrl-Shift-V] to open the HTML preview, and refer to it as we go through each tag.
@@ -241,7 +259,7 @@ export default {
     <div class="custom-div"></div>
     <p>This is where you can briefly touch on your life, thoughts, and manifestos.</p>
       </code></pre>
-      \nHere, a new tag is introduced: the \`<img>\` tag. This is one of the few tags in HTML that doesn't require an ending \`</img>\` tag. We need a src property (which is the bit with the equal sign) - replace this with an imgur link, after you upload your profile headshot, of course. Alternatively, you can use file-paths, like: \`src="img.jpg"\`, for a ,jpg in the same folder with a name of img.
+      \nHere, a new tag is introduced: the \`<img>\` tag. This is one of the few tags in HTML that doesn't require an ending \`</img>\` tag. We need a src property (which is the bit with the equal sign) - replace this with an imgur link, after you upload your profile headshot, of course. Alternatively, you can use file-paths, like: \`src="img.jpg"\`, for a .jpg in the same folder with a name of img.
       \nLet's see how your site is looking so far! [Ctrl-S] to save, and [Ctrl-Shift-V] to view, remember.
       \n![Figure 1. Your site so far. Not much, eh?](https://i.imgur.com/bPBFH7F.png)
       \n*Figure 1. Your site so far. Not much, eh?*`,
@@ -384,9 +402,28 @@ export default {
       \nThis style changes the display property of the parent (container) \`<div>\`, which is usually \`block\`, to \`grid\`. This is a relatively new CSS property, with its history only going back to around 2011. Then, we add the template columns, setting each one equal to one third each - (what the 1fr does: it's literally just 1 fraction of the total width.) If you want more or less columns, just add or remove \`1fr\`s in the \`grid-template-columns\`. Now, if you view your site with [Ctrl-Shift-V], you'll see that your \`<div>\`'s children are displayed like so:
       \n![Figure 1: An example grid.](https://i.imgur.com/ICfGPf1.png)
       \n*Figure 1: An example grid.*
-      \nAs well, the \`column-gap\` adds a little gap between each of the columns, so each column has some room to breathe. If you're planning on having more than one row, you can add a \`row-gap\` property, and set that to around 10px (measurement in pixels, remember) as well.
-      \nTry styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`,
-      slide14: `Speaking of changing background colors of containers, what if we wanted to change the color of just *one* element? And what if we wanted to keep everything else the same?
+      \nAs well, the \`column-gap\` adds a little gap between each of the columns, so each column has some room to breathe. If you're planning on having more than one row, you can add a \`row-gap\` property, and set that to around 10px (measurement in pixels, remember) as well.`,
+      slide14: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
+      \nFor our resume, the thing that's most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let's set some things called media queries, which check for the width of the screen and adapt our CSS accordingly. As a separate part of your CSS, add:
+      <pre><code>
+    @media (min-width: 768px) and (max-width: 1024px){
+        .grid-container{
+        grid-template-columns: 1fr 1fr;
+        }
+    }
+      </code></pre>
+      \nThis checks for tablets, which usually have a screen width of between 768 to 1024px. Then, we set our grid template to only have 2 columns to make reading easier on tablet.
+      <pre><code>
+    @media (min-width: 481px) and (max-width: 767px){
+    .grid-container{
+        grid-template-columns: 1fr;
+        }
+    }
+      </code></pre>
+      \nThis checks for phone screens in portrait. Here, we only want one column, or else the text might be a little cluttered and hard to read.
+      \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!
+      \nWith your new grid, try styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`,
+      slide15: `Speaking of changing background colors of containers, what if we wanted to change the color of just *one* element? And what if we wanted to keep everything else the same?
       \nThis is where we can use something called an \`id\`. Usually, these are used for CSS where we only want to change the look of an element or group of elements that only appears once. The reason that they're only used for things that appear only once? IDs can be used only once. (Technically, most web browsers are so tolerant that they'll add the styles as well, but this is definitely *bad practise*.)
       \nImagine two people named Alice Chapman and Bob Chapman. A class selector is like 'selecting' both Alice and Bob by their last name, Chapman. IDs would be like selecting just Alice, or just Bob. The way we use IDs is like:
       <pre><code>
@@ -416,42 +453,83 @@ export default {
       \n![Figure 1: Look, the center div is purple!](https://i.imgur.com/dTQKdjk.png)
       \n*Figure 1: Look, the center div is purple!*
       \nOf course, now the text inside is a little illegible. However, you can use the rest of your CSS properties to change how specific IDs look! (For example, you can put another ID on the \`<h1>\`s and \`<p>\`s and color those differently.)`,
-      slide15: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
-      \nFor our resume, the thing that's most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let's set some things called media queries, which check for the width of the screen and adapt our CSS accordingly. As a separate part of your CSS, add:
+      slide16: `We've gone over HTML, CSS, and even grids! One last thing we'll learn - HTTP requests. While these may seem super scary, this is the technology behind most web apps, like YouTube and Reddit. Here, we'll be using it to build a contact form with an external service called [Formspree](https://formspree.io/). (Not sponsored in any way, just find it a great service and convenient for getting something up and running quickly!)
+      \nNow, what *are* HTTP requests? And what even is HTTP? HTTP stands for *Hypertext Transfer Protocol*, and is a method of transferring information between the client and the server. What we've been creating over the past bit is considered purely *client*-side, and doesn't have to interact with a server, really.
+      \nAs you might expect, HTTP requests are a way for the client to request information, but from where, you ask? Well, usually, it requests information from the server. However, setting up a server and a way to get some information back to the client is out of the scope of this tutorial. If you're interested, check out [this tutorial on REST APIs](https://www.restapitutorial.com/).
+      \nHow clients and server communicate is through the use of HTTP methods. We'll be focusing on one: the POST request. As the name explains, it POSTs some information to the server. Think of it like sending an email - your email client, like GMail, sends a POST request to the big servers and tells those to transfer your message to the recipient. (grossly simplified explanation)
+      \n![Figure 1: How POST works.](https://i.imgur.com/3vMJxkX.png)
+      \n*Figure 1: How POST works.*
+      \nSo, in lieu of setting up our own services, we're going to use [Formspree](https://formspree.io). It's a free way to build contact forms quickly and easily. Take this time to create your own account, and create a form to point back at your email. Click the \`[+ New Form]\` button, then fill in your details.`,
+      slide17: `The basics of getting a form started are pretty easy.
       <pre><code>
-    @media (min-width: 768px) and (max-width: 1024px){
-        .grid-container{
-        grid-template-columns: 1fr 1fr;
-        }
+    <form action="https://formspree.io/FORM_ID" method="POST">
+        <p>Name:</p>
+        <input type="text" name="name">
+        <p>Email:</p>
+        <input type="email" name="email">
+        <p>Message:</p>
+        <textarea name="message"></textarea><br><br>
+        <input type="submit" value="Send">
+    </form>
+      </code></pre>
+      \nRemember to replace the 'action' part with your Formspree link!
+      \nIf you reload, this will give you a couple inputs, like so:
+      \n![Figure 1: The markup for our form.](https://i.imgur.com/CC3Kn8M.png)
+      \n*Figure 1: The markup for our form.*
+      \nWe're introducing a lot of new elements here, so let's go through the HTML one line at a time.
+      \n- First, we start with \`<form action="https://formspree.io/FORM_ID" method="POST">\`. This creates a new \`<form>\` element, which will serve as a container for our inputs. This 'action' tells the web browser *where* to pass our information to, and 'method' tells the browser that it should fire off a POST request - what we learned about last slide. To where? The Formspree link, of course. 
+      \n- Here, we have a paragraph tag - something we've seen before. We can use this to label our input, which is the next thing we'll look at.
+      \n- This \`<input>\` element is the input box that you see and put your information into. We give it an attribute called 'text', showing that our input is a text input. There are lots of other types of inputs, [see a larger list here](https://www.w3schools.com/html/html_form_input_types.asp). This will give us a single-line text input. We give it a 'name' too - this gives us a reference point for our data later. When submitting a form, only the inputs with a name gets submitted, so make sure your inputs have the 'name' attribute.
+      \n- Another text input - just like above!
+      \n- Onto the 'Message:' line. We'll skip over the paragraph element - you know what that does (adds a label to the input). But here, we have a new element: \`<textarea>\`. Unlike the \`<input>\` text element, this is a multiline input. Right after it, there are two \`<br>\` tags. These are linebreaks, not unlike pressing [Enter] on your keyboard. This lets us have a bit of spacing before our submit button.
+      \n- And finally, our last input. This one has a type of 'submit', which lets the web browser know that it should render it as a button and submit the form to the server. In our case, it'll submit to the URL that we defined in the 'action' attribute of our starting form element. (Again, remember to change this to your actual Formspree link!) The 'value' attribute we set here is the text that gets displayed inside the button, as you can see in the image.
+      \n- Lastly, we close our form up!
+      \nTry to implement this HTML into your website as well! We'll get into styling next.`,
+      slide18: `Alright, almost done now. Let's go through a couple recipes that you might want to use in styling your inputs and textareas!
+      <pre><code>
+    input{
+        font-family: 'Cool Font', sans-serif;
+        color: red;
     }
       </code></pre>
-      \nThis checks for tablets, which usually have a screen width of between 768 to 1024px. Then, we set our grid template to only have 2 columns to make reading easier on tablet.
+      \nThis recipe goes through two of the most commonly used properties when dealing with form inputs. Normally, we've already changed all our \`<p>\`s to be a different font, but that won't change inputs. So here, we re-add the rule. Remember, the \`'Cool Font'\` needs to be something you've imported. See previous slides for more information!
+      \nAs well, if you'd like to change the input text color, you can do so here. Now, your form might look something like:
+      \n![*Figure 1: A form with added styling!*](https://i.imgur.com/T0uFYnj.png)
+      \n*Figure 1: A form with added styling!*
+      \nIf you'd like to apply these styles to both your input and textarea, you can change the first line of the rule like so:
       <pre><code>
-    @media (min-width: 481px) and (max-width: 767px){
-    .grid-container{
-        grid-template-columns: 1fr;
-        }
+    // from 'input{' to
+    input, textarea{
+        // styles
     }
       </code></pre>
-      \nThis checks for phone screens in portrait. Here, we only want one column, or else the text might be a little cluttered and hard to read.
-      \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!`,
-      slide16: `We're almost done, so it's time to finalize your design for now. Implement any and all of the properties and selectors we've learned about.
+      \nThis tells the browser to select both inputs and textareas to apply these styles to.
+      \nIf you'd like to apply some styling to just the button, you can use an ID! (In production, there are special CSS selectors available, but those are out of the scope of this tutorial). For example:
+      <pre><code>
+    #submit-button{
+        background-color: green;
+        border: 1px white solid;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+      </code></pre>
+      \nWe know what the \`background-color\` does - changes the background color. We've also already gone over the border - here, it adds a 1 pixel solid white border. As well, we use the \`padding\` property to add a 5px space on the top and bottom, and 10px on the left and right. (Note: this is how we reference padding directions. If there's only one number after the padding, it gets applied to every side, but here, it goes to the vertical sides then the horizontal sides). Here, we also introduce a new property - the \`cursor\` property. This will change the cursor from the normal triangle pointer to the mouse hand - indicating it's a clickable button.`,
+      slide19: `We're almost done, so it's time to finalize your design for now. Implement any and all of the properties and selectors we've learned about.
       \nSome interesting resources you might also want to check out include [CSS.cool](http://css.cool/#/), [W3schools](https://www.w3schools.com/css/default.asp), and [CSS Cookbook](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook)
       \nOnce you're done, remember to take a stretch break before we get finished with deployment.`,
-      slide17: `To host our site and get a free domain, we'll be using a free-to-use service called GitHub and its website hosting service, GitHub Pages. Go to [GitHub.com](https://github.com), and sign up for an account. A free user account will work fine!
+      slide20: `To host our site and get a free domain, we'll be using a free-to-use service called GitHub and its website hosting service, GitHub Pages. Go to [GitHub.com](https://github.com), and sign up for an account. A free user account will work fine!
       \nNext, we'll make our first repo, which is where we'll upload our code. Click the + button next to your profile picture in the top right, and fill in the next page.
       \nMake sure your repository name is \`[your-username].github.io\`. For example, my username is kewbish, so I'd fill \`kewbish.github.io\` in for the repo name. The rest of the information doesn't matter - just make sure it's a public repository.`,
-      slide18: `First, let's upload our files. Find the Upload files button in your repository, and upload all the files in your development folder. Make sure you get your \`index.html\` and \`main.css\`, along with whatever else you've added, such as images.
+      slide21: `First, let's upload our files. Find the Upload files button in your repository, and upload all the files in your development folder. Make sure you get your \`index.html\` and \`main.css\`, along with whatever else you've added, such as images.
       \nFill in whatever you'd like for the commit message: Usually, it should be something like \`Initial commit\`. Then, click the commit button.
       \nWe're almost there. Finally, we need to enable GitHub Pages. Navigate to the Settings tab, and find the GitHub Pages section. Under source, select the master branch.
       \nWait a couple minutes for your site to go live, and your site will be officially online and accessible at \`[your-name].github.io\`.
       \nOnce it uploads, you can send this link to your friends and family. In the meantime, showcase your files to whoever's around!
-      \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; and GitHub version control and site deployment. That's a ton of learning!`,
-      slide19: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
+      \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; HTTP requests and forms; and GitHub version control and site deployment. That's a ton of learning!`,
+      slide22: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
       \n- CSS animations
-      \n- HTML buttons
-      \n- HTML forms and POSTing requests
-      \n- CSS Flexbox
+      \n- \`<iframe>\` and rich content
+      \n- Flexbox
       \nIf you'd like to investigate these technologies further, check out the following resources: [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css), [GitHub Labs](https://lab.github.com/githubtraining/introduction-to-html), and [Traversy Media](https://www.youtube.com/watch?v=UB1O30fR-EE&list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU).
       \nThat just about does it for this lesson. Again, if you'd like to support Canada Learning Code by making a donation, click the red button in the bottom right.
       \nAs well, I've created a GitHub repo at the link below. That's the place to ask any questions and post links to your finished sites in the issues. [The repo.](https://github.com/kewbish/diveintohtml)
@@ -481,7 +559,7 @@ export default {
       Firebase.login();
     },
     countUp() {
-      if (this.count < 19) {
+      if (this.count < 22) {
         this.count++;
         window.scrollTo(0, 0);
       }

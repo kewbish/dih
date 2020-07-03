@@ -402,9 +402,28 @@ export default {
       \nThis style changes the display property of the parent (container) \`<div>\`, which is usually \`block\`, to \`grid\`. This is a relatively new CSS property, with its history only going back to around 2011. Then, we add the template columns, setting each one equal to one third each - (what the 1fr does: it's literally just 1 fraction of the total width.) If you want more or less columns, just add or remove \`1fr\`s in the \`grid-template-columns\`. Now, if you view your site with [Ctrl-Shift-V], you'll see that your \`<div>\`'s children are displayed like so:
       \n![Figure 1: An example grid.](https://i.imgur.com/ICfGPf1.png)
       \n*Figure 1: An example grid.*
-      \nAs well, the \`column-gap\` adds a little gap between each of the columns, so each column has some room to breathe. If you're planning on having more than one row, you can add a \`row-gap\` property, and set that to around 10px (measurement in pixels, remember) as well.
-      \nTry styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`,
-      slide14: `Speaking of changing background colors of containers, what if we wanted to change the color of just *one* element? And what if we wanted to keep everything else the same?
+      \nAs well, the \`column-gap\` adds a little gap between each of the columns, so each column has some room to breathe. If you're planning on having more than one row, you can add a \`row-gap\` property, and set that to around 10px (measurement in pixels, remember) as well.`,
+      slide14: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
+      \nFor our resume, the thing that's most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let's set some things called media queries, which check for the width of the screen and adapt our CSS accordingly. As a separate part of your CSS, add:
+      <pre><code>
+    @media (min-width: 768px) and (max-width: 1024px){
+        .grid-container{
+        grid-template-columns: 1fr 1fr;
+        }
+    }
+      </code></pre>
+      \nThis checks for tablets, which usually have a screen width of between 768 to 1024px. Then, we set our grid template to only have 2 columns to make reading easier on tablet.
+      <pre><code>
+    @media (min-width: 481px) and (max-width: 767px){
+    .grid-container{
+        grid-template-columns: 1fr;
+        }
+    }
+      </code></pre>
+      \nThis checks for phone screens in portrait. Here, we only want one column, or else the text might be a little cluttered and hard to read.
+      \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!
+      \nWith your new grid, try styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`,
+      slide15: `Speaking of changing background colors of containers, what if we wanted to change the color of just *one* element? And what if we wanted to keep everything else the same?
       \nThis is where we can use something called an \`id\`. Usually, these are used for CSS where we only want to change the look of an element or group of elements that only appears once. The reason that they're only used for things that appear only once? IDs can be used only once. (Technically, most web browsers are so tolerant that they'll add the styles as well, but this is definitely *bad practise*.)
       \nImagine two people named Alice Chapman and Bob Chapman. A class selector is like 'selecting' both Alice and Bob by their last name, Chapman. IDs would be like selecting just Alice, or just Bob. The way we use IDs is like:
       <pre><code>
@@ -434,25 +453,6 @@ export default {
       \n![Figure 1: Look, the center div is purple!](https://i.imgur.com/dTQKdjk.png)
       \n*Figure 1: Look, the center div is purple!*
       \nOf course, now the text inside is a little illegible. However, you can use the rest of your CSS properties to change how specific IDs look! (For example, you can put another ID on the \`<h1>\`s and \`<p>\`s and color those differently.)`,
-      slide15: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
-      \nFor our resume, the thing that's most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let's set some things called media queries, which check for the width of the screen and adapt our CSS accordingly. As a separate part of your CSS, add:
-      <pre><code>
-    @media (min-width: 768px) and (max-width: 1024px){
-        .grid-container{
-        grid-template-columns: 1fr 1fr;
-        }
-    }
-      </code></pre>
-      \nThis checks for tablets, which usually have a screen width of between 768 to 1024px. Then, we set our grid template to only have 2 columns to make reading easier on tablet.
-      <pre><code>
-    @media (min-width: 481px) and (max-width: 767px){
-    .grid-container{
-        grid-template-columns: 1fr;
-        }
-    }
-      </code></pre>
-      \nThis checks for phone screens in portrait. Here, we only want one column, or else the text might be a little cluttered and hard to read.
-      \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!`,
       slide16: `We've gone over HTML, CSS, and even grids! One last thing we'll learn - HTTP requests. While these may seem super scary, this is the technology behind most web apps, like YouTube and Reddit. Here, we'll be using it to build a contact form with an external service called [Formspree](https://formspree.io/). (Not sponsored in any way, just find it a great service and convenient for getting something up and running quickly!)
       \nNow, what *are* HTTP requests? And what even is HTTP? HTTP stands for *Hypertext Transfer Protocol*, and is a method of transferring information between the client and the server. What we've been creating over the past bit is considered purely *client*-side, and doesn't have to interact with a server, really.
       \nAs you might expect, HTTP requests are a way for the client to request information, but from where, you ask? Well, usually, it requests information from the server. However, setting up a server and a way to get some information back to the client is out of the scope of this tutorial. If you're interested, check out [this tutorial on REST APIs](https://www.restapitutorial.com/).
@@ -525,7 +525,7 @@ export default {
       \nWe're almost there. Finally, we need to enable GitHub Pages. Navigate to the Settings tab, and find the GitHub Pages section. Under source, select the master branch.
       \nWait a couple minutes for your site to go live, and your site will be officially online and accessible at \`[your-name].github.io\`.
       \nOnce it uploads, you can send this link to your friends and family. In the meantime, showcase your files to whoever's around!
-      \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; and GitHub version control and site deployment. That's a ton of learning!`,
+      \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; HTTP requests and forms; and GitHub version control and site deployment. That's a ton of learning!`,
       slide22: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
       \n- CSS animations
       \n- \`<iframe>\` and rich content

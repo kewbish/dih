@@ -503,7 +503,17 @@ export default {
         // styles
     }
       </code></pre>
-      \nThis tells the browser to select both inputs and textareas to apply these styles to.`,
+      \nThis tells the browser to select both inputs and textareas to apply these styles to.
+      \nIf you'd like to apply some styling to just the button, you can use an ID! (In production, there are special CSS selectors available, but those are out of the scope of this tutorial). For example:
+      <pre><code>
+    #submit-button{
+        background-color: green;
+        border: 1px white solid;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+      </code></pre>
+      \nWe know what the \`background-color\` does - changes the background color. We've also already gone over the border - here, it adds a 1 pixel solid white border. As well, we use the \`padding\` property to add a 5px space on the top and bottom, and 10px on the left and right. (Note: this is how we reference padding directions. If there's only one number after the padding, it gets applied to every side, but here, it goes to the vertical sides then the horizontal sides). Here, we also introduce a new property - the \`cursor\` property. This will change the cursor from the normal triangle pointer to the mouse hand - indicating it's a clickable button.`,
       slide19: `We're almost done, so it's time to finalize your design for now. Implement any and all of the properties and selectors we've learned about.
       \nSome interesting resources you might also want to check out include [CSS.cool](http://css.cool/#/), [W3schools](https://www.w3schools.com/css/default.asp), and [CSS Cookbook](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook)
       \nOnce you're done, remember to take a stretch break before we get finished with deployment.`,
@@ -518,9 +528,8 @@ export default {
       \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; and GitHub version control and site deployment. That's a ton of learning!`,
       slide22: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
       \n- CSS animations
-      \n- HTML buttons
-      \n- HTML forms and POSTing requests
-      \n- CSS Flexbox
+      \n- \`<iframe>\` and rich content
+      \n- Flexbox
       \nIf you'd like to investigate these technologies further, check out the following resources: [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css), [GitHub Labs](https://lab.github.com/githubtraining/introduction-to-html), and [Traversy Media](https://www.youtube.com/watch?v=UB1O30fR-EE&list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU).
       \nThat just about does it for this lesson. Again, if you'd like to support Canada Learning Code by making a donation, click the red button in the bottom right.
       \nAs well, I've created a GitHub repo at the link below. That's the place to ask any questions and post links to your finished sites in the issues. [The repo.](https://github.com/kewbish/diveintohtml)

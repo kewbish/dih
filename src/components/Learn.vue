@@ -20,145 +20,145 @@
             key="0"
             v-if="count == 0"
             :slideSubject="'0: Hello ' + firstName + '!'"
-            :slideContent="[{md: slide0}]"
+            :slideContent="slide0"
           />
           <slide
             key="1"
             v-else-if="count == 1"
             slideSubject="1: Creating your files"
-            :slideContent="[{md: slide1}]"
+            :slideContent="slide1"
           />
           <slide
             key="2"
             v-else-if="count == 2"
             slideSubject="2: Some basic tags"
-            :slideContent="[{md: slide2}]"
+            :slideContent="slide2"
           />
           <slide
             key="3"
             v-else-if="count == 3"
             slideSubject="3: Learning about <p>, <h1>, and <a>"
-            :slideContent="[{md: slide3}, {timer:['Experiment with these tags', 'Try playing around with the <a> link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them.', 180]}]"
+            :slideContent="slide3"
           />
           <slide
             key="4"
             v-else-if="count == 4"
             slideSubject="4: Structural elements: <div> and <section>"
-            :slideContent="[{md: slide4}]"
+            :slideContent="slide4"
           />
           <slide
             key="5"
             v-else-if="count == 5"
             slideSubject="5: Filling up .about-me"
-            :slideContent="[{md: slide5}]"
+            :slideContent="slide5"
           />
           <slide
             key="6"
             v-else-if="count == 6"
             slideSubject="6: Filling up the rest of our sections"
-            :slideContent="[{md: slide6}, {timer:['Editing time!', 'Change anything and everything about the site, right now. Add headings, paragraphs, text, images, whatever you like.', 1200]}]"
+            :slideContent="slide6"
           />
           <slide
             key="7"
             v-else-if="count == 7"
             slideSubject="7: Checkin + break!"
-            :slideContent="[{md: slide7}]"
+            :slideContent="slide7"
           ></slide>
           <slide
             key="8"
             v-else-if="count == 8"
             slideSubject="8: A whole new style"
-            :slideContent="[{md: slide8}]"
+            :slideContent="slide8"
           />
           <slide
             key="9"
             v-else-if="count == 9"
             slideSubject="9: Dividers and box model"
-            :slideContent="[{md: slide9}]"
+            :slideContent="slide9"
           />
           <slide
             key="10"
             v-else-if="count == 10"
             slideSubject="10: Centering both ways"
-            :slideContent="[{md: slide10}, {timer: ['Centering', 'Take the next while to center some of your elements with what you\'ve just learned.', 150]}]"
+            :slideContent="slide10"
           />
           <slide
             key="11"
             v-else-if="count == 11"
             slideSubject="11: Going over some easy properties"
-            :slideContent="[{md: slide11}, {timer:['Try out some of these new properties!', 'If you\'re happy with how your site looks now, you can skip this.', 240]}]"
+            :slideContent="slide11"
           />
           <slide
             key="12"
             v-else-if="count == 12"
             slideSubject="12: Learning CSS Grid"
-            :slideContent="[{md: slide12},{timer: ['Feel free to edit everything!', 'Take the next couple minutes to talk about your projects, core competencies, internships, work experience, skills, interests - whatever! Edit the contents of each of the children of the .grid-container div.', 180]}]"
+            :slideContent="slide12"
           />
           <slide
             key="13"
             v-else-if="count == 13"
             slideSubject="13: Formatting the grid"
-            :slideContent="[{md: slide13}]"
+            :slideContent="slide13"
           />
           <slide
             key="14"
             v-else-if="count == 14"
             slideSubject="14: Introductions to IDs"
-            :slideContent="[{md: slide14}]"
+            :slideContent="slide14"
           />
           <slide
             key="15"
             v-else-if="count == 15"
             slideSubject="15: Media Queries and Responsiveness"
-            :slideContent="[{md: slide15}]"
+            :slideContent="slide15"
           />
           <slide
             key="16"
             v-else-if="count == 16"
             slideSubject="16: HTTP Requests"
-            :slideContent="[{md: slide16}]"
+            :slideContent="slide16"
           />
           <slide
             key="17"
             v-else-if="count == 17"
             slideSubject="17: Adding our form markup"
-            :slideContent="[{md: slide17}]"
+            :slideContent="slide17"
           />
           <slide
             key="18"
             v-else-if="count == 18"
             slideSubject="18: A couple style examples"
-            :slideContent="[{md: slide18}]"
+            :slideContent="slide18"
           />
           <slide
             key="19"
             v-else-if="count == 19"
             slideSubject="19: Finishing our design"
-            :slideContent="[{md: slide19}, {timer:['Take the next 5 minutes to finalize everything!', 'Make sure your site includes all the information you want on it, and if this isn\'t enough time - keep working!', 300]}]"
+            :slideContent="slide19"
           />
           <slide
             key="20"
             v-else-if="count == 20"
             slideSubject="20: GitHub setup"
-            :slideContent="[{md: slide20}]"
+            :slideContent="slide20"
           />
           <slide
             key="21"
             v-else-if="count == 21"
             slideSubject="21: Going live"
-            :slideContent="[{md: slide21}]"
+            :slideContent="slide21"
           />
           <slide
             key="22"
             v-else-if="count == 22"
             slideSubject="22: </lesson>"
-            :slideContent="[{md: slide22}]"
+            :slideContent="slide22"
           />
           <slide
             key="23"
             v-else
             slideSubject="Oops - that slide doesn't exist."
-            :slideContent="[{md: slideAny}]"
+            :slideContent="slideAny"
           ></slide>
         </transition>
       </div>
@@ -236,7 +236,7 @@ export default {
       \n
       <a href="https://reddit.com"><p>This link goes to Reddit</p></a>
       \nSee how the \`<a>\` tag goes *around* the \`<p>\` tag? This is called nesting, and the \`<a>\` is now the parent of the \`<p>\` tag, the child. We'll go through this in greater detail once we start structuring our site.
-      </p><timer title="Experiment with these tags" subtitle="Try playing around with the 'a' link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them." durationInSecs="180"/>`,
+      <timer title="Experiment with these tags" subtitle="Try playing around with the <a> link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them." :durationInSecs=300 />`,
       slide4: `\`<div>\` and \`<section>\` won't have any visible effect on the structure, and don't print anything like \`<h1>\` and \`<p>\`. However, they're still required as basic knowledge for website structuring.
       \nSection tags allow us to differentiate different, well, sections in your website. It can contain any other tags, like \`<div>\`, \`<h1>\`, and \`<p>\`.
       \nSpeaking of which: what does the div tag do? It's a container, and like section, can contain any other HTML tags, including another div. Visibly, these don't seem to do anything, but we'll be using them very frequently to structure our web resume.
@@ -265,7 +265,8 @@ export default {
       \n*Figure 1. Your site so far. Not much, eh?*`,
       slide6: `For the next 15-20 minutes, work on filling in content around your website. Try editing your education details, writing about your work, or changing anything else you wish. (Don't worry about the projects bit quite yet - we'll learn how to build a grid with that soon!)
       \nRemember the \`<p>\` tags, and keep those in mind - they're the best way to add more information. Also, remember to add \`<div>\` tags to separate chunks of content, and if you feel the need, add another section for fun! The link \`<a>\` tag can also be used to link to things like your resume, LinkedIn, or social media profiles.
-      \nDon't feel limited by the section classes we have implemented here, you can add sections with classes with whatever you wish!`,
+      \nDon't feel limited by the section classes we have implemented here, you can add sections with classes with whatever you wish!
+      <timer title="Editing time!" subtitle="Change anything and everything about the site, right now. Add headings, paragraphs, text, images, whatever you like." :durationInSecs=1200 />`,
       slide7: `Time for our first checkin!
       \nIn the past section, we've learned to:
       - Using a code editor - easy shortcuts like [Ctrl-S] and [Ctrl-Shift-V]
@@ -342,7 +343,8 @@ export default {
     }
       </code></pre>
       \nThis is another solution - it sets the position (usually static where elements render in order) to relative to its parent element. It positions 50% away from the top, and then 50% of the element's height back up, to properly center. Note: if you try to center an image, you usually need to put it inside a div, and apply these centering styles to the div instead. This is due to the fact that images don't render as blocks properly, and have some weird margin styles.
-      \nIf you'd like to center some elements on your site, take the next couple minutes to apply some styles!`,
+      \nIf you'd like to center some elements on your site, take the next couple minutes to apply some styles!
+      <timer title="Centering" subtitle="Take the next while to center some of your elements with what you've just learned." :durationInSecs=150 />`,
       slide11: `Alright, speed round. These are some easy-to-understand CSS properties that are commonly used, but don't need a lot of explanation.
       <pre><code>
     .class{
@@ -367,7 +369,8 @@ export default {
         color: #123456;
     }
       </code></pre>
-      \nThis is a little different. The :hover selector goes after an element or class selector. Here, the style would be applied when the element with class \`class\` was hovered over. Here, we're just setting an arbitrary color, but other properties can be applied, like text-shadow, for example.`,
+      \nThis is a little different. The :hover selector goes after an element or class selector. Here, the style would be applied when the element with class \`class\` was hovered over. Here, we're just setting an arbitrary color, but other properties can be applied, like text-shadow, for example.
+      <timer title="Try out some of these new properties!" subtitle="If you're happy with how your site looks now, you can skip this." :durationInSecs=240 />`,
       slide12: `If you've ever seen some grid layouts like:
       \n![Figure 1: A cool grid layout example!](https://speckyboy.com/wp-content/uploads/2017/09/css-grid-layouts-03.jpg)
       \n*Figure 1: A cool grid layout example!*
@@ -390,7 +393,8 @@ export default {
     </div>
     </div>
       </code></pre>
-      \nRemember, the larger \`<div>\` has the class \`grid-container\`, and we just filled it with three smaller \`<div>\`s which will have all our content!`,
+      \nRemember, the larger \`<div>\` has the class \`grid-container\`, and we just filled it with three smaller \`<div>\`s which will have all our content!
+      <timer title="Feel free to edit everything!" subtitle="Take the next couple minutes to talk about your projects, core competencies, internships, work experience, skills, interests - whatever! Edit the contents of each of the children of the .grid-container div." :durationInSecs=180 />`,
       slide13: `Alright, let's go back to CSS for a bit. Add the following code to your main.css file.
       <pre><code>
     .grid-container{
@@ -516,7 +520,8 @@ export default {
       \nWe know what the \`background-color\` does - changes the background color. We've also already gone over the border - here, it adds a 1 pixel solid white border. As well, we use the \`padding\` property to add a 5px space on the top and bottom, and 10px on the left and right. (Note: this is how we reference padding directions. If there's only one number after the padding, it gets applied to every side, but here, it goes to the vertical sides then the horizontal sides). Here, we also introduce a new property - the \`cursor\` property. This will change the cursor from the normal triangle pointer to the mouse hand - indicating it's a clickable button.`,
       slide19: `We're almost done, so it's time to finalize your design for now. Implement any and all of the properties and selectors we've learned about.
       \nSome interesting resources you might also want to check out include [CSS.cool](http://css.cool/#/), [W3schools](https://www.w3schools.com/css/default.asp), and [CSS Cookbook](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook)
-      \nOnce you're done, remember to take a stretch break before we get finished with deployment.`,
+      \nOnce you're done, remember to take a stretch break before we get finished with deployment.
+      <timer title="Take the next 5 minutes to finalize everything!" subtitle="Make sure your site includes all the information you want on it, and if this isn't enough time - keep working!" :durationInSecs=300 />`,
       slide20: `To host our site and get a free domain, we'll be using a free-to-use service called GitHub and its website hosting service, GitHub Pages. Go to [GitHub.com](https://github.com), and sign up for an account. A free user account will work fine!
       \nNext, we'll make our first repo, which is where we'll upload our code. Click the + button next to your profile picture in the top right, and fill in the next page.
       \nMake sure your repository name is \`[your-username].github.io\`. For example, my username is kewbish, so I'd fill \`kewbish.github.io\` in for the repo name. The rest of the information doesn't matter - just make sure it's a public repository.`,

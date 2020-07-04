@@ -2,15 +2,16 @@
   <section class="section">
     <h1 class="title is-1">{{ slideSubject }}</h1>
     <div class="content is-medium">
-      <div v-for="(s, index) in slideContent" :key="index">
-        <VueShowdown :markdown="s.md" v-if="s.md" />
+      <!-- <div v-for="(s, index) in slideContent" :key="index">
+        <VueShowdown :markdown="s.md" v-if="s.md" :vueTemplate="true" />
         <timer
           v-if="s.timer"
           :title="s.timer[0]"
           :subtitle="s.timer[1]"
           :durationInSecs="s.timer[2]"
         ></timer>
-      </div>
+      </div>-->
+      <VueShowdown :markdown="slideContent" :vueTemplate="true" />
     </div>
   </section>
 </template>
@@ -19,7 +20,7 @@
 export default {
   props: {
     slideSubject: String,
-    slideContent: Array
+    slideContent: String
   }
 };
 </script>

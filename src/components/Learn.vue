@@ -199,7 +199,7 @@ export default {
       \nIf you wish to support Canada Learning Code, whose mission is to bring the power of technology to all, including historically underrepresented groups in tech, please [visit their site](https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate).
       \nThis course was created by Emilie Ma - also known as Kewbish. If you'd like to learn more about me, visit [my site](https://kewbish.github.io).  
       \nTime to get started on your web development journey! First, let's download some software. We'll use [VSCode](https://code.visualstudio.com/download), [VSCode HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode), and any web browser, like Chrome. You can find installation instructions [for VSCode here](https://code.visualstudio.com/docs/setup/setup-overview), and [for the extension here](https://code.visualstudio.com/docs/editor/extension-gallery).
-      \nOnce you've downloaded everything, press the [>] button - it's time to go!'`,
+      \nOnce you've downloaded everything, press the [>] button - it's time to go!`,
       slide1: `Every website starts with an index.html file. This is what all web browsers look for to start rendering your creation within a site's files when it loads up.
       \nCreate a folder on your computer, and open this folder with VSCode by clicking this button:
       \n![Figure 1: Open the folder you just created.](https://i.imgur.com/QseX16F.png)

@@ -109,7 +109,7 @@
           <slide
             key="15"
             v-else-if="count == 15"
-            slideSubject="15: Media Queries and Responsiveness"
+            slideSubject="15: Media Queries and responsiveness"
             :slideContent="slide15"
           />
           <slide

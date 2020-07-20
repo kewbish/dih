@@ -22,6 +22,7 @@ index.install = function () {
 Vue.use(index);
 
 Vue.use(VueMarkdown);
+Vue.component('vue-markdown', VueMarkdown);
 
 new Vue({
     methods: {

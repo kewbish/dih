@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import VueShowdown from 'vue-showdown';
+import VueMarkdown from 'vue-markdown';
 import App from './App.vue';
 import Learn from './components/Learn.vue';
 import Index from './components/Index.vue';
@@ -13,12 +13,6 @@ Vue.component('index', Index);
 Vue.component('slide', Slide);
 Vue.component('timer', Timer);
 
-Vue.use(VueShowdown, {
-    options: {
-        emoji: false,
-    },
-});
-
 var index = new Vue({ data: { index: true } })
 index.install = function () {
     Object.defineProperty(Vue.prototype, '$indexTrue', {
@@ -26,6 +20,8 @@ index.install = function () {
     })
 }
 Vue.use(index);
+
+Vue.use(VueMarkdown);
 
 new Vue({
     methods: {

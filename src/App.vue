@@ -1,11 +1,9 @@
 <template>
   <div id="app">
-    <index v-if="$indexTrue.index"></index>
-    <learn v-if="!$indexTrue.index"></learn>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>

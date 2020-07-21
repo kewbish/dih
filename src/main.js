@@ -1,6 +1,8 @@
 import Vue from 'vue';
+import VueRouter from 'vue-router';
 import VueMarkdown from 'vue-markdown';
 import App from './App.vue';
+import Login from './components/Login.vue';
 import Learn from './components/Learn.vue';
 import Index from './components/Index.vue';
 import Slide from './components/Slide.vue';
@@ -13,23 +15,17 @@ Vue.component('index', Index);
 Vue.component('slide', Slide);
 Vue.component('timer', Timer);
 
-var index = new Vue({ data: { index: true } })
-index.install = function () {
-    Object.defineProperty(Vue.prototype, '$indexTrue', {
-        get() { return index }
-    })
-}
-Vue.use(index);
-
 Vue.use(VueMarkdown);
 Vue.component('vue-markdown', VueMarkdown);
 
+Vue.use(VueRouter);
+const routes = [
+    { path: "/login", component: Login },
+    { path: "/", component: Index }
+];
+const router = new VueRouter({ routes });
+
 new Vue({
-    methods: {
-        switchIndex: function () {
-            this.$indexTrue.index = false;
-            return;
-        }
-    },
+    router,
     render: h => h(App),
 }).$mount('#app')

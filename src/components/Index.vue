@@ -514,7 +514,7 @@
 export default {
   methods: {
     switchIndex: function() {
-      this.$indexTrue.index = false;
+      this.$router.push("/login");
     }
   }
 };

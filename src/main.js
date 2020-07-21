@@ -9,6 +9,7 @@ import Learn from './components/Learn.vue';
 import Index from './components/Index.vue';
 import Slide from './components/Slide.vue';
 import Timer from './components/Timer.vue';
+import z0 from './components/slides/z0.vue';
 
 Vue.config.productionTip = false;
 
@@ -25,6 +26,7 @@ initializeApp(firebaseConfig);
 Vue.use(VueRouter);
 const router = new VueRouter({
     routes: [
+        { path: "/0", component: z0 },
         { path: "/login", component: Login },
         { path: "/", component: Index }
     ]

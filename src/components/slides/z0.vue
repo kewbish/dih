@@ -1,6 +1,8 @@
 <template>
   <section class="section">
-    <slide :slideSubject="'0: Hello ' + firstName + '!'" :slideContent="slide"></slide>
+    <div class="container">
+      <slide :slideSubject="'0: Hello ' + firstName + '!'" :slideContent="slide"></slide>
+    </div>
   </section>
 </template>
 

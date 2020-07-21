@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueMarkdown from 'vue-markdown';
+import { initializeApp } from 'firebase/app';
+import firebaseConfig from './firebase.js';
 import App from './App.vue';
 import Login from './components/Login.vue';
 import Learn from './components/Learn.vue';
@@ -18,12 +20,15 @@ Vue.component('timer', Timer);
 Vue.use(VueMarkdown);
 Vue.component('vue-markdown', VueMarkdown);
 
+initializeApp(firebaseConfig);
+
 Vue.use(VueRouter);
-const routes = [
-    { path: "/login", component: Login },
-    { path: "/", component: Index }
-];
-const router = new VueRouter({ routes });
+const router = new VueRouter({
+    routes: [
+        { path: "/login", component: Login },
+        { path: "/", component: Index }
+    ]
+});
 
 new Vue({
     router,

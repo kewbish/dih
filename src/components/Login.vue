@@ -19,12 +19,21 @@
 </template>
 
 <script>
-import Firebase from "../firebase.js";
+import firebase from "firebase/app";
+import "firebase/auth";
 export default {
   methods: {
     login() {
-      Firebase.login();
-      this.$router.push("/0");
+      const provider = new firebase.auth.GoogleAuthProvider();
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then(() => {
+          this.$router.push("/0");
+        })
+        .catch(err => {
+          console.log("There was an error.", err);
+        });
     }
   }
 };

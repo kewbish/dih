@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    data() {
+  data() {
     return {
       slide: `Every website starts with an index.html file. This is what all web browsers look for to start rendering your creation within a site's files when it loads up.
       \nCreate a folder on your computer, and open this folder with VSCode by clicking this button:

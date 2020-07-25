@@ -1,9 +1,5 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <slide slideSubject="4: Structural elements: <div> and <section>" :slideContent="slide"></slide>
-    </div>
-  </section>
+  <slide slideSubject="4: Structural elements: <div> and <section>" :slideContent="slide"></slide>
 </template>
 
 <script>
@@ -21,8 +17,8 @@ export default {
     <section class="education"></section>
     <section class="project-skills"></section>
       </code></pre>
-      \nThis will add several empty sections to your site. Remember, you can preview your site with [Ctrl-Shift-V]!`
+      \nThis will add several empty sections to your site. Remember, you can preview your site with [Ctrl-Shift-V]!`,
     };
-  }
+  },
 };
 </script>

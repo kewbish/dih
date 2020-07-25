@@ -1,14 +1,12 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <slide slideSubject="3: Learning about <p>, <h1>, and <a>" :slideContent="slide"></slide>
-      <timer
-        title="Experiment with these tags"
-        subtitle="Try playing around with the <a> link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them."
-        :durationInSecs="300"
-      />
-    </div>
-  </section>
+  <div>
+    <slide slideSubject="3: Learning about <p>, <h1>, and <a>" :slideContent="slide"></slide>
+    <timer
+      title="Experiment with these tags"
+      subtitle="Try playing around with the <a> link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them."
+      :durationInSecs="300"
+    />
+  </div>
 </template>
 
 <script>
@@ -25,8 +23,8 @@ export default {
       \nLet's also go through the concept nesting: with the \`<a>\` tag.
       \n
       <a href="https://reddit.com"><p>This link goes to Reddit</p></a>
-      \nSee how the \`<a>\` tag goes *around* the \`<p>\` tag? This is called nesting, and the \`<a>\` is now the parent of the \`<p>\` tag, the child. We'll go through this in greater detail once we start structuring our site.`
+      \nSee how the \`<a>\` tag goes *around* the \`<p>\` tag? This is called nesting, and the \`<a>\` is now the parent of the \`<p>\` tag, the child. We'll go through this in greater detail once we start structuring our site.`,
     };
-  }
+  },
 };
 </script>

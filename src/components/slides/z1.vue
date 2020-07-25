@@ -1,9 +1,5 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <slide slideSubject="1: Creating your files" :slideContent="slide"></slide>
-    </div>
-  </section>
+  <slide slideSubject="1: Creating your files" :slideContent="slide"></slide>
 </template>
 
 <script>
@@ -17,8 +13,8 @@ export default {
       \nNow, it's time to create an index.html file.
       \n![Figure 2: Create a new file, and call it index.html.](https://code.visualstudio.com/assets/docs/nodejs/nodejs/toolbar-new-file.png)
       \n*Figure 2: Create a new file, and call it index.html.*
-      \nYou'll need to do the same with a main.css file. Create a main.css file, just like you created your index.html file.`
+      \nYou'll need to do the same with a main.css file. Create a main.css file, just like you created your index.html file.`,
     };
-  }
+  },
 };
 </script>

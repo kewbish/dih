@@ -1,9 +1,5 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <slide slideSubject="2: Some basic tags" :slideContent="slide"></slide>
-    </div>
-  </section>
+  <slide slideSubject="2: Some basic tags" :slideContent="slide"></slide>
 </template>
 
 <script>
@@ -26,8 +22,8 @@ export default {
       </code></pre>
       \nThe \`<head>\` elements are 'meta' elements, and we don't have to worry about anything right now except the \`<title></title>\`. That's what you'll see in the address bar, so choose something like your name.
       \n![Figure 3: The HTML + CSS is where your title would go.](https://i.imgur.com/cB42RYe.png)
-      \n*Figure 3: The HTML + CSS is where your title would go.*`
+      \n*Figure 3: The HTML + CSS is where your title would go.*`,
     };
-  }
+  },
 };
 </script>

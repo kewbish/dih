@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <slide slideSubject="6: Filling up the rest of our sections" :slideContent="slide"></slide>
-    <timer
-      title="Editing time!"
-      subtitle="Change anything and everything about the site, right now. Add headings, paragraphs, text, images, whatever you like."
-      :durationInSecs="1200"
-    />
-  </div>
+  <section class="section">
+    <div class="container">
+      <slide slideSubject="6: Filling up the rest of our sections" :slideContent="slide"></slide>
+      <timer
+        title="Editing time!"
+        subtitle="Change anything and everything about the site, right now. Add headings, paragraphs, text, images, whatever you like."
+        :durationInSecs="1200"
+      />
+    </div>
+  </section>
 </template>
 
 <script>

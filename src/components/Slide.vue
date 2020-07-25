@@ -1,12 +1,8 @@
 <template>
   <section class="section">
-    <div class="container">
-      <section class="section">
-        <h1 class="title is-1">{{ slideSubject }}</h1>
-        <div class="content is-medium">
-          <vue-markdown :source="slideContent"></vue-markdown>
-        </div>
-      </section>
+    <h1 class="title is-1">{{ slideSubject }}</h1>
+    <div class="content is-medium">
+      <vue-markdown :source="slideContent"></vue-markdown>
     </div>
   </section>
 </template>

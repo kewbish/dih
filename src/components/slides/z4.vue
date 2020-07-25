@@ -1,5 +1,9 @@
 <template>
-  <slide slideSubject="4: Structural elements: <div> and <section>" :slideContent="slide"></slide>
+  <section class="section">
+    <div class="container">
+      <slide slideSubject="4: Structural elements: <div> and <section>" :slideContent="slide"></slide>
+    </div>
+  </section>
 </template>
 
 <script>

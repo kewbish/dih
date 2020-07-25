@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <slide slideSubject="3: Learning about <p>, <h1>, and <a>" :slideContent="slide"></slide>
-    <timer
-      title="Experiment with these tags"
-      subtitle="Try playing around with the <a> link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them."
-      :durationInSecs="300"
-    />
-  </div>
+  <section class="section">
+    <div class="container">
+      <slide slideSubject="3: Learning about <p>, <h1>, and <a>" :slideContent="slide"></slide>
+      <timer
+        title="Experiment with these tags"
+        subtitle="Try playing around with the <a> link tags, and get familiar with how to add <p> and <h1> tags, as well as how to close them."
+        :durationInSecs="300"
+      />
+    </div>
+  </section>
 </template>
 
 <script>

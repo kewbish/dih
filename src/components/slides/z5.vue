@@ -1,5 +1,9 @@
 <template>
-  <slide slideSubject="5: Filling up .about-me" :slideContent="slide"></slide>
+  <section class="section">
+    <div class="container">
+      <slide slideSubject="5: Filling up .about-me" :slideContent="slide"></slide>
+    </div>
+  </section>
 </template>
 
 <script>

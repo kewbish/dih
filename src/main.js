@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import VueMarkdown from 'vue-markdown';
-import { initializeApp } from 'firebase/app';
+import VueShowdown from 'vue-showdown';
+import { initializeApp, auth } from 'firebase/app';
 import firebaseConfig from './firebase.js';
 import App from './App.vue';
 import Login from './components/Login.vue';
@@ -24,24 +24,38 @@ Vue.component('index', Index);
 Vue.component('slide', Slide);
 Vue.component('timer', Timer);
 
-Vue.use(VueMarkdown);
-Vue.component('vue-markdown', VueMarkdown);
+Vue.use(VueShowdown);
 
 initializeApp(firebaseConfig);
 
 Vue.use(VueRouter);
 const router = new VueRouter({
     routes: [
-        { path: "/0", component: z0 },
-        { path: "/1", component: z1 },
-        { path: "/2", component: z2 },
-        { path: "/3", component: z3 },
-        { path: "/4", component: z4 },
-        { path: "/5", component: z5 },
-        { path: "/6", component: z6 },
+        { path: "/0", component: z0, meta: { requiresAuth: true } },
+        { path: "/1", component: z1, meta: { requiresAuth: true } },
+        { path: "/2", component: z2, meta: { requiresAuth: true } },
+        { path: "/3", component: z3, meta: { requiresAuth: true } },
+        { path: "/4", component: z4, meta: { requiresAuth: true } },
+        { path: "/5", component: z5, meta: { requiresAuth: true } },
+        { path: "/6", component: z6, meta: { requiresAuth: true } },
         { path: "/login", component: Login },
         { path: "/", component: Index }
     ]
+});
+router.beforeEach((to, from, next) => {
+    if (to.meta.requiresAuth) {
+        auth().onAuthStateChanged(user => {
+            if (!user) {
+                next("/login");
+            }
+            else {
+                next();
+            }
+        })
+    }
+    else {
+        next();
+    }
 });
 
 new Vue({

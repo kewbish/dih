@@ -24,17 +24,30 @@ import "firebase/auth";
 export default {
   methods: {
     login() {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      firebase
-        .auth()
-        .signInWithPopup(provider)
-        .then(() => {
+      firebase.auth().onAuthStateChanged((user) => {
+        if (!user) {
+          const provider = new firebase.auth.GoogleAuthProvider();
+          firebase
+            .auth()
+            .signInWithPopup(provider)
+            .then(() => {
+              this.$router.push("/0");
+            })
+            .catch((err) => {
+              console.log("There was an error.", err);
+            });
+        } else {
           this.$router.push("/0");
-        })
-        .catch(err => {
-          console.log("There was an error.", err);
-        });
-    }
-  }
+        }
+      });
+    },
+  },
+  created: function () {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.$router.push("/0");
+      }
+    });
+  },
 };
 </script>

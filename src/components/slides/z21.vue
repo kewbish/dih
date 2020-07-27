@@ -1,0 +1,18 @@
+<template>
+  <slide slideSubject="21: Going live" :slideContent="slide"></slide>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      slide: `First, let's upload our files. Find the Upload files button in your repository, and upload all the files in your development folder. Make sure you get your \`index.html\` and \`main.css\`, along with whatever else you've added, such as images.
+      \nFill in whatever you'd like for the commit message: Usually, it should be something like \`Initial commit\`. Then, click the commit button.
+      \nWe're almost there. Finally, we need to enable GitHub Pages. Navigate to the Settings tab, and find the GitHub Pages section. Under source, select the master branch.
+      \nWait a couple minutes for your site to go live, and your site will be officially online and accessible at \`[your-name].github.io\`.
+      \nOnce it uploads, you can send this link to your friends and family. In the meantime, showcase your files to whoever's around!
+      \nCongratulations - you've just created a website! That's a great accomplishment, and it's the first step in becoming a full-fledged web developer! Think about the past hour or two: we've gone over HTML structure, sections, grids, and elements; CSS grids, selectors, properties, and media queries; HTTP requests and forms; and GitHub version control and site deployment. That's a ton of learning!`,
+    };
+  },
+};
+</script>

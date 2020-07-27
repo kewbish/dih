@@ -16,6 +16,23 @@ import z3 from './components/slides/z3.vue';
 import z4 from './components/slides/z4.vue';
 import z5 from './components/slides/z5.vue';
 import z6 from './components/slides/z6.vue';
+import z7 from './components/slides/z7.vue';
+import z8 from './components/slides/z8.vue';
+import z9 from './components/slides/z9.vue';
+import z10 from './components/slides/z10.vue';
+import z11 from './components/slides/z11.vue';
+import z12 from './components/slides/z12.vue';
+import z13 from './components/slides/z13.vue';
+import z14 from './components/slides/z14.vue';
+import z15 from './components/slides/z15.vue';
+import z16 from './components/slides/z16.vue';
+import z17 from './components/slides/z17.vue';
+import z18 from './components/slides/z18.vue';
+import z19 from './components/slides/z19.vue';
+import z20 from './components/slides/z20.vue';
+import z21 from './components/slides/z21.vue';
+import z22 from './components/slides/z22.vue';
+import zAny from './components/slides/zAny.vue';
 
 Vue.config.productionTip = false;
 
@@ -38,8 +55,25 @@ const router = new VueRouter({
         { path: "/4", component: z4, meta: { requiresAuth: true } },
         { path: "/5", component: z5, meta: { requiresAuth: true } },
         { path: "/6", component: z6, meta: { requiresAuth: true } },
+        { path: "/7", component: z7, meta: { requiresAuth: true } },
+        { path: "/8", component: z8, meta: { requiresAuth: true } },
+        { path: "/9", component: z9, meta: { requiresAuth: true } },
+        { path: "/10", component: z10, meta: { requiresAuth: true } },
+        { path: "/11", component: z11, meta: { requiresAuth: true } },
+        { path: "/12", component: z12, meta: { requiresAuth: true } },
+        { path: "/13", component: z13, meta: { requiresAuth: true } },
+        { path: "/14", component: z14, meta: { requiresAuth: true } },
+        { path: "/15", component: z15, meta: { requiresAuth: true } },
+        { path: "/16", component: z16, meta: { requiresAuth: true } },
+        { path: "/17", component: z17, meta: { requiresAuth: true } },
+        { path: "/18", component: z18, meta: { requiresAuth: true } },
+        { path: "/19", component: z19, meta: { requiresAuth: true } },
+        { path: "/20", component: z20, meta: { requiresAuth: true } },
+        { path: "/21", component: z21, meta: { requiresAuth: true } },
+        { path: "/22", component: z22, meta: { requiresAuth: true } },
         { path: "/login", component: Login },
-        { path: "/", component: Index }
+        { path: "/", component: Index },
+        { path: "*", component: zAny }
     ]
 });
 router.beforeEach((to, from, next) => {

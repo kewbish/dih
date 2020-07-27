@@ -42,7 +42,7 @@ export default {
       });
     },
   },
-  created: function () {
+  beforeCreate: function () {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.$router.push("/0");

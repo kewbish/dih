@@ -73,7 +73,7 @@ const router = new VueRouter({
         { path: "/22", component: z22, meta: { requiresAuth: true } },
         { path: "/login", component: Login },
         { path: "/", component: Index },
-        { path: "*", component: zAny }
+        { path: "*", component: zAny, meta: { requiresAuth: true } }
     ]
 });
 router.beforeEach((to, from, next) => {

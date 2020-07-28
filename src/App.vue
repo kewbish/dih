@@ -30,8 +30,13 @@ export default {
     },
   },
   computed: {
-    count() {
-      return parseInt(this.$route.fullPath.replace("/", ""));
+    count: {
+      get: function () {
+        return parseInt(this.$route.fullPath.replace("/", ""));
+      },
+      set: function (val) {
+        this.$router.push(`/${val}`);
+      },
     },
   },
 };

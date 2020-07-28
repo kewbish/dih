@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <input type="text" class="input fixed-input" v-model="count" />
+    <input v-if="!isNaN(count)" type="text" class="input fixed-input" v-model="count" />
     <button v-if="count > 0" @click="countDown" class="button is-info fixed-back is-small">&lt;</button>
     <button v-if="count < 22" @click="countUp" class="button is-info fixed-right is-small">&gt;</button>
     <div class="fixed-right-bottom">

@@ -18,25 +18,20 @@ export default {
   methods: {
     countUp() {
       if (this.count < 22) {
-        this.count++;
-        this.$router.push(`/${this.count}`);
+        var newU = this.count + 1;
+        this.$router.push(`/${newU}`);
       }
     },
     countDown() {
       if (this.count > 0) {
-        this.count--;
-        this.$router.push(`/${this.count}`);
+        var newU = this.count - 1;
+        this.$router.push(`/${newU}`);
       }
     },
   },
   computed: {
-    count: {
-      get() {
-        return parseInt(this.$route.fullPath.replace("/", ""));
-      },
-      set(newCount) {
-        return newCount;
-      },
+    count() {
+      return parseInt(this.$route.fullPath.replace("/", ""));
     },
   },
 };

@@ -19,6 +19,7 @@ export default {
       \nHowever, if there are two elements that have similar styles, IDs might not be the best choice - you'll have to repeat the same CSS code twice. It's not the most efficient, but it works. Generally, use IDs only when something's used once.
       \nAs well, you can't have multiple IDs on an element. Usually, only the first ID listed is applied. If you want to have multiple pseudo-IDs, try using classes instead!
       \nFor example, to change the color of one of the grid items, change your HTML to:
+      
       <code>
     <div id="purple-grid-item">
         <h1>An item title!</h1>

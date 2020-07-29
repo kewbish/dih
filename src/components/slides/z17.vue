@@ -7,6 +7,7 @@ export default {
   data() {
     return {
       slide: `The basics of getting a form started are pretty easy.
+      
       <code>
     <form action="https://formspree.io/FORM_ID" method="POST">
         <p>Name:</p>

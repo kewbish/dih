@@ -12,6 +12,7 @@ export default {
       \n![Figure 2: Another example, something closer to what we'll be building for our projects section.](https://designinginterfaces.com/wp-content/images/grid-of-equals-cnn.png)
       \n*Figure 2: Another example, something closer to what we'll be building for our projects section.*
       \nBefore we do any cool CSS styling, we need to structure our grid. Add this in one of your sections in your \`main.html\`:
+      
       <code>
     <div class="grid-container">
     <div>

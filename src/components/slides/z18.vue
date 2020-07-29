@@ -7,6 +7,7 @@ export default {
   data() {
     return {
       slide: `Alright, almost done now. Let's go through a couple recipes that you might want to use in styling your inputs and textareas!
+      
       <code>
     input{
         font-family: 'Cool Font', sans-serif;
@@ -18,6 +19,7 @@ export default {
       \n![*Figure 1: A form with added styling!*](https://i.imgur.com/T0uFYnj.png)
       \n*Figure 1: A form with added styling!*
       \nIf you'd like to apply these styles to both your input and textarea, you can change the first line of the rule like so:
+      
       <code>
     // from 'input{' to
     input, textarea{
@@ -26,6 +28,7 @@ export default {
       </code>
       \nThis tells the browser to select both inputs and textareas to apply these styles to.
       \nIf you'd like to apply some styling to just the button, you can use an ID! (In production, there are special CSS selectors available, but those are out of the scope of this tutorial). For example:
+      
       <code>
     #submit-button{
         background-color: green;

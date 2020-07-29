@@ -5,7 +5,6 @@ import { initializeApp, auth } from 'firebase/app';
 import firebaseConfig from './firebase.js';
 import App from './App.vue';
 import Login from './components/Login.vue';
-import Learn from './components/Learn.vue';
 import Index from './components/Index.vue';
 import Slide from './components/Slide.vue';
 import Timer from './components/Timer.vue';
@@ -36,7 +35,6 @@ import zAny from './components/slides/zAny.vue';
 
 Vue.config.productionTip = false;
 
-Vue.component('learn', Learn);
 Vue.component('index', Index);
 Vue.component('slide', Slide);
 Vue.component('timer', Timer);

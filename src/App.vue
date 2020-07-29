@@ -31,14 +31,22 @@ export default {
   methods: {
     countUp() {
       if (parseInt(this.count) < 22) {
-        var newU = parseInt(this.count) + 1;
-        this.$router.push(`/${newU}`);
+        if (!(0 <= parseInt(this.count) && parseInt(this.count) < 22)) {
+          this.$router.push(`/0`);
+        } else {
+          var newU = parseInt(this.count) + 1;
+          this.$router.push(`/${newU}`);
+        }
       }
     },
     countDown() {
       if (parseInt(this.count) > 0) {
-        var newU = parseInt(this.count) - 1;
-        this.$router.push(`/${newU}`);
+        if (!(0 < parseInt(this.count) && parseInt(this.count) <= 22)) {
+          this.$router.push(`/22`);
+        } else {
+          var newU = parseInt(this.count) - 1;
+          this.$router.push(`/${newU}`);
+        }
       }
     },
   },
@@ -48,7 +56,9 @@ export default {
         return this.$route.fullPath.replace("/", "");
       },
       set: function (val) {
-        this.$router.push(`/${val}`);
+        if (val !== "" && !isNaN(parseInt(val))) {
+          this.$router.push(`/${val}`);
+        }
       },
     },
   },

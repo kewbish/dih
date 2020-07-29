@@ -72,7 +72,10 @@ const router = new VueRouter({
         { path: "/login", component: Login },
         { path: "/", component: Index },
         { path: "*", component: zAny, meta: { requiresAuth: true } }
-    ]
+    ],
+    scrollBehavior() {
+        return { x: 0, y: 0 }
+    }
 });
 router.beforeEach((to, from, next) => {
     if (to.meta.requiresAuth) {

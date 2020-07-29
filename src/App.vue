@@ -6,6 +6,7 @@
       type="text"
       class="input fixed-input"
       v-model.lazy="count"
+      :placeholder="count"
     />
     <button
       v-if="parseInt(count) > 0"

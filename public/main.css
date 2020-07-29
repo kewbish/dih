@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .is-blue{
     background: linear-gradient(#53a6dd, #329de4);
 }

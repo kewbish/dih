@@ -511,11 +511,20 @@
 </template>
 
 <script>
+import firebase from "firebase/app";
+import "firebase/auth";
+
 export default {
   methods: {
-    switchIndex: function() {
-      this.$router.push("/login");
-    }
-  }
+    switchIndex: function () {
+      firebase.auth().onAuthStateChanged((user) => {
+        if (!user) {
+          this.$router.push("/login");
+        } else {
+          this.$router.push("/0");
+        }
+      });
+    },
+  },
 };
 </script>>

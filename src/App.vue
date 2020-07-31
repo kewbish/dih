@@ -21,7 +21,7 @@
     <div class="fixed-right-bottom">
       <a
         href="https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate"
-        class="button is-danger"
+        class="button is-danger-dark"
       >Support CLC 🍁</a>
     </div>
   </div>

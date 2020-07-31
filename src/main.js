@@ -4,7 +4,6 @@ import VueShowdown from 'vue-showdown';
 import { initializeApp, auth } from 'firebase/app';
 import firebaseConfig from './firebase.js';
 import App from './App.vue';
-import Login from './components/Login.vue';
 import Index from './components/Index.vue';
 import Slide from './components/Slide.vue';
 import Timer from './components/Timer.vue';
@@ -44,7 +43,7 @@ const router = new VueRouter({
         { path: "/20", component: () => import('./components/slides/z20.vue'), meta: { requiresAuth: true } },
         { path: "/21", component: () => import('./components/slides/z21.vue'), meta: { requiresAuth: true } },
         { path: "/22", component: () => import('./components/slides/z22.vue'), meta: { requiresAuth: true } },
-        { path: "/login", component: Login },
+        { path: "/login", component: () => import('./components/Login.vue') },
         { path: "/", component: Index },
         { path: "*", component: () => import('./components/slides/zAny.vue'), meta: { requiresAuth: true } }
     ],

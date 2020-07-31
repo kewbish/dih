@@ -1,11 +1,67 @@
 <template>
   <div id="app">
-    <index v-if="$indexTrue.index"></index>
-    <learn v-if="!$indexTrue.index"></learn>
+    <router-view></router-view>
+    <input
+      v-if="$router.currentRoute.path !== '/' && $router.currentRoute.path !== '/login'"
+      type="text"
+      class="input fixed-input"
+      v-model.lazy="count"
+      :placeholder="count"
+    />
+    <button
+      v-if="parseInt(count) > 0"
+      @click="countDown"
+      class="button is-info fixed-back is-small"
+    >&lt;</button>
+    <button
+      v-if="parseInt(count) < 22"
+      @click="countUp"
+      class="button is-info fixed-right is-small"
+    >&gt;</button>
+    <div class="fixed-right-bottom">
+      <a
+        href="https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate"
+        class="button is-danger-dark"
+      >Support CLC 🍁</a>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  methods: {
+    countUp() {
+      if (parseInt(this.count) < 22) {
+        if (!(0 <= parseInt(this.count) && parseInt(this.count) < 22)) {
+          this.$router.push(`/0`);
+        } else {
+          var newU = parseInt(this.count) + 1;
+          this.$router.push(`/${newU}`);
+        }
+      }
+    },
+    countDown() {
+      if (parseInt(this.count) > 0) {
+        if (!(0 < parseInt(this.count) && parseInt(this.count) <= 22)) {
+          this.$router.push(`/22`);
+        } else {
+          var newU = parseInt(this.count) - 1;
+          this.$router.push(`/${newU}`);
+        }
+      }
+    },
+  },
+  computed: {
+    count: {
+      get: function () {
+        return this.$route.fullPath.replace("/", "");
+      },
+      set: function (val) {
+        if (val !== "" && !isNaN(parseInt(val))) {
+          this.$router.push(`/${val}`);
+        }
+      },
+    },
+  },
 };
 </script>

@@ -25,14 +25,14 @@ export default {
   props: {
     durationInSecs: Number,
     title: String,
-    subtitle: String
+    subtitle: String,
   },
   data() {
     return {
       timerInt: this.durationInSecs,
       c: 0,
       isOn: false,
-      switchText: "▶️ Timer"
+      switchText: "▶️ Timer",
     };
   },
   computed: {
@@ -44,7 +44,7 @@ export default {
         seconds = `0${seconds}`;
       }
       return `${minutes}:${seconds}`;
-    }
+    },
   },
   watch: {
     timerInt: {
@@ -59,11 +59,11 @@ export default {
         if (this.timerInt == 0) {
           alert("Your timer's run out! 📚");
         }
-      }
-    }
+      },
+    },
   },
   methods: {
-    endTimer: function() {
+    endTimer: function () {
       if (this.isOn == true) {
         clearInterval(this.c);
         this.switchText = "▶️ Timer";
@@ -76,10 +76,10 @@ export default {
         this.isOn = true;
       }
     },
-    resTimer: function() {
+    resTimer: function () {
       clearInterval(this.c);
       this.timerInt = this.durationInSecs;
-    }
-  }
+    },
+  },
 };
 </script>

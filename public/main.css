@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .is-blue{
     background: linear-gradient(#53a6dd, #329de4);
 }
@@ -11,7 +14,7 @@ svg{
     position: fixed;
     bottom: 15px;
     left: 15px;
-    width: max(3.5%, 40px);
+    width: max(4%, 40px);
 }
 .fixed-back{
     position: fixed;

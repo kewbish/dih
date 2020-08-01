@@ -40,6 +40,7 @@
                 width="884.595"
                 height="628.60077"
                 viewBox="0 0 884.595 628.60077"
+                style="width: 100%; height: 100%"
               >
                 <ellipse cx="75.17704" cy="619.60077" rx="75.13932" ry="9" fill="#e6e6e6" />
                 <rect

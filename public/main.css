@@ -2,13 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 .is-blue{
-    background: linear-gradient(#53a6dd, #329de4);
-}
-svg{
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    fill: #ffffff;
+    background: #209cee;
 }
 .fixed-input{
     position: fixed;

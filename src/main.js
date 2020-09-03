@@ -51,19 +51,14 @@ const router = new VueRouter({
         return { x: 0, y: 0 }
     }
 });
-var isFirstTransition = true;
 router.beforeEach((to, from, next) => {
     const lastPage = localStorage.getItem("page");
-    const lastActivityAt = localStorage.getItem("activity");
-    const activity = Boolean(
-        lastActivityAt && Date.now() - Number(lastActivityAt) < 1200000 
-    );
     if (to.meta.requiresAuth) {
         auth().onAuthStateChanged(user => {
             if (!user) {
                 next("/login");
             }
-            else if (lastPage && to.name == "home" && isFirstTransition && activity) {
+            else if (lastPage && to.name == "0" && from.name == "login") {
                 next(lastPage);
             }
             else {
@@ -71,17 +66,15 @@ router.beforeEach((to, from, next) => {
             }
         })
     }
-    else if (lastPage && to.name == "home" && isFirstTransition && activity) {
+    else if (lastPage && to.name == "home") {
         next(lastPage);
     }
     else {
         next();
     }
-    isFirstTransition = false;
 });
 router.afterEach((to) => {
     localStorage.setItem("page", to.name);
-    localStorage.setItem("activity", Date.now());
 });
 
 new Vue({

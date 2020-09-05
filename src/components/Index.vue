@@ -518,14 +518,15 @@ import "firebase/auth";
 export default {
   methods: {
     switchIndex: function () {
+      const lastRoute = localStorage.getItem("page");
       firebase.auth().onAuthStateChanged((user) => {
         if (!user) {
           this.$router.push("/login");
         } else {
-          this.$router.push("/0");
+          this.$router.push(lastRoute != "undefined" || lastRoute != null ? lastRoute : "/0");
         }
       });
     },
   },
 };
-</script>>
+</script>

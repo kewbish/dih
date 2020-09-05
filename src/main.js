@@ -52,29 +52,24 @@ const router = new VueRouter({
     }
 });
 router.beforeEach((to, from, next) => {
-    const lastPage = localStorage.getItem("page");
     if (to.meta.requiresAuth) {
         auth().onAuthStateChanged(user => {
             if (!user) {
                 next("/login");
-            }
-            else if (lastPage && to.name == "0" && from.name == "login") {
-                next(lastPage);
             }
             else {
                 next();
             }
         })
     }
-    else if (lastPage && to.name == "home") {
-        next(lastPage);
-    }
     else {
         next();
     }
 });
 router.afterEach((to) => {
-    localStorage.setItem("page", to.name);
+    if (to.name != "index" && to.name != "any" && to.name != "login") {
+        localStorage.setItem("page", to.name);
+    }
 });
 
 new Vue({

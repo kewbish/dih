@@ -6,7 +6,7 @@
 export default {
   data() {
     return {
-      slide: `We're about to get started with a whole new language - CSS. CSS stands for Cascading Style Sheets, and is the language that web browsers use to figure out how to color, shape, and format your content.
+      slide: `We're about to get started with a whole new language - CSS. CSS stands for Cascading Style Sheets, and is the language that web browsers use to figure out how to color, shape, and format your content. It's very powerful, and most sites utilize lots of selectors and properties.
       \nTo get started, add a \`main.css\` file. As with the \`index.html\`, click the 'File add' icon on the sidebar of VSCode, and add the file.
       \nTo link our \`index.html\` with our \`main.css\` file, add the following link inside your \`<head>\` element:
       <code>  

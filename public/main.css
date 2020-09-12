@@ -20,11 +20,6 @@ html{
     bottom: 50%;
     right: 2%;
 }
-.fixed-right-bottom{
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-}
 code{
     tab-size: 4;
 }

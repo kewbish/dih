@@ -18,12 +18,6 @@
       @click="countUp"
       class="button is-info fixed-right is-small"
     >&gt;</button>
-    <div class="fixed-right-bottom">
-      <a
-        href="https://canadalearningcode.secure.nonprofitsoapbox.com/clc-donate"
-        class="button is-danger-dark"
-      >Support CLC 🍁</a>
-    </div>
   </div>
 </template>
 

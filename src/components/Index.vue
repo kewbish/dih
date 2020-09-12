@@ -18,10 +18,9 @@
               <h1 class="title">Ever wanted to create an online resume?</h1>
               <p>
                 We'll walk you through how.
-                <br />Here, you'll learn the basics of laying out a website,
+                <br />Here, you'll learn the basics of laying out a website with HTML,
                 styling
-                it, making it mobile-friendly and responsive, and deploying it to the
-                interwebs.
+                it with CSS, making it mobile-friendly and responsive, and deploying it to production
               </p>
               <br />
               <h1 class="title">Let's get started.</h1>

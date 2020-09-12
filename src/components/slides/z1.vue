@@ -6,7 +6,7 @@
 export default {
   data() {
     return {
-      slide: `Every website starts with an index.html file. This is what all web browsers look for to start rendering your creation within a site's files when it loads up.
+      slide: `Every website starts with an index.html file. This is what web browsers look for to start rendering your website from a site's files when it loads up.
       \nCreate a folder on your computer, and open this folder with VSCode by clicking this button:
       \n![Figure 1: Open the folder you just created.](https://i.imgur.com/QseX16F.png)
       \n*Figure 1: Open the folder you just created.*

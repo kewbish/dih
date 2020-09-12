@@ -6,7 +6,7 @@
 export default {
   data() {
     return {
-      slide: `CSS structures most elements in HTML with a box model.
+      slide: `CSS structures most elements in HTML with a box model, like so. You can see how there's content, then its padding and border, and finally a margin.
       \n![Figure 1: The CSS box model. Every element has its content, padding, margin, and border.](https://i.imgur.com/3A5ZcE1.png)
       \n*Figure 1: The CSS box model. Every element has its content, padding, margin, and border.*
       \nHere, we'll be taking advantage of the border to add a nice divider element. Let's add a  \`.custom-div\` class, which we'll use in CSS to add a solid divider.

@@ -11,7 +11,8 @@
             <br />This site works best on desktop. It
             <em>may</em> work on mobile, but it's difficult to view the code snippets.
           </p>
-          <a class="button" style="margin-bottom:10px" @click="login">Log In - Gmail</a>
+          <a class="button" style="margin-bottom:10px" @click="loginGoogle">Log In - Gmail</a><br>
+          <a class="button" style="margin-bottom:10px" @click="loginGitHub">Log In - GitHub</a>
         </div>
       </div>
     </div>
@@ -23,7 +24,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 export default {
   methods: {
-    login() {
+    loginGoogle() {
       const lastRoute = localStorage.getItem("page");
       firebase.auth().onAuthStateChanged((user) => {
         if (!user) {
@@ -42,11 +43,30 @@ export default {
         }
       });
     },
+    loginGitHub() {
+        const lastRoute = localStorage.getItem("page");
+        firebase.auth().onAuthStateChanged((user) => {
+            if (!user) {
+                const provider = new firebase.auth.GithubAuthProvider();
+                firebase
+                .auth()
+                .signInWithPopup(provider)
+                .then(() => {
+                  this.$router.push(lastRoute != null ? lastRoute : "/0");
+                })
+                .catch((err) => {
+                  console.log("There was an error.", err);
+                });
+            } else {
+               this.$router.push(lastRoute != null ? lastRoute : "/0");                                 
+            }
+        });
+    }
   },
   beforeCreate: function () {
     const lastRoute = localStorage.getItem("page");
     firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
+      if (user && lastRoute) {
         this.$router.push(lastRoute != "undefined" || lastRoute != null ? lastRoute : "/0");
       }
     });

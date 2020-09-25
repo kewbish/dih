@@ -522,7 +522,7 @@ export default {
         if (!user) {
           this.$router.push("/login");
         } else {
-          this.$router.push(lastRoute != "undefined" || lastRoute != null ? lastRoute : "/0");
+          this.$router.push(lastRoute != null ? lastRoute : "/0");
         }
       });
     },

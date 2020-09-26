@@ -11,8 +11,14 @@
             <br />This site works best on desktop. It
             <em>may</em> work on mobile, but it's difficult to view the code snippets.
           </p>
-          <a class="button" style="margin-bottom:10px" @click="loginGoogle">Log In - Gmail</a><br>
-          <a class="button" style="margin-bottom:10px" @click="loginGitHub">Log In - GitHub</a>
+          <div class="tile is-ancestor">
+              <div class="tile is-4 is-vertical is-parent">
+                <div class="tile is-child box">
+                  <a class="button" style="margin-bottom:10px" @click="loginGoogle">Log In - Gmail</a><br>
+                  <a class="button" style="margin-bottom:10px" @click="loginGitHub">Log In - GitHub</a>
+                </div>
+             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -25,29 +31,17 @@ import "firebase/auth";
 export default {
   methods: {
     loginGoogle() {
-      const lastRoute = localStorage.getItem("page");
-      firebase.auth().onAuthStateChanged((user) => {
-        if (!user) {
-          const provider = new firebase.auth.GoogleAuthProvider();
-          firebase
-            .auth()
-            .signInWithPopup(provider)
-            .then(() => {
-              this.$router.push(lastRoute != "undefined" || lastRoute != null ? lastRoute : "/0");
-            })
-            .catch((err) => {
-              console.log("There was an error.", err);
-            });
-        } else {
-           this.$router.push(lastRoute != "undefined" || lastRoute != null ? lastRoute : "/0");                                 
-        }
-      });
+      const provider = new firebase.auth.GoogleAuthProvider();
+      this.login();
     },
     loginGitHub() {
+        const provider = new firebase.auth.GithubAuthProvider();
+        this.login();
+    },
+    login() {
         const lastRoute = localStorage.getItem("page");
         firebase.auth().onAuthStateChanged((user) => {
             if (!user) {
-                const provider = new firebase.auth.GithubAuthProvider();
                 firebase
                 .auth()
                 .signInWithPopup(provider)

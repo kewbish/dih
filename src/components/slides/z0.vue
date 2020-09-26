@@ -19,7 +19,7 @@ export default {
       if (firebase.auth().currentUser) {
         return firebase.auth().currentUser.displayName.split(" ")[0];
       }
-      return null;
+      return "there";
     },
   },
 };

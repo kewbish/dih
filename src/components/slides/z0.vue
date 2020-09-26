@@ -17,7 +17,11 @@ export default {
   computed: {
     firstName() {
       if (firebase.auth().currentUser) {
-        return firebase.auth().currentUser.displayName.split(" ")[0];
+        if (firebase.auth().currentUser.displayName) {
+            return firebase.auth().currentUser.displayName.split(" ")[0];
+        } else {
+            return "there";
+        }
       }
       return "there";
     },

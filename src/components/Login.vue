@@ -15,7 +15,8 @@
               <div class="tile is-4 is-vertical is-parent">
                 <div class="tile is-child box">
                   <a class="button" style="margin-bottom:10px" @click="loginGoogle">Log In - Gmail</a><br>
-                  <a class="button" style="margin-bottom:10px" @click="loginGitHub">Log In - GitHub</a>
+                  <a class="button" style="margin-bottom:10px" @click="loginGitHub">Log In - GitHub</a><br>
+                  <a class="button" style="margin-bottom:10px" @click="loginAnon">Continue without logging in</a>
                 </div>
              </div>
           </div>
@@ -32,13 +33,31 @@ export default {
   methods: {
     loginGoogle() {
       const provider = new firebase.auth.GoogleAuthProvider();
-      this.login();
+      this.login(provider);
     },
     loginGitHub() {
         const provider = new firebase.auth.GithubAuthProvider();
-        this.login();
+        this.login(provider);
     },
-    login() {
+    loginAnon() {
+        const lastRoute = localStorage.getItem("page");
+        firebase.auth().onAuthStateChanged((user) => {
+            if (!user) {
+                firebase
+                .auth()
+                .signInAnonymously()
+                .then(() => {
+                  this.$router.push(lastRoute != null ? lastRoute : "/0");
+                })
+                .catch((err) => {
+                  console.log("There was an error.", err);
+                });
+            } else {
+               this.$router.push(lastRoute != null ? lastRoute : "/0");                                 
+            }
+        });
+    },
+    login(provider) {
         const lastRoute = localStorage.getItem("page");
         firebase.auth().onAuthStateChanged((user) => {
             if (!user) {

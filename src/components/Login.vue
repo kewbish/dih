@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class="message is-info is-bold is-medium">
+      <div class="message is-info is-bold is-medium is-v-centered">
         <div class="message-header">
           <h1 class="title has-text-white">Sign in, and let's get started!</h1>
         </div>
@@ -12,24 +12,26 @@
             <em>may</em> work on mobile, but it's difficult to view the code snippets.
           </p>
           <div class="tile is-ancestor">
-              <div class="tile is-4 is-horizontal is-parent">
-                <div class="tile is-child box">
+              <div class="tile is-parent">
+                <div class="tile is-child notification is-info">
                   <a class="button" style="margin-bottom:10px" @click="loginGoogle">Log In - Gmail</a><br>
                   <a class="button" style="margin-bottom:10px" @click="loginGitHub">Log In - GitHub</a><br>
                   <a class="button" style="margin-bottom:10px" @click="loginAnon">Continue without logging in</a>
                 </div>
-                <div class="tile is-child box">
+              </div>
+              <div class="tile is-parent">
+                <div class="tile is-child notification is-info">
                   <div class="field">
                       <label class="label has-text-white">Email</label>
-                      <div class="control"><input type="email" v-model="email" placeholder="Your email."></div>
+                      <div class="control"><input class="input" type="email" v-model="email" placeholder="Your email."></div>
                   </div>
                   <div class="field">
                       <label class="label has-text-white">Password</label>
-                      <div class="control"><input type="text" v-model="pass" placeholder="Password."></div>
+                      <div class="control"><input class="input" type="text" v-model="pass" placeholder="Password."></div>
                   </div>
                   <div class="field">
                       <label class="label has-text-white">Confirm password</label>
-                      <div class="control"><input type="text" v-model="passrep" placeholder="Confirm password."></div>
+                      <div class="control"><input class="input" type="text" v-model="passrep" placeholder="Confirm password."></div>
                   </div>
                   <div class="field">
                       <div class="control"><button class="button is-dark" @click="loginEmail()">Log In / Create</button></div>

@@ -21,11 +21,11 @@
                       </div>
                       <div class="field">
                           <label class="label">Password</label>
-                          <div class="control"><input class="input" type="text" v-model="pass" placeholder="Password."></div>
+                          <div class="control"><input class="input" type="password" v-model="pass" placeholder="Password."></div>
                       </div>
                       <div class="field">
                           <label class="label">Confirm password</label>
-                          <div class="control"><input class="input" type="text" v-model="passrep" placeholder="Confirm password."></div>
+                          <div class="control"><input class="input" type="password" v-model="passrep" placeholder="Confirm password."></div>
                       </div>
                       <div class="field">
                           <div class="control"><button class="button is-dark" @click="loginEmail()">Log In / Create</button></div>
@@ -102,15 +102,27 @@ export default {
             if (!user) {
                 if (this.pass != this.passrep) {
                     console.log("There was an error.");
-                    this.err = "Passwords do not match."; 
+                    this.err = "Passwords do not match - please try again!";
+                    return;
                 }
-                firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
+                firebase.auth().createUserWithEmailAndPassword(this.email, this.pass)
                 .then(() => {
                   this.$router.push(lastRoute != null ? lastRoute : "/0");
                 })
                 .catch((err) => {
-                  console.log("There was an error.", err);
-                  this.err = `${err} - please try again!`;
+                  if (err == "auth/email-already-in-use") {
+                    firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
+                    .then(() => {
+                      this.$router.push(lastRoute != null ? lastRoute : "/0");
+                    })
+                    .catch((err) => {
+                      console.log("There was an error.", err);
+                      this.err = `${err} - please try again!`;
+                    });
+                  } else {
+                      console.log("There was an error.", err);
+                      this.err = `${err} - please try again!`;
+                  }
                 });
             } else {
                this.$router.push(lastRoute != null ? lastRoute : "/0");                                 

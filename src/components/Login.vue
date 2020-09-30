@@ -44,6 +44,12 @@
                   </div>
               </div>
           </div>
+          <div class="message is-danger" v-if="err">
+             <div class="message-header">Error</div>
+             <div class="message-body">
+               {{err}}
+             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -58,7 +64,8 @@ export default {
     return {
         email: null,
         pass: null,
-        passrep: null
+        passrep: null,
+        err: null
     }
   },
   methods: {
@@ -82,6 +89,7 @@ export default {
                 })
                 .catch((err) => {
                   console.log("There was an error.", err);
+                  this.err = `${err} - please try again!`;
                 });
             } else {
                this.$router.push(lastRoute != null ? lastRoute : "/0");                                 
@@ -94,6 +102,7 @@ export default {
             if (!user) {
                 if (this.pass != this.passrep) {
                     console.log("There was an error.");
+                    this.err = "Passwords do not match."; 
                 }
                 firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
                 .then(() => {
@@ -101,6 +110,7 @@ export default {
                 })
                 .catch((err) => {
                   console.log("There was an error.", err);
+                  this.err = `${err} - please try again!`;
                 });
             } else {
                this.$router.push(lastRoute != null ? lastRoute : "/0");                                 
@@ -119,6 +129,7 @@ export default {
                 })
                 .catch((err) => {
                   console.log("There was an error.", err);
+                  this.err = `${err} - please try again!`;
                 });
             } else {
                this.$router.push(lastRoute != null ? lastRoute : "/0");                                 

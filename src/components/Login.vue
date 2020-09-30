@@ -11,27 +11,38 @@
             <br />This site works best on desktop. It
             <em>may</em> work on mobile, but it's difficult to view the code snippets.
           </p>
-          <div class="box">
-              <div class="field">
-                  <label class="label">Email</label>
-                  <div class="control"><input class="input" type="email" v-model="email" placeholder="Your email."></div>
+          <div class="tile is-ancestor">
+              <div class="tile is-parent">
+                  <div class="tile is-child">
+                    <div class="box">
+                      <div class="field">
+                          <label class="label">Email</label>
+                          <div class="control"><input class="input" type="email" v-model="email" placeholder="Your email."></div>
+                      </div>
+                      <div class="field">
+                          <label class="label">Password</label>
+                          <div class="control"><input class="input" type="text" v-model="pass" placeholder="Password."></div>
+                      </div>
+                      <div class="field">
+                          <label class="label">Confirm password</label>
+                          <div class="control"><input class="input" type="text" v-model="passrep" placeholder="Confirm password."></div>
+                      </div>
+                      <div class="field">
+                          <div class="control"><button class="button is-dark" @click="loginEmail()">Log In / Create</button></div>
+                      </div>
+                     </div> 
+                  </div>
               </div>
-              <div class="field">
-                  <label class="label">Password</label>
-                  <div class="control"><input class="input" type="text" v-model="pass" placeholder="Password."></div>
+              <div class="tile is-4 is-parent">
+                  <div class="tile is-child">
+                      <div class="box">
+                          <h1 class="title is-4">Other options</h1>
+                          <a class="button is-dark" style="margin-bottom:10px" @click="loginGoogle">Log In - Gmail</a><br>
+                          <a class="button is-dark" style="margin-bottom:10px" @click="loginGitHub">Log In - GitHub</a><br> 
+                          <a class="button is-dark" style="margin-bottom:10px" @click="loginAnon">Anonymous - no info</a>
+                      </div>
+                  </div>
               </div>
-              <div class="field">
-                  <label class="label">Confirm password</label>
-                  <div class="control"><input class="input" type="text" v-model="passrep" placeholder="Confirm password."></div>
-              </div>
-              <div class="field">
-                  <div class="control"><button class="button is-dark" @click="loginEmail()">Log In / Create</button></div>
-              </div>
-          </div>
-          <div>
-              <a class="button is-dark" style="margin-bottom:10px" @click="loginGoogle">Log In - Gmail</a> 
-              <a class="button is-dark" style="margin-bottom:10px" @click="loginGitHub">Log In - GitHub</a> 
-              <a class="button is-dark" style="margin-bottom:10px" @click="loginAnon">Continue without logging in</a>
           </div>
         </div>
       </div>

@@ -119,6 +119,23 @@ export default {
         const lastRoute = localStorage.getItem("page");
         firebase.auth().onAuthStateChanged((user) => {
             if (!user) {
+                firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
+                .then(() => {
+                  this.$router.push(lastRoute != null ? lastRoute : "/0");
+                })
+                .catch((err) => {
+                  console.log("There was an error.", err);
+                  this.err = `${err} - please try again!`;
+                });
+            } else {
+               this.$router.push(lastRoute != null ? lastRoute : "/0");                                 
+            }
+        });
+    },
+    createEmail() {
+        const lastRoute = localStorage.getItem("page");
+        firebase.auth().onAuthStateChanged((user) => {
+            if (!user) {
                 if (this.pass != this.passrep) {
                     console.log("There was an error.");
                     this.err = "Passwords do not match - please try again!";

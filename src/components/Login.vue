@@ -126,14 +126,20 @@ export default {
                 .auth()
                 .signInAnonymously()
                 .then(() => {
-                  this.$router.push(lastRoute != null ? lastRoute : "/0");
+                  this.$router.push(lastRoute != null ? lastRoute : "/0")
+                  .catch((err) => {
+                    console.log("There was an error.", err);
+                  });
                 })
                 .catch((err) => {
                   console.log("There was an error.", err);
                   this.err = `${err} - please try again!`;
                 });
             } else {
-               this.$router.push(lastRoute != null ? lastRoute : "/0");                                 
+               this.$router.push(lastRoute != null ? lastRoute : "/0")
+               .catch((err) => {
+                 console.log("There was an error.", err);
+               });
             }
         });
     },
@@ -143,14 +149,20 @@ export default {
             if (!user) {
                 firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
                 .then(() => {
-                  this.$router.push(lastRoute != null ? lastRoute : "/0");
+                  this.$router.push(lastRoute != null ? lastRoute : "/0")
+                  .catch((err) => {
+                    console.log("There was an error.", err);
+                  });
                 })
                 .catch((err) => {
                   console.log("There was an error.", err);
                   this.err = `${err} - please try again!`;
                 });
             } else {
-               this.$router.push(lastRoute != null ? lastRoute : "/0");                                 
+               this.$router.push(lastRoute != null ? lastRoute : "/0")
+               .catch((err) => {
+                 console.log("There was an error.", err);
+               });
             }
         });
     },
@@ -181,15 +193,21 @@ export default {
                 }
                 firebase.auth().createUserWithEmailAndPassword(this.email, this.pass)
                 .then(() => {
-                  this.$router.push(lastRoute != null ? lastRoute : "/0");
+                  this.$router.push(lastRoute != null ? lastRoute : "/0")
+                  .catch((err) => {
+                    console.log("There was an error.", err);
+                  });
                 })
                 .catch((err) => {
                   if (err == "auth/email-already-in-use") {
                     firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
                     .then(() => {
-                      this.$router.push(lastRoute != null ? lastRoute : "/0");
-                    })
-                    .catch((err) => {
+                      this.$router.push(lastRoute != null ? lastRoute : "/0")
+                      .catch((err) => {
+                        console.log("There was an error.", err);
+                      });
+                    })                                                          
+                    .catch((err) => {                                           
                       console.log("There was an error.", err);
                       this.err = `${err} - please try again!`;
                     });
@@ -199,7 +217,10 @@ export default {
                   }
                 });
             } else {
-               this.$router.push(lastRoute != null ? lastRoute : "/0");                                 
+               this.$router.push(lastRoute != null ? lastRoute : "/0") 
+               .catch((err) => {
+                 console.log("There was an error.", err);
+               });
             }
         });
     },
@@ -211,14 +232,20 @@ export default {
                 .auth()
                 .signInWithPopup(provider)
                 .then(() => {
-                  this.$router.push(lastRoute != null ? lastRoute : "/0");
+                  this.$router.push(lastRoute != null ? lastRoute : "/0")
+                  .catch((err) => {
+                    console.log("There was an error.", err);
+                  });
                 })
                 .catch((err) => {
                   console.log("There was an error.", err);
                   this.err = `${err} - please try again!`;
                 });
             } else {
-               this.$router.push(lastRoute != null ? lastRoute : "/0");                                 
+               this.$router.push(lastRoute != null ? lastRoute : "/0")
+               .catch((err) => {
+                 console.log("There was an error.", err);
+               });
             }
         });
     }

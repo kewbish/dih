@@ -25,7 +25,20 @@
                           <div class="control"><input class="input" type="password" v-model="pass" placeholder="Password."></div>
                       </div>
                       <div class="field">
-                          <div class="control"><button class="button is-dark" @click="loginEmail()">Log In</button></div>
+                          <div class="control"><button class="button is-dark" style="margin-right: 1%;" @click="loginEmail()">Log In</button> 
+                          <button class="button is-dark" @click="forgotEmailSwitch()">Forgot password?</button>
+                          </div>
+                      </div>
+                    </div>
+                    <div v-else-if="forgot">
+                      <h1 class="title is-4">Reset password <a @click="switchLogin">or login</a></h1>
+                      <div class="field">
+                          <label class="label">Email</label>
+                          <div class="control"><input class="input" type="email" v-model="email" placeholder="Your email."></div>
+                      </div>
+                      <div class="field">
+                          <div class="control"><button class="button is-dark" style="margin-right: 1%;" @click="forgotEmail()">Log In</button> 
+                          </div>
                       </div>
                     </div>
                     <div class="create" v-else>
@@ -78,6 +91,7 @@ export default {
   data: function () {
     return {
         loginSwitch: true,
+        forgot: false,
         email: null,
         pass: null,
         passrep: null,
@@ -87,6 +101,7 @@ export default {
   methods: {
     switchLogin() {
       this.loginSwitch = !this.loginSwitch;
+      this.forgot = false;
     },
     loginGoogle() {
       const provider = new firebase.auth.GoogleAuthProvider();
@@ -130,6 +145,20 @@ export default {
             } else {
                this.$router.push(lastRoute != null ? lastRoute : "/0");                                 
             }
+        });
+    },
+    forgotEmailSwitch() {
+        this.forget = true;
+        this.loginSwitch = false;
+    },
+    forgotEmail() {
+        firebase.auth().sendPasswordResetEmail(this.email)
+        .then(() => {
+            this.message = "A password reset was sent.";
+        })
+        .catch((err) => {
+          console.log("There was an error.", err);
+          this.err = `${err} - please try again!`;
         });
     },
     createEmail() {

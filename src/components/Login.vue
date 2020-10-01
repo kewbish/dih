@@ -78,6 +78,12 @@
                {{err}}
              </div>
           </div>
+          <div class="message is-success" v-if="message">
+             <div class="message-header">Success!</div>
+             <div class="message-body">
+               {{message}}
+             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -95,7 +101,8 @@ export default {
         email: null,
         pass: null,
         passrep: null,
-        err: null
+        err: null,
+        message: null
     }
   },
   methods: {
@@ -155,6 +162,8 @@ export default {
         firebase.auth().sendPasswordResetEmail(this.email)
         .then(() => {
             this.message = "A password reset was sent.";
+            this.loginSwitch = true;
+            this.forgot = false;
         })
         .catch((err) => {
           console.log("There was an error.", err);

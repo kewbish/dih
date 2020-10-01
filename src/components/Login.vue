@@ -15,7 +15,7 @@
               <div class="tile is-parent">
                 <div class="tile is-child box">
                   <div class="login" v-if="loginSwitch">
-                      <h1 class="title is-4">Login <a @click="switchLogin">or create</a></h1>
+                      <h1 class="title is-4">Login <a class="switch" @click="switchLogin">or create</a></h1>
                       <div class="field">
                           <label class="label">Email</label>
                           <div class="control"><input class="input" type="email" v-model="email" placeholder="Your email."></div>
@@ -31,18 +31,18 @@
                       </div>
                     </div>
                     <div v-else-if="forgot">
-                      <h1 class="title is-4">Reset password <a @click="switchLogin">or login</a></h1>
+                      <h1 class="title is-4">Reset password <a class="switch" @click="switchLogin">or login</a></h1>
                       <div class="field">
                           <label class="label">Email</label>
                           <div class="control"><input class="input" type="email" v-model="email" placeholder="Your email."></div>
                       </div>
                       <div class="field">
-                          <div class="control"><button class="button is-dark" style="margin-right: 1%;" @click="forgotEmail()">Log In</button> 
+                          <div class="control"><button class="button is-dark" style="margin-right: 1%;" @click="forgotEmail()">Send reset email</button> 
                           </div>
                       </div>
                     </div>
                     <div class="create" v-else>
-                      <h1 class="title is-4">Create account <a @click="switchLogin">or login</a></h1>
+                      <h1 class="title is-4">Create account <a class="switch" @click="switchLogin">or login</a></h1>
                       <div class="field">
                           <label class="label">Email</label>
                           <div class="control"><input class="input" type="email" v-model="email" placeholder="Your email."></div>
@@ -148,8 +148,8 @@ export default {
         });
     },
     forgotEmailSwitch() {
-        this.forget = true;
         this.loginSwitch = false;
+        this.forgot = true;
     },
     forgotEmail() {
         firebase.auth().sendPasswordResetEmail(this.email)
@@ -225,3 +225,9 @@ export default {
 };
 </script>
 
+<style scoped>
+.switch:hover {
+    color: #209cee !important;
+    transition: 0.3s ease all;
+}
+</style>

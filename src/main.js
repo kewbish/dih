@@ -53,11 +53,12 @@ const router = new VueRouter({
 });
 router.beforeEach((to, from, next) => {
     if (to.meta.requiresAuth) {
-        auth().onAuthStateChanged(user => {
-            if (!user) {
+        auth().onAuthStateChanged((user) => {
+            if (to == "/0" && from == "/login") {
+                next()
+            } else if (!user) {
                 next("/login");
-            }
-            else {
+            } else {
                 next();
             }
         })

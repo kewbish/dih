@@ -516,7 +516,8 @@ import "firebase/auth";
 
 export default {
   methods: {
-    switchIndex: function () {
+    switchIndex: function (el) {
+      el.toElement.classList.add("is-loading");
       const lastRoute = localStorage.getItem("page");
       firebase.auth().onAuthStateChanged((user) => {
         if (!user) {

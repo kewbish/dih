@@ -8,7 +8,14 @@ html{
     position: fixed;
     bottom: 15px;
     left: 15px;
+    display: flex;
+    justify-content: left;
+}
+.fixed-count {
     width: max(4%, 40px);
+}
+.fixed-drop {
+    margin-left: 5px;
 }
 .fixed-back{
     position: fixed;

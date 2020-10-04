@@ -91,8 +91,8 @@ export default {
       }
     },
     linkGmail() {
-      var credential = firebase.auth().GoogleAuthProvider.credential(googleUser.getAuthResponse().id_token);
-      firebase.auth().currentUser.linkWithCredential(credential)
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth.currentUser.linkWithPopup(provider)
       .then(() => {
         console.log("Account upgraded successfully.");
       }).catch((err) => {
@@ -100,8 +100,8 @@ export default {
       });
     },
     linkGithub() {
-      var credential = firebase.auth().GithubAuthProvider.credential(token);
-      firebase.auth().currentUser.linkWithCredential(credential)
+      var provider = new firebase.auth.GithubAuthProvider();
+      firebase.auth.currentUser.linkWithPopup(provider)
       .then(() => {
         console.log("Account upgraded successfully.");
       }).catch((err) => {
@@ -109,8 +109,8 @@ export default {
       });
     },
     linkEmail() {
-      var credential = firebase.auth().EmailAuthProvider.credential(this.email, this.password);
-      firebase.auth().currentUser.linkWithCredential(credential)
+      var provider = new firebase.auth.EmailAuthProvider.credential(this.email, this.password);
+      firebase.auth.currentUser.linkWithCredential(provider)
       .then(() => {
         console.log("Account upgraded successfully.");
       }).catch((err) => {

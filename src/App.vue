@@ -9,8 +9,8 @@
           v-model.lazy="count"
           :placeholder="count"
         />
-        <div class="fixed-drop dropdown is-up" v-if="anon">
-          <div class="dropdown-trigger" @click="trigger">
+        <div class="fixed-drop dropdown is-up is-hoverable" v-if="anon">
+          <div class="dropdown-trigger">
             <button class="button">Link account</button>
           </div>
           <div class="dropdown-menu">
@@ -26,10 +26,18 @@
               <div class="dropdown-item">
                 <details>
                     <summary>Link email</summary>
-                    <label class="label">Email</label>
-                    <input class="input" type="text" placeholder="Email">
-                    <label class="label">Password</label>
-                    <input class="input" type="password" placeholder="Password">
+                    <div class="field">
+                      <label class="label">Email</label>
+                      <div class="control">
+                        <input class="input is-small" type="text" placeholder="Email.">
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="label">Password</label>
+                      <div class="control">
+                        <input class="input is-small" type="text" placeholder="Password.">
+                      </div>
+                    </div>
                     <a @click="linkEmail()">Link email</a>
                 </details>
               </div>
@@ -60,9 +68,6 @@ export default {
     };
   },
   methods: {
-    trigger(target) {
-     target.target.classList.toggle("is-active"); 
-    },
     countUp() {
       if (parseInt(this.count) < 22) {
         if (!(0 <= parseInt(this.count) && parseInt(this.count) < 22)) {

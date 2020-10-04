@@ -29,13 +29,13 @@
                     <div class="field">
                       <label class="label">Email</label>
                       <div class="control">
-                        <input class="input is-small" type="text" placeholder="Email.">
+                        <input class="input is-small" type="text" placeholder="Email." v-model="email">
                       </div>
                     </div>
                     <div class="field">
                       <label class="label">Password</label>
                       <div class="control">
-                        <input class="input is-small" type="text" placeholder="Password.">
+                        <input class="input is-small" type="text" placeholder="Password." v-model="password">
                       </div>
                     </div>
                     <a @click="linkEmail()">Link email</a>
@@ -64,7 +64,9 @@ import "firebase/auth";
 export default {
   data () {
     return {
-      anon: null
+      anon: null,
+      email: null,
+      password: null
     };
   },
   methods: {
@@ -88,6 +90,33 @@ export default {
         }
       }
     },
+    linkGmail() {
+      var credential = firebase.auth().GoogleAuthProvider.credential(googleUser.getAuthResponse().id_token);
+      firebase.auth().currentUser.linkWithCredential(credential)
+      .then(() => {
+        console.log("Account upgraded successfully.");
+      }).catch((err) => {
+        console.log("Error upgrading anonymous account", err);
+      });
+    },
+    linkGithub() {
+      var credential = firebase.auth().GithubAuthProvider.credential(token);
+      firebase.auth().currentUser.linkWithCredential(credential)
+      .then(() => {
+        console.log("Account upgraded successfully.");
+      }).catch((err) => {
+        console.log("Error upgrading anonymous account", err);
+      });
+    },
+    linkEmail() {
+      var credential = firebase.auth().EmailAuthProvider.credential(this.email, this.password);
+      firebase.auth().currentUser.linkWithCredential(credential)
+      .then(() => {
+        console.log("Account upgraded successfully.");
+      }).catch((err) => {
+        console.log("Error upgrading anonymous account", err);
+      });
+    }
   },
   computed: {
     count: {

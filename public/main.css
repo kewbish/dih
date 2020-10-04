@@ -27,6 +27,9 @@ html{
     bottom: 50%;
     right: 2%;
 }
+.is-small {
+    max-width: 100%;
+}
 code{
     tab-size: 4;
 }

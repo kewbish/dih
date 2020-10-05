@@ -9,8 +9,8 @@
           v-model.lazy="count"
           :placeholder="count"
         />
-        <div class="fixed-drop dropdown is-up is-hoverable" v-if="anon">
-          <div class="dropdown-trigger">
+        <div class="fixed-drop dropdown is-up" id="dropdown" v-if="anon">
+          <div class="dropdown-trigger" @click="trigger">
             <button class="button">Link account</button>
           </div>
           <div class="dropdown-menu">
@@ -24,22 +24,19 @@
               </div>
               <hr class="dropdown-divider">
               <div class="dropdown-item">
-                <details>
-                    <summary>Link email</summary>
-                    <div class="field">
-                      <label class="label">Email</label>
-                      <div class="control">
-                        <input class="input is-small" type="text" placeholder="Email." v-model="email">
-                      </div>
-                    </div>
-                    <div class="field">
-                      <label class="label">Password</label>
-                      <div class="control">
-                        <input class="input is-small" type="text" placeholder="Password." v-model="password">
-                      </div>
-                    </div>
-                    <a @click="linkEmail()">Link email</a>
-                </details>
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control">
+                    <input class="input is-small" type="text" placeholder="Email." v-model="email">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Password</label>
+                  <div class="control">
+                    <input class="input is-small" type="password" placeholder="Password." v-model="password">
+                  </div>
+                </div>
+                <a @click="linkEmail()">Link email</a>
               </div>
             </div>
           </div>
@@ -70,6 +67,9 @@ export default {
     };
   },
   methods: {
+    trigger() {
+      document.getElementById("dropdown").classList.toggle("is-active");
+    },
     countUp() {
       if (parseInt(this.count) < 22) {
         if (!(0 <= parseInt(this.count) && parseInt(this.count) < 22)) {
@@ -92,27 +92,30 @@ export default {
     },
     linkGmail() {
       var provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth.currentUser.linkWithPopup(provider)
+      firebase.auth().currentUser.linkWithPopup(provider)
       .then(() => {
         console.log("Account upgraded successfully.");
+        this.anon = false;
       }).catch((err) => {
         console.log("Error upgrading anonymous account", err);
       });
     },
     linkGithub() {
       var provider = new firebase.auth.GithubAuthProvider();
-      firebase.auth.currentUser.linkWithPopup(provider)
+      firebase.auth().currentUser.linkWithPopup(provider)
       .then(() => {
         console.log("Account upgraded successfully.");
+        this.anon = false;
       }).catch((err) => {
         console.log("Error upgrading anonymous account", err);
       });
     },
     linkEmail() {
       var provider = new firebase.auth.EmailAuthProvider.credential(this.email, this.password);
-      firebase.auth.currentUser.linkWithCredential(provider)
+      firebase.auth().currentUser.linkWithCredential(provider)
       .then(() => {
         console.log("Account upgraded successfully.");
+        this.anon = false;
       }).catch((err) => {
         console.log("Error upgrading anonymous account", err);
       });

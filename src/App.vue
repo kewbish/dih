@@ -37,6 +37,12 @@
                   </div>
                 </div>
                 <a @click="linkEmail()">Link email</a>
+                <div class="message is-danger" v-if="err">
+                  <div class="message-header">Error</div>
+                  <div class="message-body">
+                    {{err}}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -63,7 +69,8 @@ export default {
     return {
       anon: null,
       email: null,
-      password: null
+      password: null,
+      err: null
     };
   },
   methods: {
@@ -98,6 +105,7 @@ export default {
         this.anon = false;
       }).catch((err) => {
         console.log("Error upgrading anonymous account", err);
+        this.err = err + "- please try again!";
       });
     },
     linkGithub() {
@@ -108,6 +116,7 @@ export default {
         this.anon = false;
       }).catch((err) => {
         console.log("Error upgrading anonymous account", err);
+        this.err = err + "- please try again!";
       });
     },
     linkEmail() {
@@ -118,6 +127,7 @@ export default {
         this.anon = false;
       }).catch((err) => {
         console.log("Error upgrading anonymous account", err);
+        this.err = err + "- please try again!";
       });
     }
   },

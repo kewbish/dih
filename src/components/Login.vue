@@ -254,7 +254,10 @@ export default {
     const lastRoute = localStorage.getItem("page");
     firebase.auth().onAuthStateChanged((user) => {
       if (user && lastRoute) {
-        this.$router.push(lastRoute != "undefined" || lastRoute != null ? lastRoute : "/0");
+        this.$router.push(lastRoute != "undefined" || lastRoute != null ? lastRoute : "/0")
+        .catch((err) => {
+          console.log("There was an error.", err);
+        });
       }
     });
   },

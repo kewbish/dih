@@ -16,30 +16,30 @@
           <div class="dropdown-menu">
             <div class="dropdown-content">
               <div class="dropdown-item">
-                <a @click="linkGmail()">Link to Google</a>
+                <a @click="linkGmail()" class="is-size-6">Link to Google</a>
               </div>
               <hr class="dropdown-divider">
               <div class="dropdown-item">
-                <a @click="linkGithub()">Link to Github</a>
+                <a @click="linkGithub()" class="is-size-6">Link to GitHub</a>
               </div>
               <hr class="dropdown-divider">
               <div class="dropdown-item">
                 <div class="field">
                   <label class="label">Email</label>
                   <div class="control">
-                    <input class="input is-small" type="text" placeholder="Email." v-model="email">
+                    <input class="input is-small is-size-6" type="text" placeholder="Email." v-model="email">
                   </div>
                 </div>
                 <div class="field">
-                  <label class="label">Password</label>
+                  <label class="label">New password</label>
                   <div class="control">
-                    <input class="input is-small" type="password" placeholder="Password." v-model="password">
+                    <input class="input is-small is-size-6" type="password" placeholder="Password." v-model="password">
                   </div>
                 </div>
-                <a @click="linkEmail()">Link email</a>
-                <div class="message is-danger" v-if="err">
+                <a @click="linkEmail()" class="is-size-6">Link email</a>
+                <div class="message is-danger is-small mt-2" v-if="err">
                   <div class="message-header">Error</div>
-                  <div class="message-body">
+                  <div class="message-body is-size-6">
                     {{err}}
                   </div>
                 </div>
@@ -143,7 +143,7 @@ export default {
       },
     }
   },
-  created() {
+  mounted() {
     firebase.auth().onAuthStateChanged((user) => {
        if (user) {
          this.anon = user.isAnonymous; 

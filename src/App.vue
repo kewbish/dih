@@ -9,7 +9,7 @@
           v-model.lazy="count"
           :placeholder="count"
         />
-        <div class="fixed-drop dropdown is-up" id="dropdown" v-if="anon">
+        <div class="fixed-drop dropdown is-up" id="dropdown" v-if="$router.currentRoute.path !== '/' && $router.currentRoute.path !== '/login' && anon">
           <div class="dropdown-trigger" @click="trigger">
             <button class="button">Link account</button>
           </div>

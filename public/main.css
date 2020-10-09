@@ -39,12 +39,3 @@ slide{
 br{
     line-height: 150%;
 }
-.c-column{
-    margin:6px auto 3px;
-    padding:0px;
-}
-@media (max-device-width: 1024px){
-    #c-column{
-        margin-top: 0 !important;
-    }
-} 

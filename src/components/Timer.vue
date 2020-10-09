@@ -3,16 +3,16 @@
     <div class="message-header" style="margin-bottom:10px">
       <h1 class="title has-text-white">{{ title }}</h1>
     </div>
-    <div class="columns is-0 is-variable">
-      <div class="column c-column">
-        <div class="box" style="margin: 5px;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent my-2 px-0 mx-1">
+        <div class="tile is-child box">
           <p style="margin-bottom:15px">{{ subtitle }}</p>
           <a class="button is-dark" @click="endTimer">{{ switchText }}</a>
           <a class="button is-dark" @click="resTimer" style="margin-left: 5px">↪️ Reset</a>
         </div>
       </div>
-      <div class="column c-column" id="c-column">
-        <div class="box" style="margin: 5px;">
+      <div class="tile is-parent my-2 px-0 mx-1">
+        <div class="tile is-child box">
           <h1 class="title">{{ formatTime }}</h1>
         </div>
       </div>

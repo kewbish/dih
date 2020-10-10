@@ -6,8 +6,8 @@ html{
 }
 .fixed-input{
     position: fixed;
-    bottom: 15px;
-    left: 15px;
+    bottom: 2%;
+    left: 1%;
     display: flex;
     justify-content: left;
 }

@@ -1,9 +1,6 @@
 html{
     scroll-behavior: smooth;
 }
-.is-blue{
-    background: #209cee;
-}
 .fixed-input{
     position: fixed;
     bottom: 2%;

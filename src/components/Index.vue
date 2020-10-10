@@ -4,6 +4,7 @@
       <div class="hero is-info is-bold is-medium">
         <div class="hero-body">
           <h1 class="title is-1 has-text-centered">Dive Into HTML</h1>
+          <p class="subtitle has-text-centered">A comprehensive branching guide designed for beginners to get up to speed quickly.</p>
           <div class="has-text-centered">
             <a @click="switchIndex" class="button">Get Started 📚</a>
           </div>
@@ -18,15 +19,14 @@
               <h1 class="title">Ever wanted to create an online resume?</h1>
               <p>
                 We'll walk you through how.
-                <br />Here, you'll learn the basics of laying out a website with HTML,
-                styling
-                it with CSS, making it mobile-friendly and responsive, and deploying it to production
+                <br/>A practical first project introduces you to the world of web design and development, quickly and easily.
+                <br/>As technology becomes more prevalent in schools, diveintoht.ml is a fun way to learn industry-applicable skills.
               </p>
-              <br />
+              <br/>
               <h1 class="title">Let's get started.</h1>
               <p>
                 <a @click="switchIndex" class="button is-dark">Go to tutorial 👩‍🏫</a>
-                <br />
+                <br/>
               </p>
             </div>
           </div>
@@ -485,19 +485,50 @@
             </div>
           </div>
         </div>
-        <div class="box is-blue">
-          <h1 class="title has-text-white is-1 has-text-centered">You'll learn...</h1>
+      </div>
+      <div class="container mt-5 mb-2">
+        <div class="notification has-text-centered">
+          <h1 class="title has-text-white is-1">You'll learn...</h1>
           <p
-            class="subtitle has-text-white has-text-centered"
-          >HTML - CSS - Responsive Design - GitHub Deployment</p>
-          <div class="has-text-centered">
+            class="subtitle has-text-white"
+          >HTML - CSS - Responsive Design - GitHub Deployment<br>...all skills highly in demand today, and stepping stones for a future tech career.</p>
+          <div>
             <a @click="switchIndex" class="button" style="margin-left:15px">Get learning ✏️</a>
           </div>
         </div>
       </div>
+      <div class="container mt-6">
+          <div class="notification is-info">
+            <h1 class="title">We're different from other resources.</h1>
+            <div class="columns is-1 is-variable">
+                <div class="column px-1">
+                    <div class="box content">
+                        <h1 class="title is-4 mb-1">For individuals:</h1>
+                        <ul>
+                            <li>A short [roughly 1-2hr] guide to get you up to speed quickly</li>
+                            <li>None of the fluff, but helpful links to resources for exploration</li>
+                            <li>A practical first project, immediately deployable</li>
+                            <li>Suggested topics to branch into provided</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column px-1">
+                    <div class="box content">
+                        <h1 class="title is-4 mb-1">For schools:</h1>
+                        <ul>
+                            <li>A reliable, up-to-date resource for students</li>
+                            <li>Convenient timed exercises and checkpoints</li>
+                            <li>None of the frustration of setting up a development environment</li>
+                            <li>Continuously maintained and updated links</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
     </section>
     <section class="hero is-info is-bold is-small">
-      <div class="hero-body">
+      <div class="hero-body content">
         <p>
           Created by
           <a

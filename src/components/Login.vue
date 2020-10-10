@@ -6,11 +6,7 @@
           <h1 class="title has-text-white">Sign in, and let's get started!</h1>
         </div>
         <div class="message-body">
-          <p class="subtitle">
-            We do not collect any information other than your display name.
-            <br />This site works best on desktop. It
-            <em>may</em> work on mobile, but it's difficult to view the code snippets.
-          </p>
+          <p class="subtitle">We do not collect any information other than your display name.</p>
           <div class="tile is-ancestor">
               <div class="tile is-parent">
                 <div class="tile is-child box">

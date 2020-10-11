@@ -498,31 +498,28 @@
         </div>
       </div>
       <div class="container mt-6">
-          <div class="notification is-info">
-            <h1 class="title">We're different from other resources.</h1>
-            <div class="columns is-1 is-variable">
-                <div class="column px-1">
-                    <div class="box content">
-                        <h1 class="title is-4 mb-1">For individuals:</h1>
-                        <ul>
-                            <li>A short [roughly 1-2hr] guide to get you up to speed quickly</li>
-                            <li>None of the fluff, but helpful links to resources for exploration</li>
-                            <li>A practical first project, immediately deployable</li>
-                            <li>Suggested topics to branch into provided</li>
-                        </ul>
+          <div class="notification is-info has-text-centered">
+            <h1 class="title">For educators:</h1>
+            <div class="box content">
+                <h1 class="title is-4 mb-1">An engaging learner experience.</h1>
+                <p>With a school bundle, you'll get:</p>
+                <ul style="list-style-position: inside;">
+                    <li>A short [roughly 1-2hr] guide to get you up to speed quickly</li>
+                    <li>None of the fluff, but helpful links to resources for exploration</li>
+                    <li>A practical first project, immediately deployable</li>
+                    <li><em>Upcoming: A central editor for immediate feedback and no setup.</em></li>
+                </ul>
+                <h1 class="title is-4 mb-2">Get in touch.</h1>
+                <form class="form" action="https://formspree.io/f/xzbkdlop">
+                <div class="field has-addons has-addons-centered">
+                    <div class="control">
+                        <input class="input" type="email" placeholder="Your email.">
+                    </div>
+                    <div class="control">
+                        <button class="button" type="submit">Submit</button>
                     </div>
                 </div>
-                <div class="column px-1">
-                    <div class="box content">
-                        <h1 class="title is-4 mb-1">For schools:</h1>
-                        <ul>
-                            <li>A reliable, up-to-date resource for students</li>
-                            <li>Convenient timed exercises and checkpoints</li>
-                            <li>None of the frustration of setting up a development environment</li>
-                            <li>Continuously maintained and updated links</li>
-                        </ul>
-                    </div>
-                </div>
+                </form>
             </div>
           </div>
       </div>

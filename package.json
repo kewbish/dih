@@ -5,7 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "cleancss": "purgecss --config purgecss.config.js"
+  },
+  "gitHooks": {
+    "postcheckout": "cp public/backupcss/bulma.min.css public/bulma.min.css && cp public/backupcss/bulma-prefers-dark.css public/bulma-prefers-dark.css && echo CSS copied from backup."
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",

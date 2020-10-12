@@ -251,6 +251,9 @@ export default {
           console.log("There was an error.", err);
         });
       }
+    })
+    .catch((err) => {
+        console.log("There was an error.", err);
     });
   },
 };

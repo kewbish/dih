@@ -116,51 +116,49 @@ export default {
     },
     loginAnon() {
         const lastRoute = localStorage.getItem("page");
-        firebase.auth().onAuthStateChanged((user) => {
-            if (!user) {
-                firebase
-                .auth()
-                .signInAnonymously()
-                .then(() => {
-                  this.$router.push(lastRoute != null ? lastRoute : "/0")
-                  .catch((err) => {
-                    console.log("There was an error.", err);
-                  });
-                })
-                .catch((err) => {
-                  console.log("There was an error.", err);
-                  this.err = `${err} - please try again!`;
-                });
-            } else {
-               this.$router.push(lastRoute != null ? lastRoute : "/0")
-               .catch((err) => {
-                 console.log("There was an error.", err);
-               });
-            }
-        });
+        const user = firebase.auth().user;
+        if (!user) {
+            firebase
+            .auth()
+            .signInAnonymously()
+            .then(() => {
+              this.$router.push(lastRoute != null ? lastRoute : "/0")
+              .catch((err) => {
+                console.log("There was an error.", err);
+              });
+            })
+            .catch((err) => {
+              console.log("There was an error.", err);
+              this.err = `${err} - please try again!`;
+            });
+        } else {
+           this.$router.push(lastRoute != null ? lastRoute : "/0")
+           .catch((err) => {
+             console.log("There was an error.", err);
+           });
+        }
     },
     loginEmail() {
         const lastRoute = localStorage.getItem("page");
-        firebase.auth().onAuthStateChanged((user) => {
-            if (!user) {
-                firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
-                .then(() => {
-                  this.$router.push(lastRoute != null ? lastRoute : "/0")
-                  .catch((err) => {
-                    console.log("There was an error.", err);
-                  });
-                })
-                .catch((err) => {
-                  console.log("There was an error.", err);
-                  this.err = `${err} - please try again!`;
-                });
-            } else {
-               this.$router.push(lastRoute != null ? lastRoute : "/0")
-               .catch((err) => {
-                 console.log("There was an error.", err);
-               });
-            }
-        });
+        const user = firebase.auth().user;
+        if (!user) {
+            firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
+            .then(() => {
+              this.$router.push(lastRoute != null ? lastRoute : "/0")
+              .catch((err) => {
+                console.log("There was an error.", err);
+              });
+            })
+            .catch((err) => {
+              console.log("There was an error.", err);
+              this.err = `${err} - please try again!`;
+            });
+        } else {
+           this.$router.push(lastRoute != null ? lastRoute : "/0")
+           .catch((err) => {
+             console.log("There was an error.", err);
+           });
+        }
     },
     forgotEmailSwitch() {
         this.loginSwitch = false;
@@ -180,70 +178,68 @@ export default {
     },
     createEmail() {
         const lastRoute = localStorage.getItem("page");
-        firebase.auth().onAuthStateChanged((user) => {
-            if (!user) {
-                if (this.pass != this.passrep) {
-                    console.log("There was an error.");
-                    this.err = "Passwords do not match - please try again!";
-                    return;
-                }
-                firebase.auth().createUserWithEmailAndPassword(this.email, this.pass)
-                .then(() => {
-                  this.$router.push(lastRoute != null ? lastRoute : "/0")
-                  .catch((err) => {
-                    console.log("There was an error.", err);
-                  });
-                })
-                .catch((err) => {
-                  if (err == "auth/email-already-in-use") {
-                    firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
-                    .then(() => {
-                      this.$router.push(lastRoute != null ? lastRoute : "/0")
-                      .catch((err) => {
-                        console.log("There was an error.", err);
-                      });
-                    })                                                          
-                    .catch((err) => {                                           
-                      console.log("There was an error.", err);
-                      this.err = `${err} - please try again!`;
-                    });
-                  } else {
-                      console.log("There was an error.", err);
-                      this.err = `${err} - please try again!`;
-                  }
-                });
-            } else {
-               this.$router.push(lastRoute != null ? lastRoute : "/0") 
-               .catch((err) => {
-                 console.log("There was an error.", err);
-               });
+        const user = firebase.auth().user;
+        if (!user) {
+            if (this.pass != this.passrep) {
+                console.log("There was an error.");
+                this.err = "Passwords do not match - please try again!";
+                return;
             }
-        });
-    },
-    login(provider) {
-        const lastRoute = localStorage.getItem("page");
-        firebase.auth().onAuthStateChanged((user) => {
-            if (!user) {
-                firebase
-                .auth()
-                .signInWithPopup(provider)
+            firebase.auth().createUserWithEmailAndPassword(this.email, this.pass)
+            .then(() => {
+              this.$router.push(lastRoute != null ? lastRoute : "/0")
+              .catch((err) => {
+                console.log("There was an error.", err);
+              });
+            })
+            .catch((err) => {
+              if (err == "auth/email-already-in-use") {
+                firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
                 .then(() => {
                   this.$router.push(lastRoute != null ? lastRoute : "/0")
                   .catch((err) => {
                     console.log("There was an error.", err);
                   });
-                })
-                .catch((err) => {
+                })                                                          
+                .catch((err) => {                                           
                   console.log("There was an error.", err);
                   this.err = `${err} - please try again!`;
                 });
-            } else {
-               this.$router.push(lastRoute != null ? lastRoute : "/0")
-               .catch((err) => {
-                 console.log("There was an error.", err);
-               });
-            }
-        });
+              } else {
+                  console.log("There was an error.", err);
+                  this.err = `${err} - please try again!`;
+              }
+            });
+        } else {
+           this.$router.push(lastRoute != null ? lastRoute : "/0") 
+           .catch((err) => {
+             console.log("There was an error.", err);
+           });
+        }
+    },
+    login(provider) {
+        const lastRoute = localStorage.getItem("page");
+        const user = firebase.auth().user;
+        if (!user) {
+            firebase
+            .auth()
+            .signInWithPopup(provider)
+            .then(() => {
+              this.$router.push(lastRoute != null ? lastRoute : "/0")
+              .catch((err) => {
+                console.log("There was an error.", err);
+              });
+            })
+            .catch((err) => {
+              console.log("There was an error.", err);
+              this.err = `${err} - please try again!`;
+            });
+        } else {
+           this.$router.push(lastRoute != null ? lastRoute : "/0")
+           .catch((err) => {
+             console.log("There was an error.", err);
+           });
+        }
     }
   },
   beforeCreate: function () {

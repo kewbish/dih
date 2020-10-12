@@ -148,7 +148,7 @@ export default {
        if (user) {
          this.anon = user.isAnonymous; 
        } else {
-         return false;
+         this.anon = false;
        }
     });
   }

@@ -547,14 +547,13 @@ export default {
     switchIndex: function (el) {
       el.toElement.classList.add("is-loading");
       const lastRoute = localStorage.getItem("page");
-      firebase.auth().onAuthStateChanged((user) => {
-        if (!user) {
-          this.$router.push("/login");
-        } else {
-          this.$router.push(lastRoute != null ? lastRoute : "/0");
-        }
-      });
-    },
-  },
+      const user = firebase.auth().user;
+      if (!user) {
+        this.$router.push("/login");
+      } else {
+        this.$router.push(lastRoute != null ? lastRoute : "/0");
+      }
+    }
+  }
 };
 </script>

@@ -8,5 +8,9 @@ module.exports = {
                 maxSize: 250000,
             }
         }
+    },
+    chainWebpack: config => {
+        config.resolve.alias
+        .set('monaco-editor', 'monaco-editor/esm/vs/editor/editor.api.js');
     }
 }

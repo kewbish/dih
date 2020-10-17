@@ -7,7 +7,6 @@ import App from './App.vue';
 import Index from './components/Index.vue';
 import Slide from './components/Slide.vue';
 import Timer from './components/Timer.vue';
-
 Vue.config.productionTip = false;
 
 Vue.component('slide', Slide);
@@ -68,7 +67,7 @@ router.beforeEach((to, from, next) => {
     }
 });
 router.afterEach((to) => {
-    if (to.name != "index" && to.name != "any" && to.name != "login") {
+    if (to.name != "index" && to.name != "any" && to.name != "login" && to.name != "editor") {
         localStorage.setItem("page", to.name);
     }
 });

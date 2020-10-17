@@ -3,13 +3,13 @@
     <router-view></router-view>
     <div class="fixed-input">
         <input
-          v-if="$router.currentRoute.path !== '/' && $router.currentRoute.path !== '/login'"
+          v-if="!['/', '/login', '/editor'].includes($router.currentRoute.path)"
           type="text"
           class="input fixed-count"
           v-model.lazy="count"
           :placeholder="count"
         />
-        <div class="fixed-drop dropdown is-up" id="dropdown" v-if="$router.currentRoute.path !== '/' && $router.currentRoute.path !== '/login' && anon">
+        <div class="fixed-drop dropdown is-up" id="dropdown" v-if="!['/', '/login', '/editor'].includes($router.currentRoute.path) && anon">
           <div class="dropdown-trigger" @click="trigger">
             <button class="button">Link account</button>
           </div>

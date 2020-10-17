@@ -43,7 +43,7 @@ const router = new VueRouter({
         { path: "/20", name: "20", component: () => import('./components/slides/z20.vue'), meta: { requiresAuth: true } },
         { path: "/21", name: "21", component: () => import('./components/slides/z21.vue'), meta: { requiresAuth: true } },
         { path: "/22", name: "22", component: () => import('./components/slides/z22.vue'), meta: { requiresAuth: true } },
-        { path: "/editor", name: "editor", component: () => import('./components/Editor.vue', meta: { requiresAuth: true })},
+        { path: "/editor", name: "editor", component: () => import('./components/Editor.vue'), meta: { requiresAuth: true } },
         { path: "/login", name: "login", component: () => import('./components/Login.vue') },
         { path: "/", name: "index", component: Index },
         { path: "*", name: "any", component: () => import('./components/slides/zAny.vue'), meta: { requiresAuth: true } }

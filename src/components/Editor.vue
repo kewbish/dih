@@ -1,14 +1,16 @@
 <template>
-    <div class="section">
+    <div class="section hero is-dark">
         <h1 class="title">diveintoht.ml editor</h1>
-        <div class="notification" style="height: 63vh;">
-            <div class="tabs">
-                <ul>
-                    <li @click="switchModel('html')" class="is-active"><a>HTML</a></li>
-                    <li @click="switchModel('css')"><a>CSS</a></li>
-                </ul>
-            </div>
-            <div id="editors" style="height: 55vh;">
+        <div class="hero-body px-0 py-3">
+            <div class="box" style="height: 100%;">
+                <div class="tabs">
+                    <ul>
+                        <li @click="switchModel('html')" class="is-active"><a>HTML</a></li>
+                        <li @click="switchModel('css')"><a>CSS</a></li>
+                    </ul>
+                </div>
+                <div id="editors" style="height: 55vh;">
+                </div>
             </div>
         </div>
     </div>
@@ -34,7 +36,6 @@ export default {
    },
    methods: {
     switchModel(model) {
-      console.log("Switched to", model);
       if (model == 'html') {
         this.editors.setModel(this.editorHtml);
       }

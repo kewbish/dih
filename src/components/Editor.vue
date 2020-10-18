@@ -7,10 +7,13 @@
                     <ul>
                         <li @click="switchModel('html')" class="is-active"><a>HTML</a></li>
                         <li @click="switchModel('css')"><a>CSS</a></li>
+                        <li @click="switchModel('preview')"><a>Preview</a></li>
                     </ul>
                 </div>
-                <div id="editors" style="height: 55vh;">
-                </div>
+                <div id="editors" style="height: 55vh;"></div>
+                <hr v-if="preview">
+                <h1 class="title is-4" v-if="preview">Preview</h1>
+                <div class="box mt-2" id="preview" v-if="preview" v-html="preview"></div>
             </div>
         </div>
     </div>
@@ -23,7 +26,8 @@ export default {
     return {
       editors: null,
       editorHtml: null,
-      editorCss: null
+      editorCss: null,
+      preview: null
     }
    },
    mounted() {
@@ -41,6 +45,11 @@ export default {
       }
       else if (model == 'css') {
         this.editors.setModel(this.editorCss);
+      }
+      else if (model == 'preview') {
+        const html = this.editorHtml.getValue();
+        const css = this.editorCss.getValue();
+        this.preview = html + `<style>${css}</style>`;
       }
     }
    }

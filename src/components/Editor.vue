@@ -7,11 +7,11 @@
                     <ul>
                         <li @click="setMode('html')" class="is-active"><a>HTML</a></li>
                         <li @click="setMode('css')"><a>CSS</a></li>
-                        <li @click="setMode('preview')"><a>Toggle preview</a></li>
+                        <li @click="setMode('preview');togglePrev()"><a>Toggle preview</a></li>
                     </ul>
                 </div>
                 <div id="editors" style="height: 55vh;"></div>
-                <div v-if="preview">
+                <div v-if="previewBool">
                     <hr>
                     <h1 class="title is-4">Preview</h1>
                     <iframe class="box mt-2" style="width: 100;" id="preview" :srcdoc="preview"></iframe>
@@ -29,6 +29,7 @@ export default {
       editors: null,
       editorHtml: null,
       editorCss: null,
+      previewBool: false,
       preview: null
     }
    },
@@ -56,6 +57,9 @@ export default {
         const css = this.editorCss.getValue();
         this.preview = html + `<style>${css}</style>`;
       }
+    },
+    togglePrev() {
+        this.previewBool = !this.previewBool;
     }
    }
 }

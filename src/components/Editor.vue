@@ -14,7 +14,7 @@
                 <div v-if="preview">
                     <hr>
                     <h1 class="title is-4">Preview</h1>
-                    <div id="preview" class="box mt-2" v-html="preview"></div>
+                    <iframe class="box mt-2" style="width: 100;" id="preview" :srcdoc="preview"></iframe>
                 </div>
             </div>
         </div>

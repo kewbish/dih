@@ -11,10 +11,10 @@
                     </ul>
                 </div>
                 <div id="editors" style="height: 55vh;"></div>
-                <div v-if="previewBool">
+                <div v-if="preview['isAct']">
                     <hr>
                     <h1 class="title is-4">Preview</h1>
-                    <iframe class="box mt-2" style="width: 100;" id="preview" :srcdoc="preview"></iframe>
+                    <iframe class="box mt-2" style="width: 100;" id="preview" :srcdoc="preview['content']"></iframe>
                 </div>
             </div>
         </div>
@@ -29,8 +29,7 @@ export default {
       editors: null,
       editorHtml: null,
       editorCss: null,
-      previewBool: false,
-      preview: null
+      preview: {"content": null, "isAct": false}
     }
    },
    mounted() {
@@ -55,11 +54,11 @@ export default {
       else if (model == 'preview') {
         const html = this.editorHtml.getValue();
         const css = this.editorCss.getValue();
-        this.preview = html + `<style>${css}</style>`;
+        this.preview['content'] = html + `<style>${css}</style>`;
       }
     },
     togglePrev() {
-        this.previewBool = !this.previewBool;
+        this.preview['isAct'] = !this.preview['isAct'];
     }
    }
 }

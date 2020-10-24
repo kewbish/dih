@@ -8,6 +8,7 @@
                         <li @click="setMode('html')" class="is-active"><a>HTML</a></li>
                         <li @click="setMode('css')"><a>CSS</a></li>
                         <li @click="setMode('preview');togglePrev()"><a>Toggle preview</a></li>
+                        <li @click="exportFiles()"><a>Export</a></li>
                     </ul>
                 </div>
                 <div id="editors" style="height: 55vh;"></div>
@@ -59,6 +60,20 @@ export default {
     },
     togglePrev() {
         this.preview['isAct'] = !this.preview['isAct'];
+    },
+    exportFiles () {
+        const linked = this.editorHtml + `<link rel="stylesheet" href="main.css">`;
+        this.filesDownloader(linked, "index.html");
+        this.filesDownloader(this.editorCss, "main.css");
+    },
+    filesDownloader(text, filename) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
     }
    }
 }

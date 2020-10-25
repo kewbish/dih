@@ -1,3 +1,5 @@
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+
 module.exports = {
     runtimeCompiler: true,
     configureWebpack: {
@@ -7,10 +9,12 @@ module.exports = {
                 minSize: 10000,
                 maxSize: 250000,
             }
-        }
-    },
-    chainWebpack: config => {
-        config.resolve.alias
-        .set('monaco-editor', 'monaco-editor/esm/vs/editor/editor.api.js');
+        },
+        plugins: [
+          new MonacoWebpackPlugin({
+            languages: ['css', 'html'],
+            features: ['!accessibilityHelp', '!codelens', '!multicursor', '!referenceSearch']
+          })
+        ]
     }
 }

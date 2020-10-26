@@ -36,7 +36,7 @@ editors: null,
             this.editors = monaco.editor.create(document.getElementById('editors'), {
 theme: 'vs-dark'
 });
-const html = localStorage.getItem('html') || "<!--Get started 🌊-->";
+const html = localStorage.getItem('html') || '<!DOCTYPE html>\n<html lang="en">\n<head>\t\n<meta charset="UTF-8">\t\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\t\n<title></title>\n</head>\n<body>\n</body>\n</html>';
 const css = localStorage.getItem('css') || "/* Get started 🌊 */";
 this.editorHtml = monaco.editor.createModel(html, "html");
 this.editorCss = monaco.editor.createModel(css, "css");

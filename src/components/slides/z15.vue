@@ -24,7 +24,7 @@ export default {
     }
       </code>
       \nThis checks for phone screens in portrait. Here, we only want one column, or else the text might be a little cluttered and hard to read.
-      \nTry previewing your site now, and resizing the side window. Alternatively, open the HTML file from File Explorer in Chrome, and resize that window. If all went well, the amount of columns will shift!
+      \nTry previewing your site now, and resizing the side window. If all went well, the amount of columns will shift!
       \nWith your new grid, try styling the background colors of some of the containers by adding classes and properties, or change the font color! If you need a refresher, visit the past slides.`,
     };
   },

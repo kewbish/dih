@@ -8,7 +8,7 @@ export default {
     return {
       slide: `Time for our first checkin!
       \nIn the past section, we've learned to:
-      - Using a code editor - easy shortcuts like [Ctrl-S] and [Ctrl-Shift-V]
+      - Using a code editor, and how to preview 
       - Basic HTML tags - \`<p>\`, \`<div>\`, \`<a>\`, \`<img>\`, \`<h1>\`, \`<section>\` (and maybe you've come across others too!)
       - Structuring a site, and applying classes
       \nIn the next section, we'll be learning how to style our site, as well as what those class quotes really do.

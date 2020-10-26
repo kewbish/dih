@@ -7,8 +7,7 @@ export default {
   data() {
     return {
       slide: `The current HTML version is HTML5 (something that won't change for a long time, if ever, so you don't need to worry about this bit), and to denote that, we'll need to add a <!DOCTYPE HTML> tag.
-      \nLuckily, VSCode comes with something called Emmet abbreviations to streamline starting up a blank file. Type \`html:5\`, and select the Emmet Abbreviation that pops up with [Enter].
-      \nVSCode should spit a nice template out for us. If not: copy-paste the code below.  
+      \nA premade template should already be available in the editor for you. If not: copy-paste the code below.
       \n
       <code>
     <!DOCTYPE html>

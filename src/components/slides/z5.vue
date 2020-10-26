@@ -18,7 +18,7 @@ export default {
     <p>This is where you can briefly touch on your life, thoughts, and manifestos.</p>
       </code>
       \nHere, a new tag is introduced: the \`<img>\` tag. This is one of the few tags in HTML that doesn't require an ending \`</img>\` tag. We need a src property (which is the bit with the equal sign) - replace this with an imgur link, after you upload your profile headshot, of course. Alternatively, you can use file-paths, like: \`src="img.jpg"\`, for a .jpg in the same folder with a name of img.
-      \nLet's see how your site is looking so far! [Ctrl-S] to save, and [Ctrl-Shift-V] to view, remember.
+      \nLet's see how your site is looking so far!.
       \n![Figure 1. Your site so far. Not much, eh?](https://i.imgur.com/bPBFH7F.png)
       \n*Figure 1. Your site so far. Not much, eh?*`,
     };

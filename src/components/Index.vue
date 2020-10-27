@@ -507,7 +507,7 @@
                     <li>A short [roughly 1-2hr] guide to get you up to speed quickly</li>
                     <li>None of the fluff, but helpful links to resources for exploration</li>
                     <li>A practical first project, immediately deployable</li>
-                    <li><em>Upcoming: A central editor for immediate feedback and no setup.</em></li>
+                    <li>A central, VSCode-like editor for quick setup</li>
                 </ul>
                 <h1 class="title is-4 mb-2">Get in touch.</h1>
                 <form class="form" action="https://formspree.io/f/xzbkdlop">

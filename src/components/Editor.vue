@@ -8,6 +8,7 @@
                         <li @click="setMode('html')" class="is-active"><a>HTML</a></li>
                         <li @click="setMode('css')"><a>CSS</a></li>
                         <li @click="setMode('preview');togglePrev()"><a>Toggle preview</a></li>
+                        <li @click="exportFiles()"><a>Export Files</a></li>
                     </ul>
                 </div>
                 <div id="editors" style="height: 55vh;"></div>
@@ -15,7 +16,6 @@
                     <hr>
                     <h1 class="title is-4">Preview</h1>
                     <iframe class="box mt-2" style="width: 100;" id="preview" :srcdoc="preview['content']"></iframe>
-                    <button class="button is-info" @click="exportFiles()">Export Files</button>
                 </div>
             </div>
         </div>
@@ -48,6 +48,13 @@ export default {
         this.editorCss.onDidChangeContent(() => {
             this.localSave('css');
         });
+        this.keyShorts = function(e) {
+            if (e.key === "V" && e.shiftKey && (e.ctrlKey || e.metaKey)) {
+                e.preventDefault();
+                this.togglePrev();
+            }
+        };
+        document.addEventListener('keydown', this.keyShorts.bind(this));
     },
     methods: {
         setMode(model) {
@@ -84,6 +91,9 @@ export default {
             link.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(html));
             link.click();
         }
+    },
+    beforeDestroy() {
+        document.removeEventListener('keydown', this.keyShorts);
     }
 }
 </script>

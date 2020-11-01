@@ -6,7 +6,7 @@
 export default {
   data() {
     return {
-      slide: `Within your \`<body></body>\` tags, try adding some other tags. Try toggling the HTML preview, and refer to it as we go through each tag.
+      slide: `Within your \`<body></body>\` tags, try adding some other tags. Try toggling the HTML preview (a keybind is available: [Ctrl-Shift-V]), and refer to it as we go through each tag.
       \nFirst, we'll look at the \`<p>\`. Add it within the body, and add something inside so it looks something like:
       \n
       <p>Hello there!</p>

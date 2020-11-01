@@ -18,7 +18,7 @@ export default {
     <section class="education"></section>
     <section class="project-skills"></section>
       </code>
-      \nThis will add several empty sections to your site. Remember, you can preview your site with the HTML preview toggle!`,
+      \nThis will add several empty sections to your site. Remember, you can preview your site with the HTML preview toggle (also [Ctrl-Shift-V])!`,
     };
   },
 };

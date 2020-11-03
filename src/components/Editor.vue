@@ -18,6 +18,7 @@
                     <iframe class="box mt-2" style="width: 100;" id="preview" :srcdoc="preview['content']"></iframe>
                 </div>
             </div>
+            <button class="button" @click="back()">📚 Go back</button>
         </div>
     </div>
 </template>
@@ -90,6 +91,13 @@ export default {
             link.setAttribute('download', 'index.html');
             link.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(html));
             link.click();
+        },
+        back () {
+            const lastRoute = localStorage.getItem("page");
+            this.$router.push(lastRoute != "undefined" || lastRoute != null ? lastRoute : "/0")
+            .catch((err) => {
+              console.log("There was an error.", err);
+            });
         }
     },
     beforeDestroy() {

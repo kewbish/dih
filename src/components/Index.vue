@@ -4,7 +4,9 @@
       <div class="hero is-info is-bold is-medium">
         <div class="hero-body">
           <h1 class="title is-1 has-text-centered">Dive Into HTML</h1>
-          <p class="subtitle has-text-centered">A comprehensive branching guide designed for beginners to get up to speed quickly.</p>
+          <p
+            class="subtitle has-text-centered"
+          >A comprehensive branching guide designed for beginners to get up to speed quickly.</p>
           <div class="has-text-centered">
             <a @click="switchIndex" class="button">Get Started 📚</a>
           </div>
@@ -19,14 +21,14 @@
               <h1 class="title">Ever wanted to create an online resume?</h1>
               <p>
                 We'll walk you through how.
-                <br/>A practical first project introduces you to the world of web design and development, quickly and easily.
-                <br/>As technology becomes more prevalent in schools, diveintoht.ml is a fun way to learn industry-applicable skills.
+                <br />A practical first project introduces you to the world of web design and development, quickly and easily.
+                <br />As technology becomes more prevalent in schools, diveintoht.ml is a fun way to learn industry-applicable skills.
               </p>
-              <br/>
+              <br />
               <h1 class="title">Let's get started.</h1>
               <p>
                 <a @click="switchIndex" class="button">Go to tutorial 👩‍🏫</a>
-                <br/>
+                <br />
               </p>
             </div>
           </div>
@@ -489,39 +491,40 @@
       <div class="container mt-5 mb-2">
         <div class="notification has-text-centered">
           <h1 class="title has-text-white is-1">You'll learn...</h1>
-          <p
-            class="subtitle has-text-white"
-          >HTML - CSS - Responsive Design - GitHub Deployment<br>...all skills highly in demand today, and stepping stones for a future tech career.</p>
+          <p class="subtitle has-text-white">
+            HTML - CSS - Responsive Design - GitHub Deployment
+            <br />...all skills highly in demand today, and stepping stones for a future tech career.
+          </p>
           <div>
             <a @click="switchIndex" class="button" style="margin-left:15px">Get learning ✏️</a>
           </div>
         </div>
       </div>
       <div class="container mt-6">
-          <div class="notification is-info has-text-centered">
-            <h1 class="title">For educators:</h1>
-            <div class="box content">
-                <h1 class="title is-4 mb-1">An engaging learner experience.</h1>
-                <p>With a school bundle, you'll get:</p>
-                <ul style="list-style-position: inside;">
-                    <li>A short [roughly 1-2hr] guide to get you up to speed quickly</li>
-                    <li>None of the fluff, but helpful links to resources for exploration</li>
-                    <li>A practical first project, immediately deployable</li>
-                    <li>A central, VSCode-like editor for quick setup</li>
-                </ul>
-                <h1 class="title is-4 mb-2">Get in touch.</h1>
-                <form class="form" action="https://formspree.io/f/xzbkdlop">
-                <div class="field has-addons has-addons-centered">
-                    <div class="control">
-                        <input class="input" type="email" placeholder="Your email.">
-                    </div>
-                    <div class="control">
-                        <button class="button" type="submit">Submit</button>
-                    </div>
+        <div class="notification is-info has-text-centered">
+          <h1 class="title">For educators:</h1>
+          <div class="box content">
+            <h1 class="title is-4 mb-1">An engaging learner experience.</h1>
+            <p>With a school bundle, you'll get:</p>
+            <ul style="list-style-position: inside;">
+              <li>A short [roughly 1-2hr] guide to get you up to speed quickly</li>
+              <li>None of the fluff, but helpful links to resources for exploration</li>
+              <li>A practical first project, immediately deployable</li>
+              <li>A central, VSCode-like editor for quick setup</li>
+            </ul>
+            <h1 class="title is-4 mb-2">Get in touch.</h1>
+            <form class="form" action="https://formspree.io/f/xzbkdlop">
+              <div class="field has-addons has-addons-centered">
+                <div class="control">
+                  <input class="input" type="email" placeholder="Your email." />
                 </div>
-                </form>
-            </div>
+                <div class="control">
+                  <button class="button" type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
           </div>
+        </div>
       </div>
     </section>
     <section class="hero is-info is-bold is-small">
@@ -553,7 +556,7 @@ export default {
       } else {
         this.$router.push(lastRoute != null ? lastRoute : "/0");
       }
-    }
-  }
+    },
+  },
 };
 </script>

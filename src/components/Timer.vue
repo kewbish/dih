@@ -7,8 +7,8 @@
       <div class="tile is-parent px-0 py-0 my-2 mx-2">
         <div class="tile is-child box">
           <p style="margin-bottom:15px">{{ subtitle }}</p>
-          <a class="button is-dark" @click="endTimer">{{ switchText }}</a>
-          <a class="button is-dark" @click="resTimer" style="margin-left: 5px">↪️ Reset</a>
+          <a class="button" @click="endTimer">{{ switchText }}</a>
+          <a class="button" @click="resTimer" style="margin-left: 5px">↪️ Reset</a>
         </div>
       </div>
       <div class="tile is-parent px-0 py-0 my-2 mx-2">

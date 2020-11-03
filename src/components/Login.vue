@@ -21,8 +21,8 @@
                           <div class="control"><input class="input" type="password" v-model="pass" placeholder="Password."></div>
                       </div>
                       <div class="field">
-                          <div class="control"><button class="button is-dark" style="margin-right: 1%;" @click="loginEmail()">Log In</button> 
-                          <button class="button is-dark" @click="forgotEmailSwitch()">Forgot password?</button>
+                          <div class="control"><button class="button" style="margin-right: 1%;" @click="loginEmail()">Log In</button> 
+                          <button class="button" @click="forgotEmailSwitch()">Forgot password?</button>
                           </div>
                       </div>
                     </div>
@@ -33,7 +33,7 @@
                           <div class="control"><input class="input" type="email" v-model="email" placeholder="Your email."></div>
                       </div>
                       <div class="field">
-                          <div class="control"><button class="button is-dark" style="margin-right: 1%;" @click="forgotEmail()">Send reset email</button> 
+                          <div class="control"><button class="button" style="margin-right: 1%;" @click="forgotEmail()">Send reset email</button> 
                           </div>
                       </div>
                     </div>
@@ -52,7 +52,7 @@
                           <div class="control"><input class="input" type="password" v-model="passrep" placeholder="Confirm password."></div>
                       </div>
                       <div class="field">
-                          <div class="control"><button class="button is-dark" @click="createEmail()">Create</button></div>
+                          <div class="control"><button class="button" @click="createEmail()">Create</button></div>
                       </div>
                      </div>
                   </div>
@@ -61,9 +61,9 @@
                   <div class="tile is-child">
                       <div class="box">
                           <h1 class="title is-4">Other options</h1>
-                          <a class="button is-dark" style="margin-bottom:10px" @click="loginGoogle">Log In - Gmail</a><br>
-                          <a class="button is-dark" style="margin-bottom:10px" @click="loginGitHub">Log In - GitHub</a><br> 
-                          <a class="button is-dark" style="margin-bottom:10px" @click="loginAnon">Anonymous - no info</a>
+                          <a class="button" style="margin-bottom:10px" @click="loginGoogle">Log In - Gmail</a><br>
+                          <a class="button" style="margin-bottom:10px" @click="loginGitHub">Log In - GitHub</a><br> 
+                          <a class="button" style="margin-bottom:10px" @click="loginAnon">Anonymous - no info</a>
                       </div>
                   </div>
               </div>

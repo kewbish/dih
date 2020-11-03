@@ -25,7 +25,7 @@
               <br/>
               <h1 class="title">Let's get started.</h1>
               <p>
-                <a @click="switchIndex" class="button is-dark">Go to tutorial 👩‍🏫</a>
+                <a @click="switchIndex" class="button">Go to tutorial 👩‍🏫</a>
                 <br/>
               </p>
             </div>

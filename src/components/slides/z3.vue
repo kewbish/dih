@@ -17,6 +17,14 @@ export default {
       \n
       <a href="https://reddit.com"><p>This link goes to Reddit</p></a>
       \nSee how the \`<a>\` tag goes *around* the \`<p>\` tag? This is called nesting, and the \`<a>\` is now the parent of the \`<p>\` tag, the child. We'll go through this in greater detail once we start structuring our site.  
+      \nThe below is what we're going to call a *playground*, or an interactive in-slide sandbox to test small concepts out without having to work with the larger Editor. Familiarize yourself with the interface, and try it out!
+      <playground
+        title="Tags and nesting!"
+        subtitle="Nesting tags is a concept that's a little tricky. Try playing around with it in the playground below!"
+        htmlProp="<h1>This is a h1, but inside, <a href='https://diveintoht.ml'>a link</a></h1>"
+        cssProp="/* Nothing much to see here - don't pay too much attention here now."
+      />
+      \nThis is a timer - just a suggestion and not a rigid schedule to be followed. These will include a topic to explore, and a suggested amount of time, but of course feel free to take shorter or longer.
       <timer
         title="Experiment with tags!"
         subtitle="Try playing around with the &lt;a&gt; link tags, and get familiar with how to add &lt;p&gt; and &lt;h1&gt; tags, as well as how to close them."

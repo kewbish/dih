@@ -4,24 +4,18 @@
       <h1 class="title has-text-white">{{ title }}</h1>
     </div>
     <div class="tile is-ancestor mx-1 py-2">
-      <div class="tile is-parent is-4 px-0 py-0 my-2 mx-2">
+      <div class="tile is-parent is-2 px-0 py-0 my-2 mx-2">
         <div class="tile is-child box">
           <p style="margin-bottom:15px">{{ subtitle }}</p>
-            <button @click="setMode('html')" class="button">
-              <a>HTML</a>
-            </button>
-            <button class="button" @click="setMode('css')">
-              <a>CSS</a>
-            </button>
-            <button class="button" @click="setMode('preview');togglePrev()">
-              <a>Toggle preview</a>
-            </button>
+            <button @click="setMode('html')" class="button mb-1">HTML</button>&nbsp;
+            <button class="button mb-1" @click="setMode('css')">CSS</button>&nbsp;
+            <button class="button mb-1" @click="setMode('preview')">Toggle preview</button>
         </div>
       </div>
       <div class="tile is-parent px-0 py-0 my-2 mx-2">
-        <div class="tile is-child box">
+        <div class="tile is-child box is-vertical">
           <iframe class="box mt-2" style="width: 100;" id="preview" :srcdoc="preview['content']" v-if="preview['isAct']"></iframe>
-          <div id="editors" v-else></div>
+          <div id="editors" style="height: 100%" v-else></div>
         </div>
       </div>
     </div>
@@ -62,12 +56,15 @@ export default {
     setMode(model) {
       if (model == "html") {
         this.editors.setModel(this.editorHtml);
+        this.preview['isAct'] = false;
       } else if (model == "css") {
         this.editors.setModel(this.editorCss);
+        this.preview['isAct'] = false;
       } else if (model == "preview") {
         const html = this.editorHtml.getValue();
         const css = this.editorCss.getValue();
         this.preview["content"] = html + `<style>${css}</style>`;
+        this.preview['isAct'] = !this.preview['isAct'];
       }
     },
   },

@@ -7,10 +7,12 @@ import App from './App.vue';
 import Index from './components/Index.vue';
 import Slide from './components/Slide.vue';
 import Timer from './components/Timer.vue';
+import Playground from './components/Playground.vue';
 Vue.config.productionTip = false;
 
 Vue.component('slide', Slide);
 Vue.component('timer', Timer);
+Vue.component('playground', Playground);
 
 Vue.use(VueShowdown);
 

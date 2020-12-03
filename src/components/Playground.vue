@@ -15,7 +15,7 @@
       <div class="tile is-parent px-0 py-0 my-2 mx-2">
         <div class="tile is-child box is-vertical">
           <iframe class="box mt-2" style="width: 100;" id="preview" :srcdoc="preview['content']" v-if="preview['isAct']"></iframe>
-          <div id="editors" style="height: 100%" v-else></div>
+          <div id="editors" style="height: 100%;min-height:200px;" v-show="!preview['isAct']"></div>
         </div>
       </div>
     </div>

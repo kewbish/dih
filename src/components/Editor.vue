@@ -2,7 +2,7 @@
   <div class="section hero is-dark">
     <h1 class="title">The Editor.</h1>
     <div class="hero-body px-0 py-3">
-      <div class="box" style="height: 100%;">
+      <div class="box" style="height:100%;">
         <div class="tabs">
           <ul>
             <li @click="setMode('html')" class="is-active">
@@ -19,11 +19,11 @@
             </li>
           </ul>
         </div>
-        <div id="editors" style="height: 55vh;"></div>
+        <div id="editors" style="height:55vh;"></div>
         <div v-if="preview['isAct']">
           <hr />
           <h1 class="title is-4">Preview</h1>
-          <iframe class="box mt-2" style="width: 100;" id="preview" :srcdoc="preview['content']"></iframe>
+          <iframe class="box mt-2" style="width:100%;" :srcdoc="preview['content']"></iframe>
         </div>
       </div>
       <button class="button" @click="back()">📚 Go back</button>

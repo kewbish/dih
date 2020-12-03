@@ -1,12 +1,12 @@
 <template>
-  <div class="message is-info is-bold" style="margin-top: 20px; margin-bottom: 20px;">
-    <div class="message-header" style="margin-bottom:10px">
+  <div class="message is-info is-bold my-5">
+    <div class="message-header mb-2">
       <h1 class="title has-text-white">{{ title }}</h1>
     </div>
     <div class="tile is-ancestor mx-1 py-2">
       <div class="tile is-parent is-2 px-0 py-0 my-2 mx-2">
         <div class="tile is-child box">
-          <p style="margin-bottom:15px">{{ subtitle }}</p>
+          <p class="mb-4">{{ subtitle }}</p>
             <button @click="setMode('html')" class="button mb-1">HTML</button>&nbsp;
             <button class="button mb-1" @click="setMode('css')">CSS</button>&nbsp;
             <button class="button mb-1" @click="setMode('preview')">Toggle preview</button>
@@ -14,8 +14,8 @@
       </div>
       <div class="tile is-parent px-0 py-0 my-2 mx-2">
         <div class="tile is-child box is-vertical">
-          <iframe class="box mt-2" style="width: 100;" id="preview" :srcdoc="preview['content']" v-if="preview['isAct']"></iframe>
-          <div id="editors" style="height: 100%;min-height:200px;" v-show="!preview['isAct']"></div>
+          <iframe class="my-2" style="height:100%;width:100%;" :srcdoc="preview['content']" v-if="preview['isAct']"></iframe>
+          <div id="editors" style="height:100%;min-height:200px;" v-show="!preview['isAct']"></div>
         </div>
       </div>
     </div>
@@ -42,6 +42,9 @@ export default {
   mounted() {
     this.editors = monaco.editor.create(document.getElementById("editors"), {
       theme: "vs-dark",
+      minimap: { enabled: false },
+      lineNumbers: "off",
+      padding: { top: 15, bottom: 15 }
     });
     const html = this.htmlProp;
     const css = this.cssProp; 

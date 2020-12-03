@@ -4,12 +4,12 @@
       <h1 class="title has-text-white">{{ title }}</h1>
     </div>
     <div class="tile is-ancestor mx-1 py-2">
-      <div class="tile is-parent is-2 px-0 py-0 my-2 mx-2">
+      <div class="tile is-parent is-3 px-0 py-0 my-2 mx-2">
         <div class="tile is-child box">
           <p class="mb-4">{{ subtitle }}</p>
             <button @click="setMode('html')" class="button mb-1">HTML</button>&nbsp;
             <button class="button mb-1" @click="setMode('css')">CSS</button>&nbsp;
-            <button class="button mb-1" @click="setMode('preview')">Toggle preview</button>
+            <button class="button mb-1" @click="setMode('preview');togglePrev();">Toggle preview</button>
         </div>
       </div>
       <div class="tile is-parent px-0 py-0 my-2 mx-2">
@@ -67,9 +67,11 @@ export default {
         const html = this.editorHtml.getValue();
         const css = this.editorCss.getValue();
         this.preview["content"] = html + `<style>${css}</style>`;
-        this.preview['isAct'] = !this.preview['isAct'];
       }
     },
+    togglePrev() {
+        this.preview['isAct'] = !this.preview['isAct'];
+    }
   },
 };
 </script>

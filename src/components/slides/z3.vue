@@ -20,7 +20,7 @@ export default {
       \nThe below is what we're going to call a *playground*, or an interactive in-slide sandbox to test small concepts out without having to work with the larger Editor. Familiarize yourself with the interface, and try it out!
       <playground
         title="Tags and nesting!"
-        subtitle="Nesting tags is a concept that's a little tricky. Try playing around with it in the playground below!"
+        subtitle="Nesting tags is a concept that's a little tricky. Try playing around with it in the playground to the right!"
         htmlProp="<h1>This is a h1, but inside, <a href='https://diveintoht.ml'>a link</a></h1>"
         cssProp="/* Nothing much to see here - don't pay too much attention here now.*/"
       />

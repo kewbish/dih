@@ -17,7 +17,13 @@ export default {
       </code>
       \nThe \`.\` before the \`custom-div\` style tells CSS that we're referencing a class. [There are also id's, but we won't be going over those in this intro site.] The border-bottom is another property that adds a 1 pixel tall, solid, dark gray border to the .custom-div element. Now, your site might look something like:
       \n![Figure 2: Maybe your site looks like this! Note the long border going across.](https://i.imgur.com/pSvBuao.png)
-      \n*Figure 2: Maybe your site looks like this! Note the long border going across.*`,
+      \n*Figure 2: Maybe your site looks like this! Note the long border going across.*
+      <playground
+        title="Challenge: borders"
+        subtitle="There are lots more borders to try. See if you can find out how to make a dotted border that goes all the way round, and in a different colour. Hint: look to border attributes in CSS (on w3schools) for help!"
+        htmlProp="<div class='custom-div'>\n\t<h1>A h1, surround me!</h1>\n</div>"
+        cssProp=".custom-div {\n border-bottom: 1px solid darkgray; \n}"
+      />`,
     };
   },
 };

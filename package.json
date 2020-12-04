@@ -15,7 +15,7 @@
     "babel-runtime": "^6.26.0",
     "core-js": "^3.6.4",
     "firebase": "^7.24.0",
-    "highlight.js": "^10.1.1",
+    "highlight.js": "^10.4.1",
     "monaco-editor": "^0.21.2",
     "monaco-editor-webpack-plugin": "^2.0.0",
     "vue": "^2.6.11",

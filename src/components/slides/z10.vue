@@ -10,6 +10,7 @@ export default {
       \nTo center content horizontally, like:
       \`|   [el]   |\`
       \nWe can use the following CSS - again, taking advantage of the margin properties of each element.
+      \n
       <code>
     .class{
         margin: auto;
@@ -19,12 +20,14 @@ export default {
       \nThe auto margin sets the margin automatically on each side of the element with the class \`class\`, top, right, left, and bottom. This doesn't end up affecting your top or bottom (we'll get there soon).
       \nThe text-align property aligns the text within the div. If you don't want your text centered in your centered div, you don't need to add this. Try applying this to one of your classes or elements!
       \nNow, let's go over vertical centering. Usually, this ends up being a little more tricky than horizontal centering, due to how default HTML displays.
+      \n
       <code class="language-css">
     .class{
         margin: 0 auto;
     }
       </code>
       \nThis sets the margin of the top and bottom to zero, and therefore sets the element right in the middle of its parent. That's usually the de-facto solution, but alternatively, you can choose to use:
+      \n
       <code>
     .class{
         position: relative;

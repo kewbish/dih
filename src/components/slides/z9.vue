@@ -16,7 +16,7 @@ export default {
     }
       </code>
       \nThe \`.\` before the \`custom-div\` style tells CSS that we're referencing a class. [There are also id's, but we won't be going over those in this intro site.] The border-bottom is another property that adds a 1 pixel tall, solid, dark gray border to the .custom-div element. Now, your site might look something like:
-      \n![Figure 2: Maybe your site looks like this! Note the long border going across.](https://i.imgur.com/pSvBuao.png)
+      \n![Figure 2: Maybe your site looks like this! Note the long border going across.](https://i.imgur.com/s9eFek8.png)
       \n*Figure 2: Maybe your site looks like this! Note the long border going across.*
       <playground
         title="Challenge: borders"

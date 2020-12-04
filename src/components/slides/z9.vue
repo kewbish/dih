@@ -22,7 +22,7 @@ export default {
         title="Challenge: borders"
         subtitle="There are lots more borders to try. See if you can find out how to make a dotted border that goes all the way round, and in a different colour. Hint: look to border attributes in CSS (on w3schools) for help!"
         htmlProp="<div class='custom-div'>\n\t<h1>A h1, surround me!</h1>\n</div>"
-        cssProp=".custom-div {\n border-bottom: 1px solid darkgray; \n}"
+        cssProp=".custom-div {\n\tborder-bottom: 1px solid darkgray;\n}"
       />`,
     };
   },

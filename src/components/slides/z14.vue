@@ -1,12 +1,23 @@
 <template>
     <div>
-        <slide slideSubject="14: Introductions to IDs" :slideContent="slide"></slide>
-        <playground
-        title="IDs vs classes"
-        subtitle="There's a difference between classes and IDs - specificity. See which overrides the others, and how they work together in this playground."
-        htmlProp="<div class='inside-cont' id='border'>\n\t<h1>This has the border ID.</h1>\n</div>\n<div class='inside-cont'>\n\t<h1>This one does not.</h1>\n</div>"
-        cssProp=".inside-cont {\n\tbackground-color: purple;\n}\n#border {\n\tborder: 2px solid blue;\n}"
-        />
+        <slide slideSubject="14: Introductions to IDs" :slideContent="slide">
+            <playground
+            title="IDs vs classes"
+            subtitle="There's a difference between classes and IDs - specificity. See which overrides the others, and how they work together in this playground."
+            htmlProp="<div class='inside-cont' id='border'>
+        <h1>This has the border ID.</h1>
+    </div>
+    <div class='inside-cont'>
+        <h1>This one does not.</h1>
+    </div>"
+            cssProp=".inside-cont {
+        background-color: purple;
+    }
+    #border {
+        border: 2px solid blue;
+    }"
+            />
+        </slide>
     </div>
 </template>
 
@@ -17,6 +28,7 @@ export default {
       slide: `We discussed background colors a few slides back, but what if we wanted to change the color of just *one* element? And what if we wanted to keep everything else the same?
       \nThis is where we can use something called an \`id\`. Usually, these are used for CSS where we only want to change the look of an element or group of elements that only appears once. The reason that they're only used for things that appear only once? IDs can be used only once. (Technically, most web browsers are so tolerant that they'll add the styles as well, but this is definitely *bad practise*.)
       \nImagine two people named Alice Chapman and Bob Chapman. A class selector is like 'selecting' both Alice and Bob by their last name, Chapman. IDs would be like selecting just Alice, or just Bob. The way we use IDs is like:
+      \n
       <code>
     #id{
       // some code   

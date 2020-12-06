@@ -30,8 +30,8 @@ export default {
       \nImagine two people named Alice Chapman and Bob Chapman. A class selector is like 'selecting' both Alice and Bob by their last name, Chapman. IDs would be like selecting just Alice, or just Bob. The way we use IDs is like:
       \n
       <code>
-    #id{
-      // some code   
+    #id {
+      // some CSS   
     }
       </code>
       \nNote the \`#\` instead of the \`.\`. This is how we differentiate between classes, which use the \`.\`, and our new IDs.
@@ -49,7 +49,7 @@ export default {
       \nAnd add this to your CSS:
       \n
       <code>
-    #purple-grid-item{
+    #purple-grid-item {
         background-color: purple;
     }
       </code>

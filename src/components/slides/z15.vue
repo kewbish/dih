@@ -12,7 +12,7 @@ export default {
       <code>
     @media (min-width: 768px) and (max-width: 1024px) {
         .grid-container {
-        grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
         }
     }
       </code>
@@ -20,8 +20,8 @@ export default {
       \n
       <code>
     @media (min-width: 481px) and (max-width: 767px) {
-    .grid-container {
-        grid-template-columns: 1fr;
+        .grid-container {
+            grid-template-columns: 1fr;
         }
     }
       </code>

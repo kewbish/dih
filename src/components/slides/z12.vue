@@ -15,18 +15,18 @@ export default {
       \n
       <code>
     <div class="grid-container">
-    <div>
-        <h1>An item title!</h1>
-        <p>An item subtitle and content. Fill this in!</p>
-    </div>
-    <div>
-        <h1>An item title!</h1>
-        <p>An item subtitle and content. Fill this in!</p>
-    </div>
-    <div>
-        <h1>An item title!</h1>
-        <p>An item subtitle and content. Fill this in!</p>
-    </div>
+        <div>
+            <h1>An item title!</h1>
+            <p>An item subtitle and content. Fill this in!</p>
+        </div>
+        <div>
+            <h1>An item title!</h1>
+            <p>An item subtitle and content. Fill this in!</p>
+        </div>
+        <div>
+            <h1>An item title!</h1>
+            <p>An item subtitle and content. Fill this in!</p>
+        </div>
     </div>
       </code>
       \nRemember, the larger \`<div>\` has the class \`grid-container\`, and we just filled it with three smaller \`<div>\`s which will have all our content!

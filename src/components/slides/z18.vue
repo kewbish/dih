@@ -38,9 +38,9 @@ export default {
       \nIf you'd like to apply these styles to both your input and textarea, you can change the first line of the rule like so:
       \n
       <code>
-    // from 'input {' to
+    /* from 'input {' to */
     input, textarea {
-        // styles
+        /* styles */
     }
       </code>
       \nThis tells the browser to select both inputs and textareas to apply these styles to.

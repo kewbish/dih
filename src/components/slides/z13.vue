@@ -9,7 +9,7 @@ export default {
       slide: `Alright, let's go back to CSS for a bit. Add the following code to your main.css file.
       \n
       <code>
-    .grid-container{
+    .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 10px;

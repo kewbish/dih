@@ -6,10 +6,10 @@
 export default {
   data() {
     return {
-      slide: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS. Some future exploring points:
+      slide: `That's about it for this course, but it doesn't have to be your end of your coding journey. We haven't gone over everything in HTML and CSS, let alone touched other languages. Some future exploring points:
       \n- CSS animations
-      \n- \`<iframe>\` and rich content
-      \n- Flexbox
+      \n- \`<iframe>\` and rich, embeddable content
+      \n- Flexbox and how it differs from Grid
       \nIf you'd like to investigate these technologies further, check out the following resources: [Khan Academy](https://www.khanacademy.org/computing/computer-programming/html-css), [GitHub Labs](https://lab.github.com/githubtraining/introduction-to-html), and [Traversy Media](https://www.youtube.com/watch?v=UB1O30fR-EE&list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU).
       \nIf you're interested, I've created a GitHub repo at the link below. That's the place to ask any questions and post links to your finished sites in the issues. [Check it out here!](https://github.com/kewbish/diveintohtml) The source of this site is also available on GitHub [here](https://github.com/kewbish/sjap).
       \nThis site was made by Kewbish - find me on the Interwebs: [my site](https://kewbi.sh) and [my GitHub](https://github.com/kewbish).

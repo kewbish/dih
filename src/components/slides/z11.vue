@@ -9,7 +9,7 @@ export default {
       slide: `Alright, speed round. These are some easy-to-understand CSS properties that are commonly used together, but don't need a lot of explanation.
       \n
       <code>
-    .class{
+    .class {
         background-color: #123456;
     }
       </code>
@@ -17,21 +17,21 @@ export default {
       \nTo add a background image instead:
       \n
       <code>
-    .class{
+    .class {
         background: url('url/to/jpeg');
     }
       </code>
       \nLet's investigate shadows next.
       \n
       <code>
-    .class{
+    .class {
         text-shadow: 2px 2px #123456;
     }
       </code>
       \nThis sets a text shadow to a text element, 2px left-right, and 2px top-down away. These values can be negative, too. Again, there's the hex code - set it to your desired text shadow color. Remember, Google's colour picker is your friend.
       \n
       <code class="language-css">
-    .class:hover{
+    .class:hover {
         color: #123456;
     }
       </code>

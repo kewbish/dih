@@ -8,17 +8,19 @@ export default {
     return {
       slide: `You might have tried to go to some websites on mobile, and seen that they were completely and utterly broken. However, other sites that were designed with mobile devices in mind - like Youtube, for example, look a little different, but still look, well, like Youtube.
       \nFor our resume, the thing that's most likely to break or look weird is our grid. On mobile, the text will be squished into short, tall lines. Instead, let's set some things called media queries, which check for the width of the screen and adapt our CSS accordingly. As a separate part of your CSS, add:
+      \n
       <code>
-    @media (min-width: 768px) and (max-width: 1024px){
-        .grid-container{
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .grid-container {
         grid-template-columns: 1fr 1fr;
         }
     }
       </code>
       \nThis checks for tablets, which usually have a screen width of between 768 to 1024px. Then, we set our grid template to only have 2 columns to make reading easier on tablet.
+      \n
       <code>
-    @media (min-width: 481px) and (max-width: 767px){
-    .grid-container{
+    @media (min-width: 481px) and (max-width: 767px) {
+    .grid-container {
         grid-template-columns: 1fr;
         }
     }

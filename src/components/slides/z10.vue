@@ -22,14 +22,14 @@ export default {
       \nNow, let's go over vertical centering. Usually, this ends up being a little more tricky than horizontal centering, due to how default HTML displays.
       \n
       <code class="language-css">
-    .class{
+    .class {
         margin: 0 auto;
     }
       </code>
       \nThis sets the margin of the top and bottom to zero, and therefore sets the element right in the middle of its parent. That's usually the de-facto solution, but alternatively, you can choose to use:
       \n
       <code>
-    .class{
+    .class {
         position: relative;
         top: 50%;
         transform: translateY(-50%);

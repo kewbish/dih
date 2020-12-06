@@ -31,7 +31,7 @@ export default {
       \n
       <code>
     #id {
-      // some CSS   
+      /* some CSS */
     }
       </code>
       \nNote the \`#\` instead of the \`.\`. This is how we differentiate between classes, which use the \`.\`, and our new IDs.

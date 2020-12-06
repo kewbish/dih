@@ -20,9 +20,9 @@ export default {
       \nThe below is what we're going to call a *playground*, or an interactive in-slide sandbox to test small concepts out without having to work with the larger Editor. Familiarize yourself with the interface, and try it out!
       <playground
         title="Tags and nesting!"
-        subtitle="Nesting tags is a concept that's a little tricky. Try playing around with it in the playground to the right!"
+        subtitle="Nesting tags is a concept that's a little tricky. Try playing around with it in the playground to the right - can you add a new &lt;p&gt; tag with a nested link?"
         htmlProp="<h1>This is a h1, but inside, <a href='https://diveintoht.ml'>a link</a></h1>"
-        cssProp="/* Nothing much to see here - don't pay too much attention here now.*/"
+        cssProp="/* Nothing much to see here - ignore this for now.*/"
       />
       \nThis is a timer - just a suggestion and not a rigid schedule to be followed. These will include a topic to explore, and a suggested amount of time, but of course feel free to take shorter or longer.
       <timer

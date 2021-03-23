@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       slide: `We discussed background colors a few slides back, but what if we wanted to change the color of just *one* element? And what if we wanted to keep everything else the same?
-      \nThis is where we can use something called an \`id\`. Usually, these are used for CSS where we only want to change the look of an element or group of elements that only appears once. The reason that they're only used for things that appear only once? IDs can be used only once. (Technically, most web browsers are so tolerant that they'll add the styles as well, but this is definitely *bad practise*.)
+      \nThis is where we can use something called an \`id\`. Usually, these are used for CSS where we only want to change the look of an element or group of elements that only appears once. The reason that they're only used for things that appear only once? IDs can be used only once. (Technically, most web browsers are so tolerant that they'll add the styles as well, but this is definitely *bad practice*.)
       \nImagine two people named Alice Chapman and Bob Chapman. A class selector is like 'selecting' both Alice and Bob by their last name, Chapman. IDs would be like selecting just Alice, or just Bob. The way we use IDs is like:
       \n
       <code>

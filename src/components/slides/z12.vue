@@ -11,7 +11,7 @@ export default {
       \n*Figure 1: A cool grid layout example!*
       \n![Figure 2: Another example, something closer to what we'll be building for our projects section.](https://designinginterfaces.com/wp-content/images/grid-of-equals-cnn.png)
       \n*Figure 2: Another example, something closer to what we'll be building for our projects section.*
-      \nBefore we do any cool CSS styling, we need to structure our grid. Add this in one of your sections in your \`main.html\`:
+      \nBefore we do any cool CSS styling, we need to structure our grid. Add this in one of your sections in your \`index.html\`:
       \n
       <code>
     <div class="grid-container">

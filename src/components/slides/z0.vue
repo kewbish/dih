@@ -8,9 +8,9 @@ import "firebase/auth";
 export default {
   data() {
     return {
-      slide: `This course will guide you through the beginnings of HTML by building a simple resume website! You'll learn the markup language used to build everything on the web, CSS - the language making each site look pretty and unique, and deployment - or how every webpage is put on the web itself.  
+      slide: `This course will guide you through the beginnings of HTML by building a simple resume website! You'll learn the markup language used to build everything on the web, HTML; the language making each site look pretty and unique, CSS; and deployment, or how every webpage is put on the web itself.  
       \nThis course was created by Emilie Ma - also known as Kewbish. If you'd like to learn more about me, visit [my site](https://kewbi.sh).  
-      \nAn online editor for this course is available <a href="#/editor" target="_blank">here</a>. It runs off the same editor as [VSCode](https://code.visualstudio.com/), so feel free to use that as an alternative. However, the editor is download- and configuration-free, so it's a much easier starting point for new developers.
+      \nAn online editor for this course is available <a href="#/editor" target="_blank">here</a>. It runs off the same editor as [VSCode](https://code.visualstudio.com/), so feel free to use that as an alternative. However, the editor is download- and configuration-free, so it's a much easier starting point for new developers and classes.
       \nOnce you've checked out the editor, press the [>] button - it's time to go!`,
     };
   },

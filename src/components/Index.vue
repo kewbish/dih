@@ -490,8 +490,8 @@
       </div>
       <div class="container mt-5 mb-2">
         <div class="notification has-text-centered">
-          <h1 class="title has-text-white is-1">You'll learn...</h1>
-          <p class="subtitle has-text-white">
+          <h1 class="title is-1">You'll learn...</h1>
+          <p class="subtitle">
             HTML - CSS - Responsive Design - GitHub Deployment
             <br />...all skills highly in demand today, and stepping stones for a future tech career.
           </p>
@@ -500,10 +500,10 @@
           </div>
         </div>
       </div>
-      <div class="container mt-6">
+      <div class="container mt-4">
         <div class="notification is-info has-text-centered">
           <h1 class="title">For educators:</h1>
-          <div class="box content">
+          <div class="box content has-text-dark">
             <h1 class="title is-4 mb-1">An engaging learner experience.</h1>
             <p>With a school bundle, you'll get:</p>
             <ul style="list-style-position: inside;">

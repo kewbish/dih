@@ -1,5 +1,5 @@
 # SJAP - Dive Into HTML
-Made with Vue, April 2020 - current.  
+Made with Vue, April 2020 - April 2021.  
 Released under [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).  
 Created by [Kewbish](https://kewbish.github.io).  
 

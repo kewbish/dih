@@ -6,7 +6,7 @@
 export default {
   data() {
     return {
-      slide: `We're almost done with our site - let's upload our files and get it live. Under the preview in the diveintoht.ml editor, click 'export files'. Find the Upload files button in your repository, and upload all the files. If you're using another editor, still ensure you get your \`index.html\` and \`main.css\` uploaded.
+      slide: `We're almost done with our site - let's upload our files and get it live. Under the preview in the Dive into HTML editor, click 'export files'. Find the Upload files button in your repository, and upload all the files. If you're using another editor, still ensure you get your \`index.html\` and \`main.css\` uploaded.
       \nFill in whatever you'd like for the commit message: Usually, it should be something like \`Initial commit\`. Then, click the commit button.
       \nWe're almost there. Finally, we need to enable GitHub Pages. Navigate to the Settings tab, and find the GitHub Pages section. Under source, select the master branch.
       \nWait a couple minutes for your site to go live, and your site will be officially online and accessible at \`[your-name].github.io\`.

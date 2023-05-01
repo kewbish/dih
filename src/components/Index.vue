@@ -4,9 +4,10 @@
       <div class="hero is-info is-bold is-medium">
         <div class="hero-body">
           <h1 class="title is-1 has-text-centered">Dive Into HTML</h1>
-          <p
-            class="subtitle has-text-centered"
-          >A comprehensive branching guide designed for beginners to get up to speed quickly.</p>
+          <p class="subtitle has-text-centered">
+            A comprehensive branching guide designed for beginners to get up to
+            speed quickly.
+          </p>
           <div class="has-text-centered">
             <a @click="switchIndex" class="button">Get Started 📚</a>
           </div>
@@ -21,8 +22,10 @@
               <h1 class="title">Ever wanted to create an online resume?</h1>
               <p>
                 We'll walk you through how.
-                <br />A practical first project introduces you to the world of web design and development, quickly and easily.
-                <br />As technology becomes more prevalent in schools, diveintoht.ml is a fun way to learn industry-applicable skills.
+                <br />A practical first project introduces you to the world of
+                web design and development, quickly and easily. <br />As
+                technology becomes more prevalent in schools, Dive Into HTML is
+                a fun way to learn industry-applicable skills.
               </p>
               <br />
               <h1 class="title">Let's get started.</h1>
@@ -43,7 +46,13 @@
                 viewBox="0 0 884.595 628.60077"
                 style="width: 100%; height: 100%"
               >
-                <ellipse cx="75.17704" cy="619.60077" rx="75.13932" ry="9" fill="#e6e6e6" />
+                <ellipse
+                  cx="75.17704"
+                  cy="619.60077"
+                  rx="75.13932"
+                  ry="9"
+                  fill="#e6e6e6"
+                />
                 <rect
                   x="196.21663"
                   y="0.39024"
@@ -51,8 +60,19 @@
                   height="440.86813"
                   fill="#e6e6e6"
                 />
-                <rect x="215.90065" y="55.6861" width="649.01033" height="359.49048" fill="#fff" />
-                <rect x="195.9227" width="688.37838" height="29.24483" fill="#00b0ff" />
+                <rect
+                  x="215.90065"
+                  y="55.6861"
+                  width="649.01033"
+                  height="359.49048"
+                  fill="#fff"
+                />
+                <rect
+                  x="195.9227"
+                  width="688.37838"
+                  height="29.24483"
+                  fill="#00b0ff"
+                />
                 <circle cx="217.65511" cy="14.95151" r="5.4203" fill="#fff" />
                 <circle cx="238.22923" cy="14.95151" r="5.4203" fill="#fff" />
                 <circle cx="258.80335" cy="14.95151" r="5.4203" fill="#fff" />
@@ -304,7 +324,12 @@
                   transform="translate(-157.7025 -135.69961)"
                   fill="#a0616a"
                 />
-                <circle cx="84.24185" cy="178.5922" r="27.25472" fill="#a0616a" />
+                <circle
+                  cx="84.24185"
+                  cy="178.5922"
+                  r="27.25472"
+                  fill="#a0616a"
+                />
                 <path
                   d="M264.24366,361.36815l-26.85938-10.73037s-5.35074.81956-20.21695,2.05841-21.46714.07033-21.46714.07033-31.80344,11.07933-30.56459,17.27358,14.86621,104.06346,21.06047,99.10806,9.9108-6.19425,9.9108-6.19425l68.13679-6.19426Z"
                   transform="translate(-157.7025 -135.69961)"
@@ -493,10 +518,13 @@
           <h1 class="title is-1">You'll learn...</h1>
           <p class="subtitle">
             HTML - CSS - Responsive Design - GitHub Deployment
-            <br />...all skills highly in demand today, and stepping stones for a future tech career.
+            <br />...all skills highly in demand today, and stepping stones for
+            a future tech career.
           </p>
           <div>
-            <a @click="switchIndex" class="button" style="margin-left:15px">Get learning ✏️</a>
+            <a @click="switchIndex" class="button" style="margin-left: 15px"
+              >Get learning ✏️</a
+            >
           </div>
         </div>
       </div>
@@ -506,9 +534,14 @@
           <div class="box content has-text-dark">
             <h1 class="title is-4 mb-1">An engaging learner experience.</h1>
             <p>With a school bundle, you'll get:</p>
-            <ul style="list-style-position: inside;">
-              <li>A short [roughly 1-2hr] guide to get you up to speed quickly</li>
-              <li>None of the fluff, but helpful links to resources for exploration</li>
+            <ul style="list-style-position: inside">
+              <li>
+                A short [roughly 1-2hr] guide to get you up to speed quickly
+              </li>
+              <li>
+                None of the fluff, but helpful links to resources for
+                exploration
+              </li>
               <li>A practical first project, immediately deployable</li>
               <li>A central, VSCode-like editor for quick setup</li>
             </ul>
@@ -533,8 +566,9 @@
           Created by
           <a
             href="https://github.com/kewbish"
-            style="color: white; text-decoration: underline;"
-          >Kewbish</a>.
+            style="color: white; text-decoration: underline"
+            >Kewbish</a
+          >.
         </p>
       </div>
     </section>
